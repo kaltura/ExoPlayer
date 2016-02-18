@@ -15,6 +15,9 @@
  */
 package com.google.android.exoplayer.hls;
 
+import android.os.Handler;
+import android.os.SystemClock;
+
 import com.google.android.exoplayer.C;
 import com.google.android.exoplayer.LoadControl;
 import com.google.android.exoplayer.MediaFormat;
@@ -197,7 +200,10 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
   @Override
   public void enable(int track, long positionUs) {
     Assertions.checkState(prepared);
+    Assertions.checkState(!trackEnabledStates[track]);
     setTrackEnabledState(track, true);
+    enabledTrackCount++;
+    trackEnabledStates[track] = true;
     downstreamMediaFormats[track] = null;
     pendingDiscontinuities[track] = false;
     downstreamFormat = null;
@@ -693,9 +699,8 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
     if (loader.isLoading() || !nextLoader || (prepared && enabledTrackCount == 0)) {
       return;
     }
-
-    chunkSource.getChunkOperation(previousTsLoadable,
-        pendingResetPositionUs != NO_RESET_PENDING ? pendingResetPositionUs : downstreamPositionUs,
+    chunkSource.getChunkOperation(previousTsLoadable,pendingResetPositionUs,
+       pendingResetPositionUs != NO_RESET_PENDING ? pendingResetPositionUs : downstreamPositionUs,
         chunkOperationHolder);
     boolean endOfStream = chunkOperationHolder.endOfStream;
     Chunk nextLoadable = chunkOperationHolder.chunk;
