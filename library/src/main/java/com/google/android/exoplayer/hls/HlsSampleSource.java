@@ -646,7 +646,8 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
   private void restartFrom(long positionUs) {
     pendingResetPositionUs = positionUs;
     loadingFinished = false;
-    if (loader.isLoading()) {
+
+    if (loader != null && loader.isLoading()) {
       loader.cancelLoading();
     } else {
       clearState();
