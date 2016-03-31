@@ -40,7 +40,7 @@ public final class DecoderInfo {
    * @param name The name of the decoder.
    * @param adaptive Whether the decoder is adaptive.
    */
-  /* package */ DecoderInfo(String name, boolean adaptive) {
+  public DecoderInfo(String name, boolean adaptive) {
     this.name = name;
     this.adaptive = adaptive;
   }
