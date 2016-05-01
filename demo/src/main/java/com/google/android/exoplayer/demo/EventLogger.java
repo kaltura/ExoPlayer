@@ -180,6 +180,7 @@ public class EventLogger implements DemoPlayer.Listener, DemoPlayer.InfoListener
   public void onAvailableRangeChanged(int sourceId, TimeRange availableRange) {
     availableRangeValuesUs = availableRange.getCurrentBoundsUs(availableRangeValuesUs);
     Log.d(TAG, "DASH availableRange [" + availableRange.isStatic() + ", " + availableRangeValuesUs[0]
+
         + ", " + availableRangeValuesUs[1] + "]");
   }
 
@@ -189,6 +190,8 @@ public class EventLogger implements DemoPlayer.Listener, DemoPlayer.InfoListener
     Log.d(TAG, "HLS - availableRange [" + availableRange.isStatic() + ", " + availableRangeValuesUs[0]
             + ", " + availableRangeValuesUs[1] + "]");
   }
+
+
 
   private void printInternalError(String type, Exception e) {
     Log.e(TAG, "internalError [" + getSessionTimeString() + ", " + type + "]", e);

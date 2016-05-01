@@ -16,10 +16,10 @@
 package com.google.android.exoplayer.hls;
 
 import android.net.Uri;
-import android.os.SystemClock;
-import android.util.Log;
 import android.os.Handler;
-
+import android.os.SystemClock;
+import android.text.TextUtils;
+import android.util.Log;
 
 import com.google.android.exoplayer.BehindLiveWindowException;
 import com.google.android.exoplayer.C;
@@ -70,6 +70,7 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
      */
     public void onAvailableRangeChanged(TimeRange availableRange);
   }
+
 
 
   /**
@@ -179,8 +180,7 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
    *     playback must have exactly one master source, which should be the source providing video
    *     chunks (or audio chunks for audio only playbacks).
    * @param dataSource A {@link DataSource} suitable for loading the media data.
-   * @param playlistUrl The playlist URL.
-   * @param playlist The hls playlist.
+   * @param playlist The HLS playlist.
    * @param trackSelector Selects tracks to be exposed by this source.
    * @param bandwidthMeter Provides an estimate of the currently available bandwidth.
    * @param timestampAdjusterProvider A provider of {@link PtsTimestampAdjuster} instances. If
@@ -190,12 +190,13 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
    *     {@link #ADAPTIVE_MODE_NONE}, {@link #ADAPTIVE_MODE_ABRUPT} and
    *     {@link #ADAPTIVE_MODE_SPLICE}.
    */
-  public HlsChunkSource(boolean isMaster, DataSource dataSource, String playlistUrl,
-      HlsPlaylist playlist, HlsTrackSelector trackSelector, BandwidthMeter bandwidthMeter,
+  public HlsChunkSource(boolean isMaster, DataSource dataSource, HlsPlaylist playlist,
+      HlsTrackSelector trackSelector, BandwidthMeter bandwidthMeter,
       PtsTimestampAdjusterProvider timestampAdjusterProvider, int adaptiveMode) {
-    this(isMaster, dataSource, playlistUrl, playlist, trackSelector, bandwidthMeter,
+    this(isMaster, dataSource, playlist, trackSelector, bandwidthMeter,
         timestampAdjusterProvider, adaptiveMode, DEFAULT_MIN_BUFFER_TO_SWITCH_UP_MS,
         DEFAULT_MAX_BUFFER_TO_SWITCH_DOWN_MS, null, null);
+
   }
 
   /**
@@ -203,8 +204,7 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
    *     playback must have exactly one master source, which should be the source providing video
    *     chunks (or audio chunks for audio only playbacks).
    * @param dataSource A {@link DataSource} suitable for loading the media data.
-   * @param playlistUrl The playlist URL.
-   * @param playlist The hls playlist.
+   * @param playlist The HLS playlist.
    * @param trackSelector Selects tracks to be exposed by this source.
    * @param bandwidthMeter Provides an estimate of the currently available bandwidth.
    * @param timestampAdjusterProvider A provider of {@link PtsTimestampAdjuster} instances. If
@@ -218,11 +218,10 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
    * @param maxBufferDurationToSwitchDownMs The maximum duration of media that needs to be buffered
    *     for a switch to a lower quality variant to be considered.
    */
-  public HlsChunkSource(boolean isMaster, DataSource dataSource, String playlistUrl,
-      HlsPlaylist playlist, HlsTrackSelector trackSelector, BandwidthMeter bandwidthMeter,
+  public HlsChunkSource(boolean isMaster, DataSource dataSource, HlsPlaylist playlist,
+      HlsTrackSelector trackSelector, BandwidthMeter bandwidthMeter,
       PtsTimestampAdjusterProvider timestampAdjusterProvider, int adaptiveMode,
       long minBufferDurationToSwitchUpMs, long maxBufferDurationToSwitchDownMs, Handler eventHandler, EventListener eventListener) {
-
     this.isMaster = isMaster;
     this.dataSource = dataSource;
     this.trackSelector = trackSelector;
@@ -231,7 +230,6 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
     this.adaptiveMode = adaptiveMode;
     this.eventHandler = eventHandler;
     this.eventListener = eventListener;
-
     minBufferDurationToSwitchUpUs = minBufferDurationToSwitchUpMs * 1000;
     maxBufferDurationToSwitchDownUs = maxBufferDurationToSwitchDownMs * 1000;
     baseUri = playlist.baseUri;
@@ -244,9 +242,9 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
       Format format = new Format("0", MimeTypes.APPLICATION_M3U8, -1, -1, -1, -1, -1, -1, null,
           null);
       List<Variant> variants = new ArrayList<>();
-      variants.add(new Variant(playlistUrl, format));
-      masterPlaylist = new HlsMasterPlaylist(playlistUrl, variants,
-          Collections.<Variant>emptyList());
+      variants.add(new Variant(baseUri, format));
+      masterPlaylist = new HlsMasterPlaylist(baseUri, variants,
+          Collections.<Variant>emptyList(), Collections.<Variant>emptyList(), null, null);
     }
   }
 
@@ -327,6 +325,23 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
     return variants.length == 1 ? variants[0] : null;
   }
 
+  /**
+   * Returns the language of the audio muxed into variants, or null if unknown.
+   *
+   * @return The language of the audio muxed into variants, or null if unknown.
+   */
+  public String getMuxedAudioLanguage() {
+    return masterPlaylist.muxedAudioLanguage;
+  }
+
+  /**
+   * Returns the language of the captions muxed into variants, or null if unknown.
+   *
+   * @return The language of the captions muxed into variants, or null if unknown.
+   */
+  public String getMuxedCaptionLanguage() {
+    return masterPlaylist.muxedCaptionLanguage;
+  }
 
   /**
    * Returns the currently selected track index.
@@ -418,7 +433,6 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
           chunkMediaSequence = Util.binarySearchFloor(mediaPlaylist.segments, seekPositionUs, true,
                   true) + mediaPlaylist.mediaSequence;
         }
-
       } else {
         chunkMediaSequence = switchingVariantSpliced
             ? previousTsChunk.chunkIndex : previousTsChunk.chunkIndex + 1;
@@ -524,8 +538,21 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
         // The master source has yet to instantiate an adjuster for the discontinuity sequence.
         return;
       }
+      int workaroundFlags = 0;
+      String codecs = format.codecs;
+      if (!TextUtils.isEmpty(codecs)) {
+        // Sometimes AAC and H264 streams are declared in TS chunks even though they don't really
+        // exist. If we know from the codec attribute that they don't exist, then we can explicitly
+        // ignore them even if they're declared.
+        if (MimeTypes.getAudioMediaMimeType(codecs) != MimeTypes.AUDIO_AAC) {
+          workaroundFlags |= TsExtractor.WORKAROUND_IGNORE_AAC_STREAM;
+        }
+        if (MimeTypes.getVideoMediaMimeType(codecs) != MimeTypes.VIDEO_H264) {
+          workaroundFlags |= TsExtractor.WORKAROUND_IGNORE_H264_STREAM;
+        }
+      }
+      Extractor extractor = new TsExtractor(timestampAdjuster, workaroundFlags);
       ExposedTrack selectedTrack = tracks.get(selectedTrackIndex);
-      Extractor extractor = new TsExtractor(timestampAdjuster);
       extractorWrapper = new HlsExtractorWrapper(trigger, format, startTimeUs, extractor,
           switchingVariantSpliced, selectedTrack.adaptiveMaxWidth, selectedTrack.adaptiveMaxHeight);
     } else {
@@ -770,6 +797,7 @@ public class HlsChunkSource implements HlsTrackSelector.Output {
       availableRange = newAvailableRange;
       this.notifyAvailableRangeChanged(availableRange);
     }
+
   }
 
   private void notifyAvailableRangeChanged(final TimeRange seekRange) {

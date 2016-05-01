@@ -15,6 +15,7 @@
  */
 package com.google.android.exoplayer.extractor.ts;
 
+import com.google.android.exoplayer.C;
 import com.google.android.exoplayer.extractor.DummyTrackOutput;
 import com.google.android.exoplayer.extractor.Extractor;
 import com.google.android.exoplayer.extractor.ExtractorInput;
@@ -35,6 +36,11 @@ import java.io.IOException;
  * Facilitates the extraction of data from the MPEG-2 TS container format.
  */
 public final class TsExtractor implements Extractor {
+
+  public static final int WORKAROUND_ALLOW_NON_IDR_KEYFRAMES = 1;
+  public static final int WORKAROUND_IGNORE_AAC_STREAM = 2;
+  public static final int WORKAROUND_IGNORE_H264_STREAM = 4;
+  public static final int WORKAROUND_DETECT_ACCESS_UNITS = 8;
 
   private static final String TAG = "TsExtractor";
 
@@ -60,7 +66,7 @@ public final class TsExtractor implements Extractor {
   private static final long HEVC_FORMAT_IDENTIFIER = Util.getIntegerCodeForString("HEVC");
 
   private final PtsTimestampAdjuster ptsTimestampAdjuster;
-  private final boolean idrKeyframesOnly;
+  private final int workaroundFlags;
   private final ParsableByteArray tsPacketBuffer;
   private final ParsableBitArray tsScratch;
   /* package */ final SparseArray<TsPayloadReader> tsPayloadReaders; // Indexed by pid
@@ -75,12 +81,12 @@ public final class TsExtractor implements Extractor {
   }
 
   public TsExtractor(PtsTimestampAdjuster ptsTimestampAdjuster) {
-    this(ptsTimestampAdjuster, true);
+    this(ptsTimestampAdjuster, 0);
   }
 
-  public TsExtractor(PtsTimestampAdjuster ptsTimestampAdjuster, boolean idrKeyframesOnly) {
+  public TsExtractor(PtsTimestampAdjuster ptsTimestampAdjuster, int workaroundFlags) {
     this.ptsTimestampAdjuster = ptsTimestampAdjuster;
-    this.idrKeyframesOnly = idrKeyframesOnly;
+    this.workaroundFlags = workaroundFlags;
     tsPacketBuffer = new ParsableByteArray(TS_PACKET_SIZE);
     tsScratch = new ParsableBitArray(new byte[3]);
     tsPayloadReaders = new SparseArray<>();
@@ -115,6 +121,11 @@ public final class TsExtractor implements Extractor {
     for (int i = 0; i < tsPayloadReaders.size(); i++) {
       tsPayloadReaders.valueAt(i).seek();
     }
+  }
+
+  @Override
+  public void release() {
+    // Do nothing
   }
 
   @Override
@@ -337,8 +348,8 @@ public final class TsExtractor implements Extractor {
             pesPayloadReader = new MpegAudioReader(output.track(TS_STREAM_TYPE_MPA_LSF));
             break;
           case TS_STREAM_TYPE_AAC:
-            pesPayloadReader = new AdtsReader(output.track(TS_STREAM_TYPE_AAC),
-                new DummyTrackOutput());
+            pesPayloadReader = (workaroundFlags & WORKAROUND_IGNORE_AAC_STREAM) != 0 ? null
+                : new AdtsReader(output.track(TS_STREAM_TYPE_AAC), new DummyTrackOutput());
             break;
           case TS_STREAM_TYPE_AC3:
             pesPayloadReader = new Ac3Reader(output.track(TS_STREAM_TYPE_AC3), false);
@@ -354,8 +365,11 @@ public final class TsExtractor implements Extractor {
             pesPayloadReader = new H262Reader(output.track(TS_STREAM_TYPE_H262));
             break;
           case TS_STREAM_TYPE_H264:
-            pesPayloadReader = new H264Reader(output.track(TS_STREAM_TYPE_H264),
-                new SeiReader(output.track(TS_STREAM_TYPE_EIA608)), idrKeyframesOnly);
+            pesPayloadReader = (workaroundFlags & WORKAROUND_IGNORE_H264_STREAM) != 0 ? null
+                : new H264Reader(output.track(TS_STREAM_TYPE_H264),
+                    new SeiReader(output.track(TS_STREAM_TYPE_EIA608)),
+                    (workaroundFlags & WORKAROUND_ALLOW_NON_IDR_KEYFRAMES) != 0,
+                    (workaroundFlags & WORKAROUND_DETECT_ACCESS_UNITS) != 0);
             break;
           case TS_STREAM_TYPE_H265:
             pesPayloadReader = new H265Reader(output.track(TS_STREAM_TYPE_H265),
@@ -371,7 +385,8 @@ public final class TsExtractor implements Extractor {
 
         if (pesPayloadReader != null) {
           streamTypes.put(streamType, true);
-          tsPayloadReaders.put(elementaryPid, new PesReader(pesPayloadReader));
+          tsPayloadReaders.put(elementaryPid,
+              new PesReader(pesPayloadReader, ptsTimestampAdjuster));
         }
       }
 
@@ -422,7 +437,7 @@ public final class TsExtractor implements Extractor {
   /**
    * Parses PES packet data and extracts samples.
    */
-  private class PesReader extends TsPayloadReader {
+  private static final class PesReader extends TsPayloadReader {
 
     private static final int STATE_FINDING_HEADER = 0;
     private static final int STATE_READING_HEADER = 1;
@@ -433,8 +448,9 @@ public final class TsExtractor implements Extractor {
     private static final int MAX_HEADER_EXTENSION_SIZE = 10;
     private static final int PES_SCRATCH_SIZE = 10; // max(HEADER_SIZE, MAX_HEADER_EXTENSION_SIZE)
 
-    private final ParsableBitArray pesScratch;
     private final ElementaryStreamReader pesPayloadReader;
+    private final PtsTimestampAdjuster ptsTimestampAdjuster;
+    private final ParsableBitArray pesScratch;
 
     private int state;
     private int bytesRead;
@@ -447,8 +463,10 @@ public final class TsExtractor implements Extractor {
     private boolean dataAlignmentIndicator;
     private long timeUs;
 
-    public PesReader(ElementaryStreamReader pesPayloadReader) {
+    public PesReader(ElementaryStreamReader pesPayloadReader,
+        PtsTimestampAdjuster ptsTimestampAdjuster) {
       this.pesPayloadReader = pesPayloadReader;
+      this.ptsTimestampAdjuster = ptsTimestampAdjuster;
       pesScratch = new ParsableBitArray(new byte[PES_SCRATCH_SIZE]);
       state = STATE_FINDING_HEADER;
     }
@@ -589,7 +607,7 @@ public final class TsExtractor implements Extractor {
 
     private void parseHeaderExtension() {
       pesScratch.setPosition(0);
-      timeUs = 0;
+      timeUs = C.UNKNOWN_TIME_US;
       if (ptsFlag) {
         pesScratch.skipBits(4); // '0010' or '0011'
         long pts = (long) pesScratch.readBits(3) << 30;

@@ -176,7 +176,32 @@ public class MediaCodecAudioTrackRenderer extends MediaCodecTrackRenderer implem
       DrmSessionManager drmSessionManager, boolean playClearSamplesWithoutKeys,
       Handler eventHandler, EventListener eventListener, AudioCapabilities audioCapabilities,
       int streamType) {
-    super(source, mediaCodecSelector, drmSessionManager, playClearSamplesWithoutKeys, eventHandler,
+    this (new SampleSource[] {source}, mediaCodecSelector, drmSessionManager,
+        playClearSamplesWithoutKeys, eventHandler, eventListener, audioCapabilities, streamType);
+  }
+
+  /**
+   * @param sources The upstream sources from which the renderer obtains samples.
+   * @param mediaCodecSelector A decoder selector.
+   * @param drmSessionManager For use with encrypted content. May be null if support for encrypted
+   *     content is not required.
+   * @param playClearSamplesWithoutKeys Encrypted media may contain clear (un-encrypted) regions.
+   *     For example a media file may start with a short clear region so as to allow playback to
+   *     begin in parallel with key acquisition. This parameter specifies whether the renderer is
+   *     permitted to play clear regions of encrypted media files before {@code drmSessionManager}
+   *     has obtained the keys necessary to decrypt encrypted regions of the media.
+   * @param eventHandler A handler to use when delivering events to {@code eventListener}. May be
+   *     null if delivery of events is not required.
+   * @param eventListener A listener of events. May be null if delivery of events is not required.
+   * @param audioCapabilities The audio capabilities for playback on this device. May be null if the
+   *     default capabilities (no encoded audio passthrough support) should be assumed.
+   * @param streamType The type of audio stream for the {@link AudioTrack}.
+   */
+  public MediaCodecAudioTrackRenderer(SampleSource[] sources, MediaCodecSelector mediaCodecSelector,
+      DrmSessionManager drmSessionManager, boolean playClearSamplesWithoutKeys,
+      Handler eventHandler, EventListener eventListener, AudioCapabilities audioCapabilities,
+      int streamType) {
+    super(sources, mediaCodecSelector, drmSessionManager, playClearSamplesWithoutKeys, eventHandler,
         eventListener);
     this.eventListener = eventListener;
     this.audioSessionId = AudioTrack.SESSION_ID_NOT_SET;
@@ -189,21 +214,21 @@ public class MediaCodecAudioTrackRenderer extends MediaCodecTrackRenderer implem
     String mimeType = mediaFormat.mimeType;
     return MimeTypes.isAudio(mimeType) && (MimeTypes.AUDIO_UNKNOWN.equals(mimeType)
         || (allowPassthrough(mimeType) && mediaCodecSelector.getPassthroughDecoderName() != null)
-        || mediaCodecSelector.getDecoderInfo(mediaFormat, false) != null);
+        || mediaCodecSelector.getDecoderInfo(mimeType, false) != null);
   }
 
   @Override
-  protected DecoderInfo getDecoderInfo(MediaCodecSelector mediaCodecSelector, MediaFormat format,
+  protected DecoderInfo getDecoderInfo(MediaCodecSelector mediaCodecSelector, String mimeType,
       boolean requiresSecureDecoder) throws DecoderQueryException {
-    if (allowPassthrough(format.mimeType)) {
+    if (allowPassthrough(mimeType)) {
       String passthroughDecoderName = mediaCodecSelector.getPassthroughDecoderName();
       if (passthroughDecoderName != null) {
         passthroughEnabled = true;
-        return new DecoderInfo(passthroughDecoderName, false);
+        return new DecoderInfo(passthroughDecoderName, null);
       }
     }
     passthroughEnabled = false;
-    return super.getDecoderInfo(mediaCodecSelector, format, requiresSecureDecoder);
+    return super.getDecoderInfo(mediaCodecSelector, mimeType, requiresSecureDecoder);
   }
 
   /**
@@ -240,7 +265,7 @@ public class MediaCodecAudioTrackRenderer extends MediaCodecTrackRenderer implem
   }
 
   @Override
-  protected void onOutputFormatChanged(android.media.MediaFormat outputFormat) {
+  protected void onOutputFormatChanged(MediaCodec codec, android.media.MediaFormat outputFormat) {
     boolean passthrough = passthroughMediaFormat != null;
     audioTrack.configure(passthrough ? passthroughMediaFormat : outputFormat, passthrough);
   }

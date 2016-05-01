@@ -1,0 +1,36 @@
+sudo: false
+language: android
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-23.0.2
+  - android-23
+  - extra-android-m2repository
+  - extra-google-m2repository
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+script:
+- ./gradlew jarRelease
+- mv library/build/libs/library.jar exoplayer.jar
+deploy:
+  provider: releases
+  draft: true
+  skip_cleanup: true
+  file:
+    - exoplayer.jar
+  on:
+    tags: true
+  api-key: $GH_TOKEN
+notifications:
+  email:
+    recipients:
+      - noam.tamim@kaltura.com
+      - gilad.nadav@kaltura.com
+    on_success: change
+    on_failure: always
+

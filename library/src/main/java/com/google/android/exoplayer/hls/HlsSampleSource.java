@@ -209,6 +209,8 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
       loadControl.register(this, bufferSizeContribution);
       loadControlRegistered = true;
     }
+    // Treat enabling of a live stream as occurring at t=0 in both of the blocks below.
+    //positionUs = chunkSource.isLive() ? 0 : positionUs;
     int chunkSourceTrack = chunkSourceTrackIndices[track];
     if (chunkSourceTrack != -1 && chunkSourceTrack != chunkSource.getSelectedTrackIndex()) {
       // This is a primary track whose corresponding chunk source track is different to the one
@@ -362,6 +364,8 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
   public void seekToUs(long positionUs) {
     Assertions.checkState(prepared);
     Assertions.checkState(enabledTrackCount > 0);
+    // Treat all seeks into live streams as being to t=0.
+    //positionUs = chunkSource.isLive() ? 0 : positionUs;
 
     // Ignore seeks to the current position.
     long currentPositionUs = isPendingReset() ? pendingResetPositionUs : downstreamPositionUs;
@@ -541,18 +545,24 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
     int trackIndex = 0;
     for (int i = 0; i < extractorTrackCount; i++) {
       MediaFormat format = extractor.getMediaFormat(i).copyWithDurationUs(durationUs);
+      String language = null;
+      if (MimeTypes.isAudio(format.mimeType)) {
+        language = chunkSource.getMuxedAudioLanguage();
+      } else if (MimeTypes.APPLICATION_EIA608.equals(format.mimeType)) {
+        language = chunkSource.getMuxedCaptionLanguage();
+      }
       if (i == primaryExtractorTrackIndex) {
         for (int j = 0; j < chunkSourceTrackCount; j++) {
           extractorTrackIndices[trackIndex] = i;
           chunkSourceTrackIndices[trackIndex] = j;
           Variant fixedTrackVariant = chunkSource.getFixedTrackVariant(j);
           trackFormats[trackIndex++] = fixedTrackVariant == null ? format.copyAsAdaptive(null)
-              : copyWithFixedTrackInfo(format, fixedTrackVariant.format);
+              : copyWithFixedTrackInfo(format, fixedTrackVariant.format, language);
         }
       } else {
         extractorTrackIndices[trackIndex] = i;
         chunkSourceTrackIndices[trackIndex] = -1;
-        trackFormats[trackIndex++] = format;
+        trackFormats[trackIndex++] = format.copyWithLanguage(language);
       }
     }
   }
@@ -574,17 +584,19 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
 
   /**
    * Copies a provided {@link MediaFormat}, incorporating information from the {@link Format} of
-   * a fixed (i.e. non-adaptive) track.
+   * a fixed (i.e. non-adaptive) track, as well as a language.
    *
    * @param format The {@link MediaFormat} to copy.
    * @param fixedTrackFormat The {@link Format} to incorporate into the copy.
+   * @param language The language to incorporate into the copy.
    * @return The copied {@link MediaFormat}.
    */
-  private static MediaFormat copyWithFixedTrackInfo(MediaFormat format, Format fixedTrackFormat) {
+  private static MediaFormat copyWithFixedTrackInfo(MediaFormat format, Format fixedTrackFormat,
+      String language) {
     int width = fixedTrackFormat.width == -1 ? MediaFormat.NO_VALUE : fixedTrackFormat.width;
     int height = fixedTrackFormat.height == -1 ? MediaFormat.NO_VALUE : fixedTrackFormat.height;
     return format.copyWithFixedTrackInfo(fixedTrackFormat.id, fixedTrackFormat.bitrate, width,
-        height, fixedTrackFormat.language);
+        height, language);
   }
 
   /**
@@ -646,7 +658,7 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
   private void restartFrom(long positionUs) {
     pendingResetPositionUs = positionUs;
     loadingFinished = false;
-    if (loader.isLoading()) {
+    if (loader != null && loader.isLoading()) {
       loader.cancelLoading();
     } else {
       clearState();
@@ -693,8 +705,8 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
       return;
     }
 
-    chunkSource.getChunkOperation(previousTsLoadable,pendingResetPositionUs,/*downstreamPositionUs,*/
-       pendingResetPositionUs != NO_RESET_PENDING ? pendingResetPositionUs : downstreamPositionUs,
+    chunkSource.getChunkOperation(previousTsLoadable, pendingResetPositionUs,
+        pendingResetPositionUs != NO_RESET_PENDING ? pendingResetPositionUs : downstreamPositionUs,
         chunkOperationHolder);
     boolean endOfStream = chunkOperationHolder.endOfStream;
     Chunk nextLoadable = chunkOperationHolder.chunk;

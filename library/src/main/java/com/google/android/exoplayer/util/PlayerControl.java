@@ -31,6 +31,7 @@ public class PlayerControl implements MediaPlayerControl {
   private final ExoPlayer exoPlayer;
   private final long[] seekRange;
 
+
   public PlayerControl(ExoPlayer exoPlayer) {
     this.exoPlayer = exoPlayer;
     this.seekRange = new long[2];
@@ -119,4 +120,6 @@ public class PlayerControl implements MediaPlayerControl {
       seekRange.getCurrentBoundsMs(this.seekRange);
     }
   }
+
+
 }

@@ -29,6 +29,7 @@ import com.google.android.exoplayer.MediaCodecTrackRenderer;
 import com.google.android.exoplayer.MediaCodecTrackRenderer.DecoderInitializationException;
 import com.google.android.exoplayer.MediaCodecVideoTrackRenderer;
 import com.google.android.exoplayer.MediaFormat;
+import com.google.android.exoplayer.SingleSampleSource;
 import com.google.android.exoplayer.TimeRange;
 import com.google.android.exoplayer.TrackRenderer;
 import com.google.android.exoplayer.audio.AudioTrack;
@@ -36,9 +37,11 @@ import com.google.android.exoplayer.chunk.ChunkSampleSource;
 import com.google.android.exoplayer.chunk.Format;
 import com.google.android.exoplayer.dash.DashChunkSource;
 import com.google.android.exoplayer.drm.StreamingDrmSessionManager;
+import com.google.android.exoplayer.extractor.ExtractorSampleSource;
 import com.google.android.exoplayer.hls.HlsChunkSource;
 import com.google.android.exoplayer.hls.HlsSampleSource;
 import com.google.android.exoplayer.metadata.MetadataTrackRenderer.MetadataRenderer;
+import com.google.android.exoplayer.metadata.id3.Id3Frame;
 import com.google.android.exoplayer.text.Cue;
 import com.google.android.exoplayer.text.TextRenderer;
 import com.google.android.exoplayer.upstream.BandwidthMeter;
@@ -46,11 +49,9 @@ import com.google.android.exoplayer.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer.util.DebugTextViewHelper;
 import com.google.android.exoplayer.util.PlayerControl;
 
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -59,10 +60,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * SmoothStreaming and so on).
  */
 public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventListener,
-    HlsChunkSource.EventListener, HlsSampleSource.EventListener, DefaultBandwidthMeter.EventListener,
+    HlsChunkSource.EventListener, HlsSampleSource.EventListener, ExtractorSampleSource.EventListener,
+    SingleSampleSource.EventListener, DefaultBandwidthMeter.EventListener,
     MediaCodecVideoTrackRenderer.EventListener, MediaCodecAudioTrackRenderer.EventListener,
     StreamingDrmSessionManager.EventListener, DashChunkSource.EventListener, TextRenderer,
-    MetadataRenderer<Map<String, Object>>, DebugTextViewHelper.Provider {
+    MetadataRenderer<List<Id3Frame>>, DebugTextViewHelper.Provider {
+
 
   /**
    * Builds renderers for the player.
@@ -130,7 +133,8 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
         long initializationDurationMs);
     void onAvailableRangeChanged(int sourceId, TimeRange availableRange);
     void onAvailableRangeChanged(TimeRange availableRange);
-  }
+
+    }
 
   /**
    * A listener for receiving notifications of timed text.
@@ -143,7 +147,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
    * A listener for receiving ID3 metadata parsed from the media stream.
    */
   public interface Id3MetadataListener {
-    void onId3Metadata(Map<String, Object> metadata);
+    void onId3Metadata(List<Id3Frame> id3Frames);
   }
 
   // Constants pulled into this class for convenience.
@@ -522,9 +526,9 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
   }
 
   @Override
-  public void onMetadata(Map<String, Object> metadata) {
+  public void onMetadata(List<Id3Frame> id3Frames) {
     if (id3MetadataListener != null && getSelectedTrack(TYPE_METADATA) != TRACK_DISABLED) {
-      id3MetadataListener.onId3Metadata(metadata);
+      id3MetadataListener.onId3Metadata(id3Frames);
     }
   }
 

@@ -32,7 +32,9 @@ import java.util.Locale;
     public final String uri;
     public final int type;
 
-    public Sample(String name, String uri, int type) {
+      public static final String LIVE_DVR = "http://qa-apache-testing-ubu-01.dev.kaltura.com/p/1091/sp/109100/playManifest/entryId/0_cb9k71rb/format/applehttp/protocol/http/uiConfId/15088771/a.m3u8";
+
+      public Sample(String name, String uri, int type) {
       this(name, name.toLowerCase(Locale.US).replaceAll("\\s", ""), "", uri, type);
     }
 
@@ -47,6 +49,8 @@ import java.util.Locale;
   }
 
   public static final Sample[] YOUTUBE_DASH_MP4 = new Sample[] {
+          new Sample("DIZ1", "http://html5demos.com/assets/dizzy.mp4", Util.TYPE_OTHER),
+          new Sample("DIZ", "http://dpndczlul8yjf.cloudfront.net/creatives/assets/9d266094-8d1e-49e3-b13c-249515529bfc/c01b6747-0a3b-4480-9286-811d469b977d.mp4", Util.TYPE_OTHER),
     new Sample("Google Glass (MP4,H264)",
         "http://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?"
         + "as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&"
@@ -210,6 +214,7 @@ import java.util.Locale;
   };
 
   public static final Sample[] HLS = new Sample[] {
+    new Sample("Live DVR", "http://cdnapi.kaltura.com/p/1878761/sp/187876100/playManifest/entryId/1_k64id08u/format/applehttp/protocol/http/uiConfId/34758182/a.m3u8", Util.TYPE_HLS),
     new Sample("Apple master playlist",
         "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/"
         + "bipbop_4x3_variant.m3u8", Util.TYPE_HLS),
@@ -242,6 +247,8 @@ import java.util.Locale;
         + "&key=ik0", Util.TYPE_OTHER),
     new Sample("Google Play (MP3 Audio)",
         "http://storage.googleapis.com/exoplayer-test-media-0/play.mp3", Util.TYPE_OTHER),
+    new Sample("Google Play (Ogg/Vorbis Audio)",
+        "https://storage.googleapis.com/exoplayer-test-media-1/ogg/play.ogg", Util.TYPE_OTHER),
     new Sample("Google Glass (WebM Video with Vorbis Audio)",
         "http://demos.webmproject.org/exoplayer/glass_vp9_vorbis.webm", Util.TYPE_OTHER),
     new Sample("Big Buck Bunny (FLV Video)",

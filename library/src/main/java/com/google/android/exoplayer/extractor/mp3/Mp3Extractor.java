@@ -67,7 +67,7 @@ public final class Mp3Extractor implements Extractor {
   private GaplessInfo gaplessInfo;
   private Seeker seeker;
   private long basisTimeUs;
-  private int samplesRead;
+  private long samplesRead;
   private int sampleBytesRemaining;
 
   /**
@@ -111,6 +111,11 @@ public final class Mp3Extractor implements Extractor {
   }
 
   @Override
+  public void release() {
+    // Do nothing
+  }
+
+  @Override
   public int read(ExtractorInput input, PositionHolder seekPosition)
       throws IOException, InterruptedException {
     if (synchronizedHeaderData == 0 && !synchronizeCatchingEndOfInput(input)) {
@@ -119,9 +124,14 @@ public final class Mp3Extractor implements Extractor {
     if (seeker == null) {
       setupSeeker(input);
       extractorOutput.seekMap(seeker);
-      trackOutput.format(MediaFormat.createAudioFormat(null, synchronizedHeader.mimeType,
+      MediaFormat mediaFormat = MediaFormat.createAudioFormat(null, synchronizedHeader.mimeType,
           MediaFormat.NO_VALUE, MpegAudioHeader.MAX_FRAME_SIZE_BYTES, seeker.getDurationUs(),
-          synchronizedHeader.channels, synchronizedHeader.sampleRate, null, null));
+          synchronizedHeader.channels, synchronizedHeader.sampleRate, null, null);
+      if (gaplessInfo != null) {
+        mediaFormat =
+            mediaFormat.copyWithGaplessInfo(gaplessInfo.encoderDelay, gaplessInfo.encoderPadding);
+      }
+      trackOutput.format(mediaFormat);
     }
     return readSample(input);
   }
@@ -202,6 +212,9 @@ public final class Mp3Extractor implements Extractor {
     if (input.getPosition() == 0) {
       gaplessInfo = Id3Util.parseId3(input);
       peekedId3Bytes = (int) input.getPeekPosition();
+      if (!sniffing) {
+        input.skipFully(peekedId3Bytes);
+      }
     }
     while (true) {
       if (sniffing && searched == MAX_SNIFF_BYTES) {
