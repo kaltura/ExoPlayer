@@ -15,10 +15,10 @@
  */
 package com.google.android.exoplayer;
 
-import com.google.android.exoplayer.util.Util;
-
 import android.annotation.TargetApi;
 import android.media.MediaCodecInfo.CodecCapabilities;
+
+import com.google.android.exoplayer.util.Util;
 
 /**
  * Contains information about a media decoder.
@@ -51,10 +51,10 @@ public final class DecoderInfo {
    * @param name The name of the decoder.
    * @param capabilities {@link CodecCapabilities} of the decoder.
    */
-  /* package */ DecoderInfo(String name, CodecCapabilities capabilities) {
-    this.name = name;
-    this.capabilities = capabilities;
-    this.adaptive = isAdaptive(capabilities);
+    public DecoderInfo(String name, CodecCapabilities capabilities) {
+      this.name = name;
+      this.capabilities = capabilities;
+      this.adaptive = isAdaptive(capabilities);
   }
 
   private static boolean isAdaptive(CodecCapabilities capabilities) {
