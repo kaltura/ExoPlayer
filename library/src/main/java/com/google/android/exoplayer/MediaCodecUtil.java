@@ -58,6 +58,9 @@ public final class MediaCodecUtil {
 
   private static final Map<CodecKey, List<DecoderInfo>> decoderInfosCache = new HashMap<>();
 
+  // Lazily initialized.
+  private static int maxH264DecodableFrameSize = -1;
+
   private MediaCodecUtil() {}
 
   /**
@@ -181,7 +184,7 @@ public final class MediaCodecUtil {
             || "MP3Decoder".equals(name)) {
       return false;
     }
-    if (Util.SDK_INT == 16 && "OMX.SEC.MP3.Decoder".equals(name)) {
+    if (Util.SDK_INT < 18 && "OMX.SEC.MP3.Decoder".equals(name)) {
       return false;
     }
 
@@ -290,14 +293,15 @@ public final class MediaCodecUtil {
    * @return the maximum frame size for an H264 stream that can be decoded on the device.
    */
   public static int maxH264DecodableFrameSize() throws DecoderQueryException {
-    DecoderInfo decoderInfo = getDecoderInfo(MimeTypes.VIDEO_H264, false);
-    if (decoderInfo == null) {
-      return 0;
-    }
-    int maxH264DecodableFrameSize = 0;
-    for (CodecProfileLevel profileLevel : decoderInfo.capabilities.profileLevels) {
-      maxH264DecodableFrameSize = Math.max(
-          avcLevelToMaxFrameSize(profileLevel.level), maxH264DecodableFrameSize);
+    if (maxH264DecodableFrameSize == -1) {
+      int result = 0;
+      DecoderInfo decoderInfo = getDecoderInfo(MimeTypes.VIDEO_H264, false);
+      if (decoderInfo != null) {
+        for (CodecProfileLevel profileLevel : decoderInfo.capabilities.profileLevels) {
+          result = Math.max(avcLevelToMaxFrameSize(profileLevel.level), result);
+        }
+      }
+      maxH264DecodableFrameSize = result;
     }
     return maxH264DecodableFrameSize;
   }
