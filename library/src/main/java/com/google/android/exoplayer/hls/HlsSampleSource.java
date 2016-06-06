@@ -693,6 +693,9 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
     long now = SystemClock.elapsedRealtime();
     long nextLoadPositionUs = getNextLoadPositionUs();
     boolean isBackedOff = currentLoadableException != null;
+    if (loader == null) {
+      return;
+    }
     boolean loadingOrBackedOff = loader.isLoading() || isBackedOff;
 
     // Update the control with our current state, and determine whether we're the next loader.
