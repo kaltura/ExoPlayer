@@ -549,6 +549,11 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
   }
 
   @Override
+  public void onMediaPlaylistLoadCompleted(byte[] rawResponse) {
+
+  }
+
+  @Override
   public void onPlayWhenReadyCommitted() {
     // Do nothing.
   }
