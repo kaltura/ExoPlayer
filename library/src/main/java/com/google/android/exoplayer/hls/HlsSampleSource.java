@@ -564,7 +564,7 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
           chunkSourceTrackIndices[trackIndex] = j;
           Variant fixedTrackVariant = chunkSource.getFixedTrackVariant(j);
           trackFormats[trackIndex++] = fixedTrackVariant == null ? format.copyAsAdaptive(null)
-              : copyWithFixedTrackInfo(format, fixedTrackVariant.format, language);
+              : copyWithFixedTrackInfo(format, fixedTrackVariant.format, fixedTrackVariant.getFormat().language);
         }
       } else {
         extractorTrackIndices[trackIndex] = i;
