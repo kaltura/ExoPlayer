@@ -15,12 +15,6 @@
  */
 package com.google.android.exoplayer;
 
-import com.google.android.exoplayer.ExoPlayer.ExoPlayerComponent;
-import com.google.android.exoplayer.util.Assertions;
-import com.google.android.exoplayer.util.PriorityHandlerThread;
-import com.google.android.exoplayer.util.TraceUtil;
-import com.google.android.exoplayer.util.Util;
-
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
@@ -29,6 +23,12 @@ import android.os.Process;
 import android.os.SystemClock;
 import android.util.Log;
 import android.util.Pair;
+
+import com.google.android.exoplayer.ExoPlayer.ExoPlayerComponent;
+import com.google.android.exoplayer.util.Assertions;
+import com.google.android.exoplayer.util.PriorityHandlerThread;
+import com.google.android.exoplayer.util.TraceUtil;
+import com.google.android.exoplayer.util.Util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -287,6 +287,22 @@ import java.util.concurrent.atomic.AtomicInteger;
     long durationUs = 0;
     boolean allRenderersEnded = true;
     boolean allRenderersReadyOrEnded = true;
+    boolean videoTrackExists = false;
+    long durationVideoTrack = 0;
+    boolean audioTrackExists = false;
+    long durationAudioTrack = 0;
+
+    for (int rendererIndex = 0; rendererIndex < renderers.length; rendererIndex++) {
+      TrackRenderer renderer = renderers[rendererIndex];
+      if (renderer instanceof MediaCodecVideoTrackRenderer) {
+        videoTrackExists = true;
+        durationVideoTrack = renderer.getDurationUs();
+      } else  if (renderer instanceof MediaCodecAudioTrackRenderer) {
+        audioTrackExists = true;
+        durationAudioTrack = renderer.getDurationUs();
+      }
+    }
+
     for (int rendererIndex = 0; rendererIndex < renderers.length; rendererIndex++) {
       TrackRenderer renderer = renderers[rendererIndex];
       int rendererTrackCount = renderer.getTrackCount();
@@ -306,7 +322,9 @@ import java.util.concurrent.atomic.AtomicInteger;
           } else if (trackDurationUs == TrackRenderer.MATCH_LONGEST_US) {
             // Do nothing.
           } else {
-            durationUs = Math.max(durationUs, trackDurationUs);
+            if ((renderer instanceof MediaCodecVideoTrackRenderer) || (renderer instanceof MediaCodecAudioTrackRenderer)) {
+              durationUs = Math.max(durationUs, trackDurationUs);
+            }
           }
         }
         int trackIndex = selectedTrackIndices[rendererIndex];
@@ -318,6 +336,14 @@ import java.util.concurrent.atomic.AtomicInteger;
       }
     }
     this.durationUs = durationUs;
+    if (durationUs != durationVideoTrack) {
+      if (durationVideoTrack != TrackRenderer.UNKNOWN_TIME_US) {
+        this.durationUs = durationVideoTrack;
+      }
+    }
+    if (!videoTrackExists && audioTrackExists) {
+      this.durationUs = durationAudioTrack;
+    }
 
     if (allRenderersEnded
         && (durationUs == TrackRenderer.UNKNOWN_TIME_US || durationUs <= positionUs)) {
