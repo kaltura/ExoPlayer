@@ -291,7 +291,7 @@ import java.util.concurrent.atomic.AtomicInteger;
     long durationVideoTrack = 0;
     boolean audioTrackExists = false;
     long durationAudioTrack = 0;
-
+    
     for (int rendererIndex = 0; rendererIndex < renderers.length; rendererIndex++) {
       TrackRenderer renderer = renderers[rendererIndex];
       if (renderer instanceof MediaCodecVideoTrackRenderer) {
@@ -301,10 +301,7 @@ import java.util.concurrent.atomic.AtomicInteger;
         audioTrackExists = true;
         durationAudioTrack = renderer.getDurationUs();
       }
-    }
 
-    for (int rendererIndex = 0; rendererIndex < renderers.length; rendererIndex++) {
-      TrackRenderer renderer = renderers[rendererIndex];
       int rendererTrackCount = renderer.getTrackCount();
       MediaFormat[] rendererTrackFormats = new MediaFormat[rendererTrackCount];
       for (int trackIndex = 0; trackIndex < rendererTrackCount; trackIndex++) {
