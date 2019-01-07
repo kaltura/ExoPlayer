@@ -23,6 +23,7 @@ gen-external-apklibs
 # Gradle
 .gradle
 build
+buildout
 out
 
 # Maven
@@ -38,9 +39,16 @@ proguard-project.txt
 
 # Other
 .DS_Store
+cmake-build-debug
 dist
 tmp
 
+<<<<<<< HEAD
+=======
+# External native builds
+.externalNativeBuild
+
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 # VP9 extension
 extensions/vp9/src/main/jni/libvpx
 extensions/vp9/src/main/jni/libvpx_android_configs
@@ -51,3 +59,16 @@ extensions/opus/src/main/jni/libopus
 
 # FLAC extension
 extensions/flac/src/main/jni/flac
+<<<<<<< HEAD
+=======
+
+# FFmpeg extension
+extensions/ffmpeg/src/main/jni/ffmpeg
+
+# Cronet extension
+extensions/cronet/jniLibs/*
+!extensions/cronet/jniLibs/README.md
+extensions/cronet/libs/*
+!extensions/cronet/libs/README.md
+
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The Android Open Source Project
+# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ LIBYUV_ROOT := $(WORKING_DIR)/libyuv
 
 # build libyuv_static.a
 LOCAL_PATH := $(WORKING_DIR)
+LIBYUV_DISABLE_JPEG := "yes"
 include $(LIBYUV_ROOT)/Android.mk
 
 # build libvpx.so
@@ -34,7 +35,7 @@ LOCAL_MODULE := libvpxJNI
 LOCAL_ARM_MODE := arm
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_SRC_FILES := vpx_jni.cc
-LOCAL_LDLIBS := -llog -lz -lm
+LOCAL_LDLIBS := -llog -lz -lm -landroid
 LOCAL_SHARED_LIBRARIES := libvpx
 LOCAL_STATIC_LIBRARIES := libyuv_static cpufeatures
 include $(BUILD_SHARED_LIBRARY)

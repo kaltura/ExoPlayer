@@ -22,6 +22,10 @@
 
 class DataSource {
  public:
+<<<<<<< HEAD
+=======
+  virtual ~DataSource() {}
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
   // Returns the number of bytes read, or -1 on failure. It's not an error if
   // this returns zero; it just means the given offset is equal to, or
   // beyond, the end of the source.

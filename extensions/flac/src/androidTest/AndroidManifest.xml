@@ -16,9 +16,13 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     package="com.google.android.exoplayer.ext.flac.test">
 
   <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23"/>
+=======
+    package="com.google.android.exoplayer2.ext.flac.test">
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 
   <application android:debuggable="true"
       android:allowBackup="false"
@@ -27,8 +31,13 @@
   </application>
 
   <instrumentation
+<<<<<<< HEAD
       android:targetPackage="com.google.android.exoplayer.ext.flac.test"
       android:name="android.test.InstrumentationTestRunner"
       tools:replace="android:targetPackage"/>
+=======
+      android:targetPackage="com.google.android.exoplayer2.ext.flac.test"
+      android:name="androidx.test.runner.AndroidJUnitRunner"/>
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 
 </manifest>

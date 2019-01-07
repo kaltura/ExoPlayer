@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.google.android.exoplayer.playbacktests"
@@ -41,3 +42,6 @@
       android:name="android.test.InstrumentationTestRunner"/>
 
 </manifest>
+=======
+<manifest package="com.google.android.exoplayer2.playbacktests"/>
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77

@@ -22,6 +22,10 @@
 
 #include <cassert>
 #include <cstdlib>
+<<<<<<< HEAD
+=======
+#include <cstring>
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 
 #define LOG_TAG "FLACParser"
 #define ALOGE(...) \
@@ -41,6 +45,12 @@
 #define CHECK(x) \
   if (!(x)) ALOGE("Check failed: %s ", #x)
 
+<<<<<<< HEAD
+=======
+const int endian = 1;
+#define isBigEndian() (*(reinterpret_cast<const char *>(&endian)) == 0)
+
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 // The FLAC parser calls our C++ static callbacks using C calling conventions,
 // inside FLAC__stream_decoder_process_until_end_of_metadata
 // and FLAC__stream_decoder_process_single.
@@ -179,6 +189,7 @@ void FLACParser::errorCallback(FLAC__StreamDecoderErrorStatus status) {
   mErrorStatus = status;
 }
 
+<<<<<<< HEAD
 // Copy samples from FLAC native 32-bit non-interleaved to 16-bit interleaved.
 // These are candidates for optimization if needed.
 
@@ -202,10 +213,28 @@ static void copyMultiCh8(int16_t *dst, const int *const *src, unsigned nSamples,
   for (unsigned i = 0; i < nSamples; ++i) {
     for (unsigned c = 0; c < nChannels; ++c) {
       *dst++ = src[c][i] << 8;
+=======
+// Copy samples from FLAC native 32-bit non-interleaved to
+// correct bit-depth (non-zero padded), interleaved.
+// These are candidates for optimization if needed.
+static void copyToByteArrayBigEndian(int8_t *dst, const int *const *src,
+                                     unsigned bytesPerSample, unsigned nSamples,
+                                     unsigned nChannels) {
+  for (unsigned i = 0; i < nSamples; ++i) {
+    for (unsigned c = 0; c < nChannels; ++c) {
+      // point to the first byte of the source address
+      // and then skip the first few bytes (most significant bytes)
+      // depending on the bit depth
+      const int8_t *byteSrc =
+          reinterpret_cast<const int8_t *>(&src[c][i]) + 4 - bytesPerSample;
+      memcpy(dst, byteSrc, bytesPerSample);
+      dst = dst + bytesPerSample;
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     }
   }
 }
 
+<<<<<<< HEAD
 static void copyMono16(int16_t *dst, const int *const *src, unsigned nSamples,
                        unsigned /* nChannels */) {
   for (unsigned i = 0; i < nSamples; ++i) {
@@ -226,10 +255,23 @@ static void copyMultiCh16(int16_t *dst, const int *const *src,
   for (unsigned i = 0; i < nSamples; ++i) {
     for (unsigned c = 0; c < nChannels; ++c) {
       *dst++ = src[c][i];
+=======
+static void copyToByteArrayLittleEndian(int8_t *dst, const int *const *src,
+                                        unsigned bytesPerSample,
+                                        unsigned nSamples, unsigned nChannels) {
+  for (unsigned i = 0; i < nSamples; ++i) {
+    for (unsigned c = 0; c < nChannels; ++c) {
+      // with little endian, the most significant bytes will be at the end
+      // copy the bytes in little endian will remove the most significant byte
+      // so we are good here.
+      memcpy(dst, &(src[c][i]), bytesPerSample);
+      dst = dst + bytesPerSample;
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     }
   }
 }
 
+<<<<<<< HEAD
 // 24-bit versions should do dithering or noise-shaping, here or in AudioFlinger
 
 static void copyMono24(int16_t *dst, const int *const *src, unsigned nSamples,
@@ -258,6 +300,11 @@ static void copyMultiCh24(int16_t *dst, const int *const *src,
 
 static void copyTrespass(int16_t * /* dst */, const int *const * /* src */,
                          unsigned /* nSamples */, unsigned /* nChannels */) {
+=======
+static void copyTrespass(int8_t * /* dst */, const int *const * /* src */,
+                         unsigned /* bytesPerSample */, unsigned /* nSamples */,
+                         unsigned /* nChannels */) {
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
   TRESPASS();
 }
 
@@ -316,9 +363,19 @@ bool FLACParser::init() {
     ALOGE("init_stream failed %d", initStatus);
     return false;
   }
+<<<<<<< HEAD
   // parse all metadata
   if (!FLAC__stream_decoder_process_until_end_of_metadata(mDecoder)) {
     ALOGE("end_of_metadata failed");
+=======
+  return true;
+}
+
+bool FLACParser::decodeMetadata() {
+  // parse all metadata
+  if (!FLAC__stream_decoder_process_until_end_of_metadata(mDecoder)) {
+    ALOGE("metadata decoding failed");
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     return false;
   }
   // store first frame offset
@@ -335,6 +392,10 @@ bool FLACParser::init() {
       case 8:
       case 16:
       case 24:
+<<<<<<< HEAD
+=======
+      case 32:
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
         break;
       default:
         ALOGE("unsupported bits per sample %u", getBitsPerSample());
@@ -353,11 +414,17 @@ bool FLACParser::init() {
       case 48000:
       case 88200:
       case 96000:
+<<<<<<< HEAD
+=======
+      case 176400:
+      case 192000:
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
         break;
       default:
         ALOGE("unsupported sample rate %u", getSampleRate());
         return false;
     }
+<<<<<<< HEAD
     // configure the appropriate copy function, defaulting to trespass
     static const struct {
       unsigned mChannels;
@@ -375,6 +442,13 @@ bool FLACParser::init() {
         mCopy = table[i].mCopy;
         break;
       }
+=======
+    // configure the appropriate copy function based on device endianness.
+    if (isBigEndian()) {
+      mCopy = copyToByteArrayBigEndian;
+    } else {
+      mCopy = copyToByteArrayLittleEndian;
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     }
   } else {
     ALOGE("missing STREAMINFO");
@@ -389,14 +463,22 @@ size_t FLACParser::readBuffer(void *output, size_t output_size) {
 
   if (!FLAC__stream_decoder_process_single(mDecoder)) {
     ALOGE("FLACParser::readBuffer process_single failed. Status: %s",
+<<<<<<< HEAD
             FLAC__stream_decoder_get_resolved_state_string(mDecoder));
+=======
+          getDecoderStateString());
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     return -1;
   }
   if (!mWriteCompleted) {
     if (FLAC__stream_decoder_get_state(mDecoder) !=
         FLAC__STREAM_DECODER_END_OF_STREAM) {
       ALOGE("FLACParser::readBuffer write did not complete. Status: %s",
+<<<<<<< HEAD
             FLAC__stream_decoder_get_resolved_state_string(mDecoder));
+=======
+            getDecoderStateString());
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     }
     return -1;
   }
@@ -419,7 +501,12 @@ size_t FLACParser::readBuffer(void *output, size_t output_size) {
     return -1;
   }
 
+<<<<<<< HEAD
   size_t bufferSize = blocksize * getChannels() * sizeof(int16_t);
+=======
+  unsigned bytesPerSample = getBitsPerSample() >> 3;
+  size_t bufferSize = blocksize * getChannels() * bytesPerSample;
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
   if (bufferSize > output_size) {
     ALOGE(
         "FLACParser::readBuffer not enough space in output buffer "
@@ -429,8 +516,13 @@ size_t FLACParser::readBuffer(void *output, size_t output_size) {
   }
 
   // copy PCM from FLAC write buffer to our media buffer, with interleaving.
+<<<<<<< HEAD
   (*mCopy)(reinterpret_cast<int16_t *>(output), mWriteBuffer, blocksize,
            getChannels());
+=======
+  (*mCopy)(reinterpret_cast<int8_t *>(output), mWriteBuffer, bytesPerSample,
+           blocksize, getChannels());
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 
   // fill in buffer metadata
   CHECK(mWriteHeader.number_type == FLAC__FRAME_NUMBER_TYPE_SAMPLE_NUMBER);
@@ -449,7 +541,12 @@ int64_t FLACParser::getSeekPosition(int64_t timeUs) {
   }
 
   FLAC__StreamMetadata_SeekPoint* points = mSeekTable->points;
+<<<<<<< HEAD
   for (unsigned i = mSeekTable->num_points - 1; i >= 0; i--) {
+=======
+  for (unsigned i = mSeekTable->num_points; i > 0; ) {
+    i--;
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
     if (points[i].sample_number <= sample) {
       return firstFrameOffset + points[i].stream_offset;
     }

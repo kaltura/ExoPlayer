@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The Android Open Source Project
+# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 WORKING_DIR := $(call my-dir)
 include $(CLEAR_VARS)
 
-# build libopus.so
+# build libopus.a
 LOCAL_PATH := $(WORKING_DIR)
 include libopus.mk
 
@@ -29,5 +29,5 @@ LOCAL_ARM_MODE := arm
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_SRC_FILES := opus_jni.cc
 LOCAL_LDLIBS := -llog -lz -lm
-LOCAL_SHARED_LIBRARIES := libopus
+LOCAL_STATIC_LIBRARIES := libopus
 include $(BUILD_SHARED_LIBRARY)

@@ -44,15 +44,32 @@ class FLACParser {
     return mStreamInfo;
   }
 
+<<<<<<< HEAD
   int64_t getLastTimestamp() const {
     return (1000000LL * mWriteHeader.number.sample_number) / getSampleRate();
   }
 
+=======
+  int64_t getLastFrameTimestamp() const {
+    return (1000000LL * mWriteHeader.number.sample_number) / getSampleRate();
+  }
+
+  int64_t getLastFrameFirstSampleIndex() const {
+    return mWriteHeader.number.sample_number;
+  }
+
+  int64_t getNextFrameFirstSampleIndex() const {
+    return mWriteHeader.number.sample_number + mWriteHeader.blocksize;
+  }
+
+  bool decodeMetadata();
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
   size_t readBuffer(void *output, size_t output_size);
 
   int64_t getSeekPosition(int64_t timeUs);
 
   void flush() {
+<<<<<<< HEAD
     if (mDecoder != NULL) {
       FLAC__stream_decoder_flush(mDecoder);
     }
@@ -63,6 +80,47 @@ class FLACParser {
 
   void (*mCopy)(int16_t *dst, const int *const *src, unsigned nSamples,
                 unsigned nChannels);
+=======
+    reset(mCurrentPos);
+  }
+
+  void reset(int64_t newPosition) {
+    if (mDecoder != NULL) {
+      mCurrentPos = newPosition;
+      mEOF = false;
+      if (newPosition == 0) {
+        mStreamInfoValid = false;
+        FLAC__stream_decoder_reset(mDecoder);
+      } else {
+        FLAC__stream_decoder_flush(mDecoder);
+      }
+    }
+  }
+
+  int64_t getDecodePosition() {
+    uint64_t position;
+    if (mDecoder != NULL
+        && FLAC__stream_decoder_get_decode_position(mDecoder, &position)) {
+      return position;
+    }
+    return -1;
+  }
+
+  const char *getDecoderStateString() {
+    return FLAC__stream_decoder_get_resolved_state_string(mDecoder);
+  }
+
+  bool isDecoderAtEndOfStream() const {
+    return FLAC__stream_decoder_get_state(mDecoder) ==
+           FLAC__STREAM_DECODER_END_OF_STREAM;
+  }
+
+ private:
+  DataSource *mDataSource;
+
+  void (*mCopy)(int8_t *dst, const int *const *src, unsigned bytesPerSample,
+                unsigned nSamples, unsigned nChannels);
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
 
   // handle to underlying libFLAC parser
   FLAC__StreamDecoder *mDecoder;

@@ -17,4 +17,8 @@
 APP_OPTIM := release
 APP_STL := gnustl_static
 APP_CPPFLAGS := -frtti
+<<<<<<< HEAD
 APP_PLATFORM := android-9
+=======
+APP_PLATFORM := android-14
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77

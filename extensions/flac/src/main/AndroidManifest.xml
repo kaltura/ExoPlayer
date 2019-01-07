@@ -14,9 +14,13 @@
      limitations under the License.
 -->
 
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.google.android.exoplayer.ext.flac">
 
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23"/>
 
 </manifest>
+=======
+<manifest package="com.google.android.exoplayer2.ext.flac"/>
+>>>>>>> 71f72c59537711399dc5496136dd6b867acc6d77
