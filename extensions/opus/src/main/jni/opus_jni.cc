@@ -30,21 +30,21 @@
 #define DECODER_FUNC(RETURN_TYPE, NAME, ...) \
   extern "C" { \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_opus_OpusDecoder_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_opus_OpusDecoder_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__);\
   } \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_opus_OpusDecoder_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_opus_OpusDecoder_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__)\
 
 #define LIBRARY_FUNC(RETURN_TYPE, NAME, ...) \
   extern "C" { \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_opus_OpusLibrary_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_opus_OpusLibrary_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__);\
   } \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_opus_OpusLibrary_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_opus_OpusLibrary_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__)\
 
 // JNI references for SimpleOutputBuffer class.

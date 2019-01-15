@@ -43,21 +43,21 @@
 #define DECODER_FUNC(RETURN_TYPE, NAME, ...) \
   extern "C" { \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_vp9_VpxDecoder_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_vp9_VpxDecoder_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__);\
   } \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_vp9_VpxDecoder_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_vp9_VpxDecoder_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__)\
 
 #define LIBRARY_FUNC(RETURN_TYPE, NAME, ...) \
   extern "C" { \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_vp9_VpxLibrary_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_vp9_VpxLibrary_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__);\
   } \
   JNIEXPORT RETURN_TYPE \
-    Java_com_google_android_exoplayer2_ext_vp9_VpxLibrary_ ## NAME \
+    Java_com_kaltura_android_exoplayer2_ext_vp9_VpxLibrary_ ## NAME \
       (JNIEnv* env, jobject thiz, ##__VA_ARGS__)\
 
 // JNI references for VpxOutputBuffer class.
