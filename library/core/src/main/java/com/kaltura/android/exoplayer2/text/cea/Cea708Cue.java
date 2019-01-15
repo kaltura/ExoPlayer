@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.cea;
+package com.kaltura.android.exoplayer2.text.cea;
 
 import android.support.annotation.NonNull;
 import android.text.Layout.Alignment;
-import com.google.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.Cue;
 
 /**
  * A {@link Cue} for CEA-708.

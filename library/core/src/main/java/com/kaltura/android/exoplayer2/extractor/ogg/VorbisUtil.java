@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ogg;
+package com.kaltura.android.exoplayer2.extractor.ogg;
 
-import com.google.android.exoplayer2.ParserException;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import java.util.Arrays;
 
 /**

@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
 import android.net.Uri;
 import android.support.annotation.NonNull;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.cache.Cache;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSource;
-import com.google.android.exoplayer2.upstream.cache.CacheUtil;
-import com.google.android.exoplayer2.upstream.cache.CacheUtil.CachingCounters;
-import com.google.android.exoplayer2.util.PriorityTaskManager;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.cache.Cache;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheDataSource;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheUtil;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheUtil.CachingCounters;
+import com.kaltura.android.exoplayer2.util.PriorityTaskManager;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

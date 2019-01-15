@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.playbacktests.gts;
+package com.kaltura.android.exoplayer2.playbacktests.gts;
 
 import static androidx.test.InstrumentationRegistry.getInstrumentation;
 
@@ -22,13 +22,13 @@ import android.media.MediaCodecInfo.CodecCapabilities;
 import android.media.MediaCodecInfo.CodecProfileLevel;
 import android.media.MediaCodecInfo.VideoCapabilities;
 import androidx.test.runner.AndroidJUnit4;
-import com.google.android.exoplayer2.mediacodec.MediaCodecInfo;
-import com.google.android.exoplayer2.mediacodec.MediaCodecUtil;
-import com.google.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
-import com.google.android.exoplayer2.testutil.MetricsLogger;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecInfo;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecUtil;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
+import com.kaltura.android.exoplayer2.testutil.MetricsLogger;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Before;

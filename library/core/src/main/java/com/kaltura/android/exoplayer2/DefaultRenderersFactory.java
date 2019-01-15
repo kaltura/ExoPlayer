@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.audio.AudioCapabilities;
-import com.google.android.exoplayer2.audio.AudioProcessor;
-import com.google.android.exoplayer2.audio.AudioRendererEventListener;
-import com.google.android.exoplayer2.audio.MediaCodecAudioRenderer;
-import com.google.android.exoplayer2.drm.DrmSessionManager;
-import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
-import com.google.android.exoplayer2.mediacodec.MediaCodecSelector;
-import com.google.android.exoplayer2.metadata.MetadataOutput;
-import com.google.android.exoplayer2.metadata.MetadataRenderer;
-import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.text.TextRenderer;
-import com.google.android.exoplayer2.trackselection.TrackSelector;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.video.MediaCodecVideoRenderer;
-import com.google.android.exoplayer2.video.VideoRendererEventListener;
-import com.google.android.exoplayer2.video.spherical.CameraMotionRenderer;
+import com.kaltura.android.exoplayer2.audio.AudioCapabilities;
+import com.kaltura.android.exoplayer2.audio.AudioProcessor;
+import com.kaltura.android.exoplayer2.audio.AudioRendererEventListener;
+import com.kaltura.android.exoplayer2.audio.MediaCodecAudioRenderer;
+import com.kaltura.android.exoplayer2.drm.DrmSessionManager;
+import com.kaltura.android.exoplayer2.drm.FrameworkMediaCrypto;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecSelector;
+import com.kaltura.android.exoplayer2.metadata.MetadataOutput;
+import com.kaltura.android.exoplayer2.metadata.MetadataRenderer;
+import com.kaltura.android.exoplayer2.text.TextOutput;
+import com.kaltura.android.exoplayer2.text.TextRenderer;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelector;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.video.MediaCodecVideoRenderer;
+import com.kaltura.android.exoplayer2.video.VideoRendererEventListener;
+import com.kaltura.android.exoplayer2.video.spherical.CameraMotionRenderer;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -230,13 +230,13 @@ public class DefaultRenderersFactory implements RenderersFactory {
     try {
       // Full class names used for constructor args so the LINT rule triggers if any of them move.
       // LINT.IfChange
-      Class<?> clazz = Class.forName("com.google.android.exoplayer2.ext.vp9.LibvpxVideoRenderer");
+      Class<?> clazz = Class.forName("com.kaltura.android.exoplayer2.ext.vp9.LibvpxVideoRenderer");
       Constructor<?> constructor =
           clazz.getConstructor(
               boolean.class,
               long.class,
               android.os.Handler.class,
-              com.google.android.exoplayer2.video.VideoRendererEventListener.class,
+              com.kaltura.android.exoplayer2.video.VideoRendererEventListener.class,
               int.class);
       // LINT.ThenChange(../../../../../../../proguard-rules.txt)
       Renderer renderer =
@@ -297,12 +297,12 @@ public class DefaultRenderersFactory implements RenderersFactory {
     try {
       // Full class names used for constructor args so the LINT rule triggers if any of them move.
       // LINT.IfChange
-      Class<?> clazz = Class.forName("com.google.android.exoplayer2.ext.opus.LibopusAudioRenderer");
+      Class<?> clazz = Class.forName("com.kaltura.android.exoplayer2.ext.opus.LibopusAudioRenderer");
       Constructor<?> constructor =
           clazz.getConstructor(
               android.os.Handler.class,
-              com.google.android.exoplayer2.audio.AudioRendererEventListener.class,
-              com.google.android.exoplayer2.audio.AudioProcessor[].class);
+              com.kaltura.android.exoplayer2.audio.AudioRendererEventListener.class,
+              com.kaltura.android.exoplayer2.audio.AudioProcessor[].class);
       // LINT.ThenChange(../../../../../../../proguard-rules.txt)
       Renderer renderer =
           (Renderer) constructor.newInstance(eventHandler, eventListener, audioProcessors);
@@ -318,12 +318,12 @@ public class DefaultRenderersFactory implements RenderersFactory {
     try {
       // Full class names used for constructor args so the LINT rule triggers if any of them move.
       // LINT.IfChange
-      Class<?> clazz = Class.forName("com.google.android.exoplayer2.ext.flac.LibflacAudioRenderer");
+      Class<?> clazz = Class.forName("com.kaltura.android.exoplayer2.ext.flac.LibflacAudioRenderer");
       Constructor<?> constructor =
           clazz.getConstructor(
               android.os.Handler.class,
-              com.google.android.exoplayer2.audio.AudioRendererEventListener.class,
-              com.google.android.exoplayer2.audio.AudioProcessor[].class);
+              com.kaltura.android.exoplayer2.audio.AudioRendererEventListener.class,
+              com.kaltura.android.exoplayer2.audio.AudioProcessor[].class);
       // LINT.ThenChange(../../../../../../../proguard-rules.txt)
       Renderer renderer =
           (Renderer) constructor.newInstance(eventHandler, eventListener, audioProcessors);
@@ -340,12 +340,12 @@ public class DefaultRenderersFactory implements RenderersFactory {
       // Full class names used for constructor args so the LINT rule triggers if any of them move.
       // LINT.IfChange
       Class<?> clazz =
-          Class.forName("com.google.android.exoplayer2.ext.ffmpeg.FfmpegAudioRenderer");
+          Class.forName("com.kaltura.android.exoplayer2.ext.ffmpeg.FfmpegAudioRenderer");
       Constructor<?> constructor =
           clazz.getConstructor(
               android.os.Handler.class,
-              com.google.android.exoplayer2.audio.AudioRendererEventListener.class,
-              com.google.android.exoplayer2.audio.AudioProcessor[].class);
+              com.kaltura.android.exoplayer2.audio.AudioRendererEventListener.class,
+              com.kaltura.android.exoplayer2.audio.AudioProcessor[].class);
       // LINT.ThenChange(../../../../../../../proguard-rules.txt)
       Renderer renderer =
           (Renderer) constructor.newInstance(eventHandler, eventListener, audioProcessors);

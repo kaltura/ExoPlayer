@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.trackselection;
+package com.kaltura.android.exoplayer2.trackselection;
 
-import static com.google.android.exoplayer2.RendererCapabilities.FORMAT_EXCEEDS_CAPABILITIES;
-import static com.google.android.exoplayer2.RendererCapabilities.FORMAT_HANDLED;
-import static com.google.android.exoplayer2.RendererCapabilities.FORMAT_UNSUPPORTED_SUBTYPE;
-import static com.google.android.exoplayer2.RendererConfiguration.DEFAULT;
+import static com.kaltura.android.exoplayer2.RendererCapabilities.FORMAT_EXCEEDS_CAPABILITIES;
+import static com.kaltura.android.exoplayer2.RendererCapabilities.FORMAT_HANDLED;
+import static com.kaltura.android.exoplayer2.RendererCapabilities.FORMAT_UNSUPPORTED_SUBTYPE;
+import static com.kaltura.android.exoplayer2.RendererConfiguration.DEFAULT;
 import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyVararg;
@@ -32,19 +32,19 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import android.os.Parcel;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.RendererCapabilities;
-import com.google.android.exoplayer2.RendererConfiguration;
-import com.google.android.exoplayer2.source.TrackGroup;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector.Parameters;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector.ParametersBuilder;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector.SelectionOverride;
-import com.google.android.exoplayer2.trackselection.TrackSelector.InvalidationListener;
-import com.google.android.exoplayer2.upstream.BandwidthMeter;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.RendererCapabilities;
+import com.kaltura.android.exoplayer2.RendererConfiguration;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector.Parameters;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector.ParametersBuilder;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector.SelectionOverride;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelector.InvalidationListener;
+import com.kaltura.android.exoplayer2.upstream.BandwidthMeter;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Before;

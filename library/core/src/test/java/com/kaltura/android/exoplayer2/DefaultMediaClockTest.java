@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
@@ -22,9 +22,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import com.google.android.exoplayer2.DefaultMediaClock.PlaybackParameterListener;
-import com.google.android.exoplayer2.testutil.FakeClock;
-import com.google.android.exoplayer2.testutil.FakeMediaClockRenderer;
+import com.kaltura.android.exoplayer2.DefaultMediaClock.PlaybackParameterListener;
+import com.kaltura.android.exoplayer2.testutil.FakeClock;
+import com.kaltura.android.exoplayer2.testutil.FakeMediaClockRenderer;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

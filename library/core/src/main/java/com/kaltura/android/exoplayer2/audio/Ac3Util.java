@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.audio;
+package com.kaltura.android.exoplayer2.audio;
 
 import android.support.annotation.IntDef;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.audio.Ac3Util.SyncFrameInfo.StreamType;
-import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.ParsableBitArray;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.audio.Ac3Util.SyncFrameInfo.StreamType;
+import com.kaltura.android.exoplayer2.drm.DrmInitData;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.ParsableBitArray;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

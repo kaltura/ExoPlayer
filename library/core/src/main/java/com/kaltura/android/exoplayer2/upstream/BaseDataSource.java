@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream;
+package com.kaltura.android.exoplayer2.upstream;
 
-import static com.google.android.exoplayer2.util.Util.castNonNull;
+import static com.kaltura.android.exoplayer2.util.Util.castNonNull;
 
 import android.support.annotation.Nullable;
 import java.util.ArrayList;

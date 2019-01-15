@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ts;
+package com.kaltura.android.exoplayer2.extractor.ts;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.util.SparseArray;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorOutput;
-import com.google.android.exoplayer2.extractor.PositionHolder;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.extractor.ts.TsPayloadReader.EsInfo;
-import com.google.android.exoplayer2.extractor.ts.TsPayloadReader.TrackIdGenerator;
-import com.google.android.exoplayer2.testutil.ExtractorAsserts;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
-import com.google.android.exoplayer2.testutil.FakeExtractorOutput;
-import com.google.android.exoplayer2.testutil.FakeTrackOutput;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorOutput;
+import com.kaltura.android.exoplayer2.extractor.PositionHolder;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.extractor.ts.TsPayloadReader.EsInfo;
+import com.kaltura.android.exoplayer2.extractor.ts.TsPayloadReader.TrackIdGenerator;
+import com.kaltura.android.exoplayer2.testutil.ExtractorAsserts;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorOutput;
+import com.kaltura.android.exoplayer2.testutil.FakeTrackOutput;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 import java.io.ByteArrayOutputStream;
 import java.util.Random;
 import org.junit.Test;

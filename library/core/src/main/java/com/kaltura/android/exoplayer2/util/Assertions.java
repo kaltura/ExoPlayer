@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.util;
+package com.kaltura.android.exoplayer2.util;
 
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import com.google.android.exoplayer2.ExoPlayerLibraryInfo;
+import com.kaltura.android.exoplayer2.ExoPlayerLibraryInfo;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
 
 /**

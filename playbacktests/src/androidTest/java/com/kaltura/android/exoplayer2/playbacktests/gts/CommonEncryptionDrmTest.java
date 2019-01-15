@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.playbacktests.gts;
+package com.kaltura.android.exoplayer2.playbacktests.gts;
 
 import static androidx.test.InstrumentationRegistry.getInstrumentation;
 
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.testutil.ActionSchedule;
-import com.google.android.exoplayer2.testutil.HostActivity;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.testutil.ActionSchedule;
+import com.kaltura.android.exoplayer2.testutil.HostActivity;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.Util;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;

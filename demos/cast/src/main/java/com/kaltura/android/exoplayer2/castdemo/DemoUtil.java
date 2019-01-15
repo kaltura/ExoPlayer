@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.castdemo;
+package com.kaltura.android.exoplayer2.castdemo;
 
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import com.google.android.gms.cast.MediaInfo;
 import java.util.ArrayList;
 import java.util.Collections;

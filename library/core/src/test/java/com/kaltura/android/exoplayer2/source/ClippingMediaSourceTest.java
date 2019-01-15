@@ -13,31 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.Timeline.Period;
-import com.google.android.exoplayer2.Timeline.Window;
-import com.google.android.exoplayer2.source.ClippingMediaSource.IllegalClippingException;
-import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.MediaLoadData;
-import com.google.android.exoplayer2.testutil.FakeMediaPeriod;
-import com.google.android.exoplayer2.testutil.FakeMediaSource;
-import com.google.android.exoplayer2.testutil.FakeTimeline;
-import com.google.android.exoplayer2.testutil.FakeTimeline.TimelineWindowDefinition;
-import com.google.android.exoplayer2.testutil.MediaSourceTestRunner;
-import com.google.android.exoplayer2.testutil.RobolectricUtil;
-import com.google.android.exoplayer2.testutil.TimelineAsserts;
-import com.google.android.exoplayer2.upstream.Allocator;
-import com.google.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.Timeline.Period;
+import com.kaltura.android.exoplayer2.Timeline.Window;
+import com.kaltura.android.exoplayer2.source.ClippingMediaSource.IllegalClippingException;
+import com.kaltura.android.exoplayer2.source.MediaSource.MediaPeriodId;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.MediaLoadData;
+import com.kaltura.android.exoplayer2.testutil.FakeMediaPeriod;
+import com.kaltura.android.exoplayer2.testutil.FakeMediaSource;
+import com.kaltura.android.exoplayer2.testutil.FakeTimeline;
+import com.kaltura.android.exoplayer2.testutil.FakeTimeline.TimelineWindowDefinition;
+import com.kaltura.android.exoplayer2.testutil.MediaSourceTestRunner;
+import com.kaltura.android.exoplayer2.testutil.RobolectricUtil;
+import com.kaltura.android.exoplayer2.testutil.TimelineAsserts;
+import com.kaltura.android.exoplayer2.upstream.Allocator;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;

@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.smoothstreaming.offline;
+package com.kaltura.android.exoplayer2.source.smoothstreaming.offline;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.offline.DownloadAction;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.SegmentDownloadAction;
-import com.google.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.offline.DownloadAction;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.SegmentDownloadAction;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Collections;

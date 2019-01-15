@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.ssa;
+package com.kaltura.android.exoplayer2.text.ssa;
 
 import android.text.TextUtils;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.SimpleSubtitleDecoder;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.LongArray;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.SimpleSubtitleDecoder;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.LongArray;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

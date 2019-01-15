@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.offline;
+package com.kaltura.android.exoplayer2.source.hls.offline;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.offline.DownloadHelper;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.offline.TrackKey;
-import com.google.android.exoplayer2.source.TrackGroup;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylist;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistParser;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.offline.DownloadHelper;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.offline.TrackKey;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylist;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylistParser;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;

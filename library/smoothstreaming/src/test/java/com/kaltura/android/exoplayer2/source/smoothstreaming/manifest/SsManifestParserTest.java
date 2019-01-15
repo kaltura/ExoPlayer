@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.smoothstreaming.manifest;
+package com.kaltura.android.exoplayer2.source.smoothstreaming.manifest;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.io.IOException;
 import org.junit.Test;
 import org.junit.runner.RunWith;

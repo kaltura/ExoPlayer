@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls;
+package com.kaltura.android.exoplayer2.source.hls;
 
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Pair;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.extractor.mp3.Mp3Extractor;
-import com.google.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
-import com.google.android.exoplayer2.extractor.ts.Ac3Extractor;
-import com.google.android.exoplayer2.extractor.ts.AdtsExtractor;
-import com.google.android.exoplayer2.extractor.ts.DefaultTsPayloadReaderFactory;
-import com.google.android.exoplayer2.extractor.ts.TsExtractor;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.drm.DrmInitData;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.mp3.Mp3Extractor;
+import com.kaltura.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
+import com.kaltura.android.exoplayer2.extractor.ts.Ac3Extractor;
+import com.kaltura.android.exoplayer2.extractor.ts.AdtsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.DefaultTsPayloadReaderFactory;
+import com.kaltura.android.exoplayer2.extractor.ts.TsExtractor;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Collections;

@@ -13,36 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.offline;
+package com.kaltura.android.exoplayer2.source.hls.offline;
 
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.ENC_MEDIA_PLAYLIST_DATA;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.ENC_MEDIA_PLAYLIST_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_MEDIA_PLAYLIST_1_INDEX;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_MEDIA_PLAYLIST_2_INDEX;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_PLAYLIST_DATA;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_PLAYLIST_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_0_DIR;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_0_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_1_DIR;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_1_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_2_DIR;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_2_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_3_DIR;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_3_URI;
-import static com.google.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_DATA;
-import static com.google.android.exoplayer2.testutil.CacheAsserts.assertCacheEmpty;
-import static com.google.android.exoplayer2.testutil.CacheAsserts.assertCachedData;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.ENC_MEDIA_PLAYLIST_DATA;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.ENC_MEDIA_PLAYLIST_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_MEDIA_PLAYLIST_1_INDEX;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_MEDIA_PLAYLIST_2_INDEX;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_PLAYLIST_DATA;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MASTER_PLAYLIST_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_0_DIR;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_0_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_1_DIR;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_1_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_2_DIR;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_2_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_3_DIR;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_3_URI;
+import static com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadTestData.MEDIA_PLAYLIST_DATA;
+import static com.kaltura.android.exoplayer2.testutil.CacheAsserts.assertCacheEmpty;
+import static com.kaltura.android.exoplayer2.testutil.CacheAsserts.assertCachedData;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist;
-import com.google.android.exoplayer2.testutil.FakeDataSet;
-import com.google.android.exoplayer2.testutil.FakeDataSource.Factory;
-import com.google.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
-import com.google.android.exoplayer2.upstream.cache.SimpleCache;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSource.Factory;
+import com.kaltura.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
+import com.kaltura.android.exoplayer2.upstream.cache.SimpleCache;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

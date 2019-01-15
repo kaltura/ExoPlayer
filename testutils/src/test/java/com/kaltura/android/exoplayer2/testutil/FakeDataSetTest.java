@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
 import java.io.IOException;
 import java.util.List;
 import org.junit.Test;

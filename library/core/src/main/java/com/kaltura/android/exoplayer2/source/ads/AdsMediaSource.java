@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.ads;
+package com.kaltura.android.exoplayer2.source.ads;
 
 import android.net.Uri;
 import android.os.Handler;
@@ -21,23 +21,23 @@ import android.os.Looper;
 import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
 import android.view.ViewGroup;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.CompositeMediaSource;
-import com.google.android.exoplayer2.source.DeferredMediaPeriod;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
-import com.google.android.exoplayer2.source.MediaPeriod;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
-import com.google.android.exoplayer2.source.MediaSourceEventListener;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.LoadEventInfo;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.MediaLoadData;
-import com.google.android.exoplayer2.upstream.Allocator;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.TransferListener;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.source.CompositeMediaSource;
+import com.kaltura.android.exoplayer2.source.DeferredMediaPeriod;
+import com.kaltura.android.exoplayer2.source.ExtractorMediaSource;
+import com.kaltura.android.exoplayer2.source.MediaPeriod;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.source.MediaSource.MediaPeriodId;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.LoadEventInfo;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.MediaLoadData;
+import com.kaltura.android.exoplayer2.upstream.Allocator;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

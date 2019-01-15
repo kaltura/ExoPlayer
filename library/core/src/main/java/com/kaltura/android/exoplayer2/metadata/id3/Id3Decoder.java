@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.metadata.id3;
+package com.kaltura.android.exoplayer2.metadata.id3;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.MetadataDecoder;
-import com.google.android.exoplayer2.metadata.MetadataInputBuffer;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.ParsableBitArray;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.MetadataDecoder;
+import com.kaltura.android.exoplayer2.metadata.MetadataInputBuffer;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.ParsableBitArray;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

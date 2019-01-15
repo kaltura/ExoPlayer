@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.demo;
+package com.kaltura.android.exoplayer2.demo;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,26 +27,26 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.offline.ActionFile;
-import com.google.android.exoplayer2.offline.DownloadAction;
-import com.google.android.exoplayer2.offline.DownloadHelper;
-import com.google.android.exoplayer2.offline.DownloadManager;
-import com.google.android.exoplayer2.offline.DownloadManager.TaskState;
-import com.google.android.exoplayer2.offline.DownloadService;
-import com.google.android.exoplayer2.offline.ProgressiveDownloadHelper;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.offline.TrackKey;
-import com.google.android.exoplayer2.source.TrackGroup;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.source.dash.offline.DashDownloadHelper;
-import com.google.android.exoplayer2.source.hls.offline.HlsDownloadHelper;
-import com.google.android.exoplayer2.source.smoothstreaming.offline.SsDownloadHelper;
-import com.google.android.exoplayer2.ui.DefaultTrackNameProvider;
-import com.google.android.exoplayer2.ui.TrackNameProvider;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.offline.ActionFile;
+import com.kaltura.android.exoplayer2.offline.DownloadAction;
+import com.kaltura.android.exoplayer2.offline.DownloadHelper;
+import com.kaltura.android.exoplayer2.offline.DownloadManager;
+import com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState;
+import com.kaltura.android.exoplayer2.offline.DownloadService;
+import com.kaltura.android.exoplayer2.offline.ProgressiveDownloadHelper;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.offline.TrackKey;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.source.dash.offline.DashDownloadHelper;
+import com.kaltura.android.exoplayer2.source.hls.offline.HlsDownloadHelper;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.offline.SsDownloadHelper;
+import com.kaltura.android.exoplayer2.ui.DefaultTrackNameProvider;
+import com.kaltura.android.exoplayer2.ui.TrackNameProvider;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;

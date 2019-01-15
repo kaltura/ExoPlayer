@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.metadata.scte35;
+package com.kaltura.android.exoplayer2.metadata.scte35;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 
 /**
  * Represents a private command as defined in SCTE35, Section 9.3.6.

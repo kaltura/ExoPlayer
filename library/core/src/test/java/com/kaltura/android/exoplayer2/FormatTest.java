@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
-import static com.google.android.exoplayer2.C.WIDEVINE_UUID;
-import static com.google.android.exoplayer2.util.MimeTypes.VIDEO_MP4;
-import static com.google.android.exoplayer2.util.MimeTypes.VIDEO_WEBM;
+import static com.kaltura.android.exoplayer2.C.WIDEVINE_UUID;
+import static com.kaltura.android.exoplayer2.util.MimeTypes.VIDEO_MP4;
+import static com.kaltura.android.exoplayer2.util.MimeTypes.VIDEO_WEBM;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.os.Parcel;
-import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.id3.TextInformationFrame;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.video.ColorInfo;
+import com.kaltura.android.exoplayer2.drm.DrmInitData;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.id3.TextInformationFrame;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.video.ColorInfo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

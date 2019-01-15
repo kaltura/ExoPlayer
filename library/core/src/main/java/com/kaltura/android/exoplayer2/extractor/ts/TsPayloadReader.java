@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ts;
+package com.kaltura.android.exoplayer2.extractor.ts;
 
 import android.util.SparseArray;
-import com.google.android.exoplayer2.ParserException;
-import com.google.android.exoplayer2.extractor.ExtractorOutput;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.extractor.ExtractorOutput;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 import java.util.Collections;
 import java.util.List;
 

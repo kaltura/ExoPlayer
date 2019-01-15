@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
 import android.app.Notification;
 import android.app.Service;
@@ -24,13 +24,13 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
-import com.google.android.exoplayer2.offline.DownloadManager.TaskState;
-import com.google.android.exoplayer2.scheduler.Requirements;
-import com.google.android.exoplayer2.scheduler.RequirementsWatcher;
-import com.google.android.exoplayer2.scheduler.Scheduler;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.NotificationUtil;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState;
+import com.kaltura.android.exoplayer2.scheduler.Requirements;
+import com.kaltura.android.exoplayer2.scheduler.RequirementsWatcher;
+import com.kaltura.android.exoplayer2.scheduler.Scheduler;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.NotificationUtil;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -39,18 +39,18 @@ public abstract class DownloadService extends Service {
 
   /** Starts a download service without adding a new {@link DownloadAction}. */
   public static final String ACTION_INIT =
-      "com.google.android.exoplayer.downloadService.action.INIT";
+      "com.kaltura.android.exoplayer.downloadService.action.INIT";
 
   /** Starts a download service, adding a new {@link DownloadAction} to be executed. */
-  public static final String ACTION_ADD = "com.google.android.exoplayer.downloadService.action.ADD";
+  public static final String ACTION_ADD = "com.kaltura.android.exoplayer.downloadService.action.ADD";
 
   /** Reloads the download requirements. */
   public static final String ACTION_RELOAD_REQUIREMENTS =
-      "com.google.android.exoplayer.downloadService.action.RELOAD_REQUIREMENTS";
+      "com.kaltura.android.exoplayer.downloadService.action.RELOAD_REQUIREMENTS";
 
   /** Like {@link #ACTION_INIT}, but with {@link #KEY_FOREGROUND} implicitly set to true. */
   private static final String ACTION_RESTART =
-      "com.google.android.exoplayer.downloadService.action.RESTART";
+      "com.kaltura.android.exoplayer.downloadService.action.RESTART";
 
   /** Key for the {@link DownloadAction} in an {@link #ACTION_ADD} intent. */
   public static final String KEY_DOWNLOAD_ACTION = "download_action";

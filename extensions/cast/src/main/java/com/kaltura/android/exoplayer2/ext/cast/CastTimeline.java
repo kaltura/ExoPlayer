@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.cast;
+package com.kaltura.android.exoplayer2.ext.cast;
 
 import android.support.annotation.Nullable;
 import android.util.SparseIntArray;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Timeline;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaQueueItem;
 import java.util.Arrays;

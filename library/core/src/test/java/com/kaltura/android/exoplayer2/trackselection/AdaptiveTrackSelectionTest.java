@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.trackselection;
+package com.kaltura.android.exoplayer2.trackselection;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.atLeastOnce;
@@ -24,17 +24,17 @@ import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.source.TrackGroup;
-import com.google.android.exoplayer2.source.chunk.MediaChunk;
-import com.google.android.exoplayer2.source.chunk.MediaChunkIterator;
-import com.google.android.exoplayer2.testutil.FakeClock;
-import com.google.android.exoplayer2.upstream.BandwidthMeter;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.source.chunk.MediaChunk;
+import com.kaltura.android.exoplayer2.source.chunk.MediaChunkIterator;
+import com.kaltura.android.exoplayer2.testutil.FakeClock;
+import com.kaltura.android.exoplayer2.upstream.BandwidthMeter;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.DefaultHttpDataSource;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

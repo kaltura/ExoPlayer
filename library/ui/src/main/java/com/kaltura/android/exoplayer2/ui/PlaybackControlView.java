@@ -13,32 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui;
+package com.kaltura.android.exoplayer2.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import com.google.android.exoplayer2.util.RepeatModeUtil;
+import com.kaltura.android.exoplayer2.util.RepeatModeUtil;
 
 /** @deprecated Use {@link PlayerControlView}. */
 @Deprecated
 public class PlaybackControlView extends PlayerControlView {
 
-  /** @deprecated Use {@link com.google.android.exoplayer2.ControlDispatcher}. */
+  /** @deprecated Use {@link com.kaltura.android.exoplayer2.ControlDispatcher}. */
   @Deprecated
-  public interface ControlDispatcher extends com.google.android.exoplayer2.ControlDispatcher {}
+  public interface ControlDispatcher extends com.kaltura.android.exoplayer2.ControlDispatcher {}
 
   /**
-   * @deprecated Use {@link com.google.android.exoplayer2.ui.PlayerControlView.VisibilityListener}.
+   * @deprecated Use {@link com.kaltura.android.exoplayer2.ui.PlayerControlView.VisibilityListener}.
    */
   @Deprecated
   public interface VisibilityListener
-      extends com.google.android.exoplayer2.ui.PlayerControlView.VisibilityListener {}
+      extends com.kaltura.android.exoplayer2.ui.PlayerControlView.VisibilityListener {}
 
   @Deprecated
   @SuppressWarnings("deprecation")
   private static final class DefaultControlDispatcher
-      extends com.google.android.exoplayer2.DefaultControlDispatcher implements ControlDispatcher {}
-  /** @deprecated Use {@link com.google.android.exoplayer2.DefaultControlDispatcher}. */
+      extends com.kaltura.android.exoplayer2.DefaultControlDispatcher implements ControlDispatcher {}
+  /** @deprecated Use {@link com.kaltura.android.exoplayer2.DefaultControlDispatcher}. */
   @Deprecated
   @SuppressWarnings("deprecation")
   public static final ControlDispatcher DEFAULT_CONTROL_DISPATCHER = new DefaultControlDispatcher();

@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.source.TrackGroup;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import java.util.List;
 import java.util.Random;
 import org.junit.Test;

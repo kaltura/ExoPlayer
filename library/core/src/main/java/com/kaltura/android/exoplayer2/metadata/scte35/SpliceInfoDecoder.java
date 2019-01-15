@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.metadata.scte35;
+package com.kaltura.android.exoplayer2.metadata.scte35;
 
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.MetadataDecoder;
-import com.google.android.exoplayer2.metadata.MetadataInputBuffer;
-import com.google.android.exoplayer2.util.ParsableBitArray;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.MetadataDecoder;
+import com.kaltura.android.exoplayer2.metadata.MetadataInputBuffer;
+import com.kaltura.android.exoplayer2.util.ParsableBitArray;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 import java.nio.ByteBuffer;
 
 /**

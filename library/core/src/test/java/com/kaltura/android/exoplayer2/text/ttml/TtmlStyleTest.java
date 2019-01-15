@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.ttml;
+package com.kaltura.android.exoplayer2.text.ttml;
 
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
-import static com.google.android.exoplayer2.text.ttml.TtmlStyle.STYLE_BOLD;
-import static com.google.android.exoplayer2.text.ttml.TtmlStyle.STYLE_BOLD_ITALIC;
-import static com.google.android.exoplayer2.text.ttml.TtmlStyle.STYLE_ITALIC;
-import static com.google.android.exoplayer2.text.ttml.TtmlStyle.STYLE_NORMAL;
-import static com.google.android.exoplayer2.text.ttml.TtmlStyle.UNSPECIFIED;
+import static com.kaltura.android.exoplayer2.text.ttml.TtmlStyle.STYLE_BOLD;
+import static com.kaltura.android.exoplayer2.text.ttml.TtmlStyle.STYLE_BOLD_ITALIC;
+import static com.kaltura.android.exoplayer2.text.ttml.TtmlStyle.STYLE_ITALIC;
+import static com.kaltura.android.exoplayer2.text.ttml.TtmlStyle.STYLE_NORMAL;
+import static com.kaltura.android.exoplayer2.text.ttml.TtmlStyle.UNSPECIFIED;
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.ads;
+package com.kaltura.android.exoplayer2.source.ads;
 
 import android.view.ViewGroup;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.source.ads.AdsMediaSource.AdLoadException;
-import com.google.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.source.ads.AdsMediaSource.AdLoadException;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
 
 /**

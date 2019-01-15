@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.playlist;
+package com.kaltura.android.exoplayer2.source.hls.playlist;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
-import com.google.android.exoplayer2.source.hls.HlsDataSourceFactory;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist.HlsUrl;
-import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
+import com.kaltura.android.exoplayer2.source.hls.HlsDataSourceFactory;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist.HlsUrl;
+import com.kaltura.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import java.io.IOException;
 
 /**

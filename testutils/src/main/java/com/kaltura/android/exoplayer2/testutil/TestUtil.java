@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
@@ -23,17 +23,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.extractor.DefaultExtractorInput;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.extractor.PositionHolder;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput.SimulatedIOException;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.extractor.DefaultExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.PositionHolder;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput.SimulatedIOException;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;

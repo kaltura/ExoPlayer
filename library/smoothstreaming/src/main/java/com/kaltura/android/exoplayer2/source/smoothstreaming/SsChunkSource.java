@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.smoothstreaming;
+package com.kaltura.android.exoplayer2.source.smoothstreaming;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.extractor.mp4.TrackEncryptionBox;
-import com.google.android.exoplayer2.source.chunk.ChunkSource;
-import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifest;
-import com.google.android.exoplayer2.trackselection.TrackSelection;
-import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
-import com.google.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.extractor.mp4.TrackEncryptionBox;
+import com.kaltura.android.exoplayer2.source.chunk.ChunkSource;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.manifest.SsManifest;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelection;
+import com.kaltura.android.exoplayer2.upstream.LoaderErrorThrower;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
 
 /**
  * A {@link ChunkSource} for SmoothStreaming.

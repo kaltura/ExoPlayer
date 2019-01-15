@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import android.util.SparseArray;
-import com.google.android.exoplayer2.upstream.cache.Cache.CacheException;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.AtomicFile;
-import com.google.android.exoplayer2.util.ReusableBufferedOutputStream;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.upstream.cache.Cache.CacheException;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.AtomicFile;
+import com.kaltura.android.exoplayer2.util.ReusableBufferedOutputStream;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

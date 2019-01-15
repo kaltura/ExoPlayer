@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.util;
+package com.kaltura.android.exoplayer2.util;
 
-import static com.google.android.exoplayer2.util.Util.binarySearchCeil;
-import static com.google.android.exoplayer2.util.Util.binarySearchFloor;
-import static com.google.android.exoplayer2.util.Util.escapeFileName;
-import static com.google.android.exoplayer2.util.Util.getCodecsOfType;
-import static com.google.android.exoplayer2.util.Util.parseXsDateTime;
-import static com.google.android.exoplayer2.util.Util.parseXsDuration;
-import static com.google.android.exoplayer2.util.Util.unescapeFileName;
+import static com.kaltura.android.exoplayer2.util.Util.binarySearchCeil;
+import static com.kaltura.android.exoplayer2.util.Util.binarySearchFloor;
+import static com.kaltura.android.exoplayer2.util.Util.escapeFileName;
+import static com.kaltura.android.exoplayer2.util.Util.getCodecsOfType;
+import static com.kaltura.android.exoplayer2.util.Util.parseXsDateTime;
+import static com.kaltura.android.exoplayer2.util.Util.parseXsDuration;
+import static com.kaltura.android.exoplayer2.util.Util.unescapeFileName;
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

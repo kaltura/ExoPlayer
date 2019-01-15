@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.audio;
+package com.kaltura.android.exoplayer2.audio;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -33,7 +33,7 @@ import java.nio.ByteOrder;
  * <p>This audio processor can be inserted into the audio processor chain to access audio data
  * before/after particular processing steps have been applied. For example, to get audio output
  * after playback speed adjustment and silence skipping have been applied it is necessary to pass a
- * custom {@link com.google.android.exoplayer2.audio.DefaultAudioSink.AudioProcessorChain} when
+ * custom {@link com.kaltura.android.exoplayer2.audio.DefaultAudioSink.AudioProcessorChain} when
  * creating the audio sink, and include this audio processor after all other audio processors.
  */
 public final class TeeAudioProcessor implements AudioProcessor {

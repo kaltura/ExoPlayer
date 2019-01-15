@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.crypto;
+package com.kaltura.android.exoplayer2.upstream.crypto;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.Random;
 import javax.crypto.Cipher;
 import org.junit.After;

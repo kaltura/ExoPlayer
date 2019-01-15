@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.testutil.FakeDataSet;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSourceInputStream;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.DummyDataSource;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSourceInputStream;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.DummyDataSource;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/** Assertion methods for {@link com.google.android.exoplayer2.upstream.cache.Cache}. */
+/** Assertion methods for {@link com.kaltura.android.exoplayer2.upstream.cache.Cache}. */
 /* package */ final class CacheAsserts {
 
   /**

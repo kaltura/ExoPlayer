@@ -1167,7 +1167,7 @@ and architectural changes, new features and many bug fixes. You can read about
 some of the motivations behind ExoPlayer 2.x
 [here](https://medium.com/google-exoplayer/exoplayer-2-x-why-what-and-when-74fd9cb139#.am7h8nytm).
 
-* Root package name changed to `com.google.android.exoplayer2`. The library
+* Root package name changed to `com.kaltura.android.exoplayer2`. The library
   structure and class names have also been sanitized. Read more
   [here](https://medium.com/google-exoplayer/exoplayer-2-x-new-package-and-class-names-ef8e1d9ba96f#.lv8sd4nez).
 * Key architectural changes:

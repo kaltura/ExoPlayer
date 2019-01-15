@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.castdemo;
+package com.kaltura.android.exoplayer2.castdemo;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -33,12 +33,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.castdemo.DemoUtil.Sample;
-import com.google.android.exoplayer2.ext.cast.CastPlayer;
-import com.google.android.exoplayer2.ui.PlayerControlView;
-import com.google.android.exoplayer2.ui.PlayerView;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.SimpleExoPlayer;
+import com.kaltura.android.exoplayer2.castdemo.DemoUtil.Sample;
+import com.kaltura.android.exoplayer2.ext.cast.CastPlayer;
+import com.kaltura.android.exoplayer2.ui.PlayerControlView;
+import com.kaltura.android.exoplayer2.ui.PlayerView;
 import com.google.android.gms.cast.framework.CastButtonFactory;
 import com.google.android.gms.cast.framework.CastContext;
 

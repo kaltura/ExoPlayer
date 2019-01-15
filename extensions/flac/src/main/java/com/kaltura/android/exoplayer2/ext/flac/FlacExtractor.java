@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
-import static com.google.android.exoplayer2.util.Util.getPcmEncoding;
+import static com.kaltura.android.exoplayer2.util.Util.getPcmEncoding;
 
 import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.extractor.BinarySearchSeeker;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.extractor.ExtractorOutput;
-import com.google.android.exoplayer2.extractor.ExtractorsFactory;
-import com.google.android.exoplayer2.extractor.Id3Peeker;
-import com.google.android.exoplayer2.extractor.PositionHolder;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.extractor.SeekPoint;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.id3.Id3Decoder;
-import com.google.android.exoplayer2.util.FlacStreamInfo;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.extractor.BinarySearchSeeker;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.ExtractorOutput;
+import com.kaltura.android.exoplayer2.extractor.ExtractorsFactory;
+import com.kaltura.android.exoplayer2.extractor.Id3Peeker;
+import com.kaltura.android.exoplayer2.extractor.PositionHolder;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.extractor.SeekPoint;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.id3.Id3Decoder;
+import com.kaltura.android.exoplayer2.util.FlacStreamInfo;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

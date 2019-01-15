@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.ttml;
+package com.kaltura.android.exoplayer2.text.ttml;
 
 import android.text.Layout;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.SimpleSubtitleDecoder;
-import com.google.android.exoplayer2.text.SubtitleDecoderException;
-import com.google.android.exoplayer2.util.ColorParser;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.exoplayer2.util.XmlPullParserUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.SimpleSubtitleDecoder;
+import com.kaltura.android.exoplayer2.text.SubtitleDecoderException;
+import com.kaltura.android.exoplayer2.util.ColorParser;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.XmlPullParserUtil;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayDeque;

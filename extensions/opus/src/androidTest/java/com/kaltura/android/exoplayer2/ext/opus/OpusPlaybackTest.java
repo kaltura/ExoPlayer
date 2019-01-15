@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.opus;
+package com.kaltura.android.exoplayer2.ext.opus;
 
 import static androidx.test.InstrumentationRegistry.getContext;
 import static org.junit.Assert.fail;
@@ -22,16 +22,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Looper;
 import androidx.test.runner.AndroidJUnit4;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.ExoPlayerFactory;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Renderer;
-import com.google.android.exoplayer2.extractor.mkv.MatroskaExtractor;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.ExoPlayerFactory;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Renderer;
+import com.kaltura.android.exoplayer2.extractor.mkv.MatroskaExtractor;
+import com.kaltura.android.exoplayer2.source.ExtractorMediaSource;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.kaltura.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

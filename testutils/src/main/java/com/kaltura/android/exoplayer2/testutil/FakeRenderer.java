@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.BaseRenderer;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.FormatHolder;
-import com.google.android.exoplayer2.Renderer;
-import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.BaseRenderer;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.FormatHolder;
+import com.kaltura.android.exoplayer2.Renderer;
+import com.kaltura.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

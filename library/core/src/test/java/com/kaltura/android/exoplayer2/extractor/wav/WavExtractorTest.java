@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.wav;
+package com.kaltura.android.exoplayer2.extractor.wav;
 
-import com.google.android.exoplayer2.testutil.ExtractorAsserts;
+import com.kaltura.android.exoplayer2.testutil.ExtractorAsserts;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;

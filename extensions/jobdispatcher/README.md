@@ -9,7 +9,7 @@ This extension provides a Scheduler implementation which uses [Firebase JobDispa
 The easiest way to use the extension is to add it as a gradle dependency:
 
 ```gradle
-implementation 'com.google.android.exoplayer:extension-jobdispatcher:2.X.X'
+implementation 'com.kaltura.android.exoplayer:extension-jobdispatcher:2.X.X'
 ```
 
 where `2.X.X` is the version, which must match the version of the ExoPlayer

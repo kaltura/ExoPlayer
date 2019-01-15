@@ -13,25 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.MediaCodec;
 import android.media.MediaCrypto;
 import android.os.Handler;
-import com.google.android.exoplayer2.DefaultRenderersFactory;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.Renderer;
-import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
-import com.google.android.exoplayer2.drm.DrmSessionManager;
-import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
-import com.google.android.exoplayer2.mediacodec.MediaCodecInfo;
-import com.google.android.exoplayer2.mediacodec.MediaCodecSelector;
-import com.google.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
-import com.google.android.exoplayer2.video.MediaCodecVideoRenderer;
-import com.google.android.exoplayer2.video.VideoRendererEventListener;
+import com.kaltura.android.exoplayer2.DefaultRenderersFactory;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.Renderer;
+import com.kaltura.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.kaltura.android.exoplayer2.drm.DrmSessionManager;
+import com.kaltura.android.exoplayer2.drm.FrameworkMediaCrypto;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecInfo;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecSelector;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
+import com.kaltura.android.exoplayer2.video.MediaCodecVideoRenderer;
+import com.kaltura.android.exoplayer2.video.VideoRendererEventListener;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 

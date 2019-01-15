@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ts;
+package com.kaltura.android.exoplayer2.extractor.ts;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.extractor.ExtractorOutput;
-import com.google.android.exoplayer2.extractor.MpegAudioHeader;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.extractor.ts.TsPayloadReader.TrackIdGenerator;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.extractor.ExtractorOutput;
+import com.kaltura.android.exoplayer2.extractor.MpegAudioHeader;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.extractor.ts.TsPayloadReader.TrackIdGenerator;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 
 /**
  * Parses a continuous MPEG Audio byte stream and extracts individual frames.

@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.video.spherical;
+package com.kaltura.android.exoplayer2.video.spherical;
 
 import android.opengl.Matrix;
-import com.google.android.exoplayer2.util.TimedValueQueue;
+import com.kaltura.android.exoplayer2.util.TimedValueQueue;
 
 /**
  * This class serves multiple purposes:

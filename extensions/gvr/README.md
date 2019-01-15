@@ -12,7 +12,7 @@ of surround sound and ambisonic soundfields.
 The easiest way to use the extension is to add it as a gradle dependency:
 
 ```gradle
-implementation 'com.google.android.exoplayer:extension-gvr:2.X.X'
+implementation 'com.kaltura.android.exoplayer:extension-gvr:2.X.X'
 ```
 
 where `2.X.X` is the version, which must match the version of the ExoPlayer
@@ -34,7 +34,7 @@ locally. Instructions for doing this can be found in ExoPlayer's
 
 ## Links ##
 
-* [Javadoc][]: Classes matching `com.google.android.exoplayer2.ext.gvr.*`
+* [Javadoc][]: Classes matching `com.kaltura.android.exoplayer2.ext.gvr.*`
   belong to this module.
 
 [Javadoc]: https://google.github.io/ExoPlayer/doc/reference/index.html

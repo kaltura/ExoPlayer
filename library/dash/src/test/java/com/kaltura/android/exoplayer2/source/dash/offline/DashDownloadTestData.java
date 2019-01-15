@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.offline;
+package com.kaltura.android.exoplayer2.source.dash.offline;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.nio.charset.Charset;
 
 /** Data for DASH downloading tests. */

@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
-import static com.google.android.exoplayer2.upstream.cache.CacheAsserts.assertCacheEmpty;
+import static com.kaltura.android.exoplayer2.upstream.cache.CacheAsserts.assertCacheEmpty;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData;
-import com.google.android.exoplayer2.testutil.FakeDataSource;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.FileDataSource;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSource;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.FileDataSource;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ogg;
+package com.kaltura.android.exoplayer2.extractor.ogg;
 
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Assertions;
 
 /**
  * Wraps a byte array, providing methods that allow it to be read as a vorbis bitstream.

@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.SeekParameters;
-import com.google.android.exoplayer2.source.chunk.Chunk;
-import com.google.android.exoplayer2.source.chunk.ChunkHolder;
-import com.google.android.exoplayer2.source.chunk.ChunkSource;
-import com.google.android.exoplayer2.source.chunk.MediaChunk;
-import com.google.android.exoplayer2.source.chunk.MediaChunkIterator;
-import com.google.android.exoplayer2.source.chunk.SingleSampleMediaChunk;
-import com.google.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
-import com.google.android.exoplayer2.trackselection.TrackSelection;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.TransferListener;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.SeekParameters;
+import com.kaltura.android.exoplayer2.source.chunk.Chunk;
+import com.kaltura.android.exoplayer2.source.chunk.ChunkHolder;
+import com.kaltura.android.exoplayer2.source.chunk.ChunkSource;
+import com.kaltura.android.exoplayer2.source.chunk.MediaChunk;
+import com.kaltura.android.exoplayer2.source.chunk.MediaChunkIterator;
+import com.kaltura.android.exoplayer2.source.chunk.SingleSampleMediaChunk;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet.FakeData.Segment;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelection;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.util.List;
 

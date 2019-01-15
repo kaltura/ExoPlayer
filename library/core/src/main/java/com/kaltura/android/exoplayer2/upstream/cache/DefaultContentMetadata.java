@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;

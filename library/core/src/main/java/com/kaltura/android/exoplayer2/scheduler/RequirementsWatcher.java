@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.scheduler;
+package com.kaltura.android.exoplayer2.scheduler;
 
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
@@ -28,9 +28,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.PowerManager;
 import android.support.annotation.RequiresApi;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
 
 /**
  * Watches whether the {@link Requirements} are met and notifies the {@link Listener} on changes.

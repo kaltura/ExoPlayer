@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.video;
+package com.kaltura.android.exoplayer2.video;
 
-import static com.google.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_NONE;
-import static com.google.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_PROTECTED_PBUFFER;
-import static com.google.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_SURFACELESS_CONTEXT;
+import static com.kaltura.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_NONE;
+import static com.kaltura.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_PROTECTED_PBUFFER;
+import static com.kaltura.android.exoplayer2.util.EGLSurfaceTexture.SECURE_MODE_SURFACELESS_CONTEXT;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -31,11 +31,11 @@ import android.os.HandlerThread;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.Surface;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.EGLSurfaceTexture;
-import com.google.android.exoplayer2.util.EGLSurfaceTexture.SecureMode;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.EGLSurfaceTexture;
+import com.kaltura.android.exoplayer2.util.EGLSurfaceTexture.SecureMode;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
 import javax.microedition.khronos.egl.EGL10;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 

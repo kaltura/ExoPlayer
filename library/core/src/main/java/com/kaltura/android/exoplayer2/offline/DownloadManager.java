@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
-import static com.google.android.exoplayer2.offline.DownloadManager.TaskState.STATE_CANCELED;
-import static com.google.android.exoplayer2.offline.DownloadManager.TaskState.STATE_COMPLETED;
-import static com.google.android.exoplayer2.offline.DownloadManager.TaskState.STATE_FAILED;
-import static com.google.android.exoplayer2.offline.DownloadManager.TaskState.STATE_QUEUED;
-import static com.google.android.exoplayer2.offline.DownloadManager.TaskState.STATE_STARTED;
+import static com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.STATE_CANCELED;
+import static com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.STATE_COMPLETED;
+import static com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.STATE_FAILED;
+import static com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.STATE_QUEUED;
+import static com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.STATE_STARTED;
 
 import android.os.ConditionVariable;
 import android.os.Handler;
@@ -27,13 +27,13 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.offline.DownloadAction.Deserializer;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.cache.Cache;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.offline.DownloadAction.Deserializer;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.cache.Cache;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;

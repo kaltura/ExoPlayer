@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
 /**
  * Identifies a given track by the index of the containing period, the index of the containing group

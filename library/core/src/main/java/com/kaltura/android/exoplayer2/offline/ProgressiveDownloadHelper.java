@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
 import java.util.List;
 
 /** A {@link DownloadHelper} for progressive streams. */

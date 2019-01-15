@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.ttml;
+package com.kaltura.android.exoplayer2.text.ttml;
 
 import android.graphics.Typeface;
 import android.support.annotation.IntDef;
 import android.text.Layout;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

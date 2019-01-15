@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.ParserException;
 
 /**
  * Thrown if the input format was not recognized.

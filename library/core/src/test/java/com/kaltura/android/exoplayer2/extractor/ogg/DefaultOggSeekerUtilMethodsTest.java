@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ogg;
+package com.kaltura.android.exoplayer2.extractor.ogg;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
-import com.google.android.exoplayer2.testutil.OggTestData;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.OggTestData;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Random;

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.DefaultLoadControl.Builder;
-import com.google.android.exoplayer2.upstream.DefaultAllocator;
+import com.kaltura.android.exoplayer2.DefaultLoadControl.Builder;
+import com.kaltura.android.exoplayer2.upstream.DefaultAllocator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

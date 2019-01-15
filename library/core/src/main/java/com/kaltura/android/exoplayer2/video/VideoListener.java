@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.video;
+package com.kaltura.android.exoplayer2.video;
 
 /** A listener for metadata corresponding to video being rendered. */
 public interface VideoListener {
@@ -42,10 +42,10 @@ public interface VideoListener {
    * rendered.
    *
    * @param width The surface width in pixels. May be {@link
-   *     com.google.android.exoplayer2.C#LENGTH_UNSET} if unknown, or 0 if the video is not rendered
+   *     com.kaltura.android.exoplayer2.C#LENGTH_UNSET} if unknown, or 0 if the video is not rendered
    *     onto a surface.
    * @param height The surface height in pixels. May be {@link
-   *     com.google.android.exoplayer2.C#LENGTH_UNSET} if unknown, or 0 if the video is not rendered
+   *     com.kaltura.android.exoplayer2.C#LENGTH_UNSET} if unknown, or 0 if the video is not rendered
    *     onto a surface.
    */
   default void onSurfaceSizeChanged(int width, int height) {}

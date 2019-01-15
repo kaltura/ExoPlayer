@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.chunk;
+package com.kaltura.android.exoplayer2.source.chunk;
 
-import com.google.android.exoplayer2.extractor.DummyTrackOutput;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.source.SampleQueue;
-import com.google.android.exoplayer2.source.chunk.ChunkExtractorWrapper.TrackOutputProvider;
-import com.google.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.extractor.DummyTrackOutput;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.source.SampleQueue;
+import com.kaltura.android.exoplayer2.source.chunk.ChunkExtractorWrapper.TrackOutputProvider;
+import com.kaltura.android.exoplayer2.util.Log;
 
 /** An output for {@link BaseMediaChunk}s. */
 public final class BaseMediaChunkOutput implements TrackOutputProvider {

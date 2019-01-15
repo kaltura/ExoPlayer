@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.test.InstrumentationTestCase;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.io.IOException;
 
 /** Unit test for {@link FlacBinarySearchSeeker}. */

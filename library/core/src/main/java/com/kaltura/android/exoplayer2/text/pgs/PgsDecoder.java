@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.pgs;
+package com.kaltura.android.exoplayer2.text.pgs;
 
 import android.graphics.Bitmap;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.SimpleSubtitleDecoder;
-import com.google.android.exoplayer2.text.Subtitle;
-import com.google.android.exoplayer2.text.SubtitleDecoderException;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.SimpleSubtitleDecoder;
+import com.kaltura.android.exoplayer2.text.Subtitle;
+import com.kaltura.android.exoplayer2.text.SubtitleDecoderException;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

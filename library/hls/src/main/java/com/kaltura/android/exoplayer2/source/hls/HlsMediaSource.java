@@ -13,39 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls;
+package com.kaltura.android.exoplayer2.source.hls;
 
 import android.net.Uri;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.ExoPlayerLibraryInfo;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.source.BaseMediaSource;
-import com.google.android.exoplayer2.source.CompositeSequenceableLoaderFactory;
-import com.google.android.exoplayer2.source.DefaultCompositeSequenceableLoaderFactory;
-import com.google.android.exoplayer2.source.MediaPeriod;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.MediaSourceEventListener;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
-import com.google.android.exoplayer2.source.SequenceableLoader;
-import com.google.android.exoplayer2.source.SinglePeriodTimeline;
-import com.google.android.exoplayer2.source.ads.AdsMediaSource;
-import com.google.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistParserFactory;
-import com.google.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistTracker;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylist;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistParser;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistParserFactory;
-import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistTracker;
-import com.google.android.exoplayer2.upstream.Allocator;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DefaultLoadErrorHandlingPolicy;
-import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
-import com.google.android.exoplayer2.upstream.TransferListener;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.ExoPlayerLibraryInfo;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.source.BaseMediaSource;
+import com.kaltura.android.exoplayer2.source.CompositeSequenceableLoaderFactory;
+import com.kaltura.android.exoplayer2.source.DefaultCompositeSequenceableLoaderFactory;
+import com.kaltura.android.exoplayer2.source.MediaPeriod;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
+import com.kaltura.android.exoplayer2.source.SequenceableLoader;
+import com.kaltura.android.exoplayer2.source.SinglePeriodTimeline;
+import com.kaltura.android.exoplayer2.source.ads.AdsMediaSource;
+import com.kaltura.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistParserFactory;
+import com.kaltura.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistTracker;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylist;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylistParser;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylistParserFactory;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsPlaylistTracker;
+import com.kaltura.android.exoplayer2.upstream.Allocator;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DefaultLoadErrorHandlingPolicy;
+import com.kaltura.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.io.IOException;
 import java.util.List;
 
@@ -99,8 +99,8 @@ public final class HlsMediaSource extends BaseMediaSource
 
     /**
      * Sets a tag for the media source which will be published in the {@link
-     * com.google.android.exoplayer2.Timeline} of the source as {@link
-     * com.google.android.exoplayer2.Timeline.Window#tag}.
+     * com.kaltura.android.exoplayer2.Timeline} of the source as {@link
+     * com.kaltura.android.exoplayer2.Timeline.Window#tag}.
      *
      * @param tag A tag for the media source.
      * @return This factory, for convenience.

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.rtmp;
+package com.kaltura.android.exoplayer2.ext.rtmp;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.HttpDataSource.Factory;
-import com.google.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.HttpDataSource.Factory;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
 
 /**
  * A {@link Factory} that produces {@link RtmpDataSource}.

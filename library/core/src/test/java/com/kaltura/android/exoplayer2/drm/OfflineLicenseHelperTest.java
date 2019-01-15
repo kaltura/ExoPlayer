@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
@@ -21,9 +21,9 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
-import com.google.android.exoplayer2.testutil.RobolectricUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.kaltura.android.exoplayer2.testutil.RobolectricUtil;
 import java.util.HashMap;
 import org.junit.After;
 import org.junit.Before;

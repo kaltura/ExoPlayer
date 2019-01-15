@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 
 // TODO: Clarify the requirements for implementing this interface [Internal ref: b/36250203].
 /**

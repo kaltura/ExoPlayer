@@ -13,25 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.playlist;
+package com.kaltura.android.exoplayer2.source.hls.playlist;
 
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ParserException;
-import com.google.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
-import com.google.android.exoplayer2.source.hls.HlsDataSourceFactory;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist.HlsUrl;
-import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.Segment;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
-import com.google.android.exoplayer2.upstream.Loader;
-import com.google.android.exoplayer2.upstream.Loader.LoadErrorAction;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.UriUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.source.MediaSourceEventListener.EventDispatcher;
+import com.kaltura.android.exoplayer2.source.hls.HlsDataSourceFactory;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMasterPlaylist.HlsUrl;
+import com.kaltura.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.Segment;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.kaltura.android.exoplayer2.upstream.Loader;
+import com.kaltura.android.exoplayer2.upstream.Loader.LoadErrorAction;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.UriUtil;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.IdentityHashMap;

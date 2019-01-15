@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.metadata;
+package com.kaltura.android.exoplayer2.metadata;
 
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.metadata.emsg.EventMessageDecoder;
-import com.google.android.exoplayer2.metadata.id3.Id3Decoder;
-import com.google.android.exoplayer2.metadata.scte35.SpliceInfoDecoder;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.metadata.emsg.EventMessageDecoder;
+import com.kaltura.android.exoplayer2.metadata.id3.Id3Decoder;
+import com.kaltura.android.exoplayer2.metadata.scte35.SpliceInfoDecoder;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 
 /**
  * A factory for {@link MetadataDecoder} instances.

@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.mp4;
+package com.kaltura.android.exoplayer2.extractor.mp4;
 
-import static com.google.android.exoplayer2.C.WIDEVINE_UUID;
-import static com.google.android.exoplayer2.extractor.mp4.Atom.TYPE_pssh;
-import static com.google.android.exoplayer2.extractor.mp4.Atom.parseFullAtomFlags;
-import static com.google.android.exoplayer2.extractor.mp4.Atom.parseFullAtomVersion;
+import static com.kaltura.android.exoplayer2.C.WIDEVINE_UUID;
+import static com.kaltura.android.exoplayer2.extractor.mp4.Atom.TYPE_pssh;
+import static com.kaltura.android.exoplayer2.extractor.mp4.Atom.parseFullAtomFlags;
+import static com.kaltura.android.exoplayer2.extractor.mp4.Atom.parseFullAtomVersion;
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import java.util.UUID;
 import org.junit.Test;
 import org.junit.runner.RunWith;

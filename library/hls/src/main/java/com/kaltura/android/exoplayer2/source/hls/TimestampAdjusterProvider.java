@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls;
+package com.kaltura.android.exoplayer2.source.hls;
 
 import android.util.SparseArray;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 
 /**
  * Provides {@link TimestampAdjuster} instances for use during HLS playbacks.

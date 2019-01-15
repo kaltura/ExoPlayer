@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash;
+package com.kaltura.android.exoplayer2.source.dash;
 
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.source.chunk.ChunkSource;
-import com.google.android.exoplayer2.source.dash.PlayerEmsgHandler.PlayerTrackEmsgHandler;
-import com.google.android.exoplayer2.source.dash.manifest.DashManifest;
-import com.google.android.exoplayer2.trackselection.TrackSelection;
-import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
-import com.google.android.exoplayer2.upstream.TransferListener;
+import com.kaltura.android.exoplayer2.source.chunk.ChunkSource;
+import com.kaltura.android.exoplayer2.source.dash.PlayerEmsgHandler.PlayerTrackEmsgHandler;
+import com.kaltura.android.exoplayer2.source.dash.manifest.DashManifest;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelection;
+import com.kaltura.android.exoplayer2.upstream.LoaderErrorThrower;
+import com.kaltura.android.exoplayer2.upstream.TransferListener;
 
 /**
  * An {@link ChunkSource} for DASH streams.

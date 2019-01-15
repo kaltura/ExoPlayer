@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor;
+package com.kaltura.android.exoplayer2.extractor;
 
 import android.support.annotation.IntDef;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

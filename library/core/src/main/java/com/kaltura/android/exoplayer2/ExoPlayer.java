@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.os.Looper;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.audio.MediaCodecAudioRenderer;
-import com.google.android.exoplayer2.metadata.MetadataRenderer;
-import com.google.android.exoplayer2.source.ClippingMediaSource;
-import com.google.android.exoplayer2.source.ConcatenatingMediaSource;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
-import com.google.android.exoplayer2.source.LoopingMediaSource;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.MergingMediaSource;
-import com.google.android.exoplayer2.source.SingleSampleMediaSource;
-import com.google.android.exoplayer2.text.TextRenderer;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.trackselection.TrackSelector;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.video.MediaCodecVideoRenderer;
+import com.kaltura.android.exoplayer2.audio.MediaCodecAudioRenderer;
+import com.kaltura.android.exoplayer2.metadata.MetadataRenderer;
+import com.kaltura.android.exoplayer2.source.ClippingMediaSource;
+import com.kaltura.android.exoplayer2.source.ConcatenatingMediaSource;
+import com.kaltura.android.exoplayer2.source.ExtractorMediaSource;
+import com.kaltura.android.exoplayer2.source.LoopingMediaSource;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.source.MergingMediaSource;
+import com.kaltura.android.exoplayer2.source.SingleSampleMediaSource;
+import com.kaltura.android.exoplayer2.text.TextRenderer;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelector;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.video.MediaCodecVideoRenderer;
 
 /**
  * An extensible media player that plays {@link MediaSource}s. Instances can be obtained from {@link

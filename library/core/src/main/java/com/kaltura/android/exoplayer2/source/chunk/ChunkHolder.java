@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.chunk;
+package com.kaltura.android.exoplayer2.source.chunk;
 
 /**
  * Holds a chunk or an indication that the end of the stream has been reached.

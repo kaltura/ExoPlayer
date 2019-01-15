@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.mkv;
+package com.kaltura.android.exoplayer2.extractor.mkv;
 
-import static com.google.android.exoplayer2.C.RESULT_END_OF_INPUT;
-import static com.google.android.exoplayer2.C.RESULT_MAX_LENGTH_EXCEEDED;
+import static com.kaltura.android.exoplayer2.C.RESULT_END_OF_INPUT;
+import static com.kaltura.android.exoplayer2.C.RESULT_MAX_LENGTH_EXCEEDED;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput.SimulatedIOException;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput.SimulatedIOException;
 import java.io.EOFException;
 import java.io.IOException;
 import org.junit.Test;

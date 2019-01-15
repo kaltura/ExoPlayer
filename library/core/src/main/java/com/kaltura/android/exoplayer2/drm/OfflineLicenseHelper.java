@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
 import android.media.MediaDrm;
 import android.os.ConditionVariable;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.drm.DefaultDrmSessionManager.Mode;
-import com.google.android.exoplayer2.drm.DrmSession.DrmSessionException;
-import com.google.android.exoplayer2.upstream.HttpDataSource;
-import com.google.android.exoplayer2.upstream.HttpDataSource.Factory;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.drm.DefaultDrmSessionManager.Mode;
+import com.kaltura.android.exoplayer2.drm.DrmSession.DrmSessionException;
+import com.kaltura.android.exoplayer2.upstream.HttpDataSource;
+import com.kaltura.android.exoplayer2.upstream.HttpDataSource.Factory;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.util.HashMap;
 import java.util.UUID;
 

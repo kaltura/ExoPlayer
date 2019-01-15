@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.amr.AmrExtractor;
-import com.google.android.exoplayer2.extractor.flv.FlvExtractor;
-import com.google.android.exoplayer2.extractor.mkv.MatroskaExtractor;
-import com.google.android.exoplayer2.extractor.mp3.Mp3Extractor;
-import com.google.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
-import com.google.android.exoplayer2.extractor.mp4.Mp4Extractor;
-import com.google.android.exoplayer2.extractor.ogg.OggExtractor;
-import com.google.android.exoplayer2.extractor.ts.Ac3Extractor;
-import com.google.android.exoplayer2.extractor.ts.AdtsExtractor;
-import com.google.android.exoplayer2.extractor.ts.PsExtractor;
-import com.google.android.exoplayer2.extractor.ts.TsExtractor;
-import com.google.android.exoplayer2.extractor.wav.WavExtractor;
+import com.kaltura.android.exoplayer2.extractor.DefaultExtractorsFactory;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.amr.AmrExtractor;
+import com.kaltura.android.exoplayer2.extractor.flv.FlvExtractor;
+import com.kaltura.android.exoplayer2.extractor.mkv.MatroskaExtractor;
+import com.kaltura.android.exoplayer2.extractor.mp3.Mp3Extractor;
+import com.kaltura.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
+import com.kaltura.android.exoplayer2.extractor.mp4.Mp4Extractor;
+import com.kaltura.android.exoplayer2.extractor.ogg.OggExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.Ac3Extractor;
+import com.kaltura.android.exoplayer2.extractor.ts.AdtsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.PsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.TsExtractor;
+import com.kaltura.android.exoplayer2.extractor.wav.WavExtractor;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;

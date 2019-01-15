@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.video;
+package com.kaltura.android.exoplayer2.video;
 
-import com.google.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.Format;
 
 /** A listener for metadata corresponding to video frame being rendered. */
 public interface VideoFrameMetadataListener {

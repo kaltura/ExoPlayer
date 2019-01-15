@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.audio;
+package com.kaltura.android.exoplayer2.audio;
 
-import static com.google.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_DO_NOT_PLAY;
-import static com.google.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_PLAY_WHEN_READY;
-import static com.google.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_WAIT_FOR_CALLBACK;
+import static com.kaltura.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_DO_NOT_PLAY;
+import static com.kaltura.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_PLAY_WHEN_READY;
+import static com.kaltura.android.exoplayer2.audio.AudioFocusManager.PLAYER_COMMAND_WAIT_FOR_CALLBACK;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.content.Context;
 import android.media.AudioManager;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Player;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

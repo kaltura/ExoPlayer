@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -21,20 +21,20 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.test.InstrumentationTestCase;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.extractor.DefaultExtractorInput;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.extractor.PositionHolder;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
-import com.google.android.exoplayer2.testutil.FakeExtractorOutput;
-import com.google.android.exoplayer2.testutil.FakeTrackOutput;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.DefaultDataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.extractor.DefaultExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.PositionHolder;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorOutput;
+import com.kaltura.android.exoplayer2.testutil.FakeTrackOutput;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.DefaultDataSource;
+import com.kaltura.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;

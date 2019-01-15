@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ts;
+package com.kaltura.android.exoplayer2.extractor.ts;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.testutil.FakeExtractorOutput;
-import com.google.android.exoplayer2.testutil.FakeTrackOutput;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.upstream.DefaultDataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorOutput;
+import com.kaltura.android.exoplayer2.testutil.FakeTrackOutput;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.upstream.DefaultDataSource;
+import com.kaltura.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;

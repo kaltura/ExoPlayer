@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui;
+package com.kaltura.android.exoplayer2.ui;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -33,15 +33,15 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.media.app.NotificationCompat.MediaStyle;
 import android.support.v4.media.session.MediaSessionCompat;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ControlDispatcher;
-import com.google.android.exoplayer2.DefaultControlDispatcher;
-import com.google.android.exoplayer2.PlaybackParameters;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.NotificationUtil;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ControlDispatcher;
+import com.kaltura.android.exoplayer2.DefaultControlDispatcher;
+import com.kaltura.android.exoplayer2.PlaybackParameters;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.NotificationUtil;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -230,19 +230,19 @@ public class PlayerNotificationManager {
   }
 
   /** The action which starts playback. */
-  public static final String ACTION_PLAY = "com.google.android.exoplayer.play";
+  public static final String ACTION_PLAY = "com.kaltura.android.exoplayer.play";
   /** The action which pauses playback. */
-  public static final String ACTION_PAUSE = "com.google.android.exoplayer.pause";
+  public static final String ACTION_PAUSE = "com.kaltura.android.exoplayer.pause";
   /** The action which skips to the previous window. */
-  public static final String ACTION_PREVIOUS = "com.google.android.exoplayer.prev";
+  public static final String ACTION_PREVIOUS = "com.kaltura.android.exoplayer.prev";
   /** The action which skips to the next window. */
-  public static final String ACTION_NEXT = "com.google.android.exoplayer.next";
+  public static final String ACTION_NEXT = "com.kaltura.android.exoplayer.next";
   /** The action which fast forwards. */
-  public static final String ACTION_FAST_FORWARD = "com.google.android.exoplayer.ffwd";
+  public static final String ACTION_FAST_FORWARD = "com.kaltura.android.exoplayer.ffwd";
   /** The action which rewinds. */
-  public static final String ACTION_REWIND = "com.google.android.exoplayer.rewind";
+  public static final String ACTION_REWIND = "com.kaltura.android.exoplayer.rewind";
   /** The action which cancels the notification and stops playback. */
-  public static final String ACTION_STOP = "com.google.android.exoplayer.stop";
+  public static final String ACTION_STOP = "com.kaltura.android.exoplayer.stop";
   /** The extra key of the instance id of the player notification manager. */
   public static final String EXTRA_INSTANCE_ID = "INSTANCE_ID";
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.ima;
+package com.kaltura.android.exoplayer2.ext.ima;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.atLeastOnce;
@@ -31,16 +31,16 @@ import com.google.ads.interactivemedia.v3.api.AdEvent.AdEventType;
 import com.google.ads.interactivemedia.v3.api.AdsManager;
 import com.google.ads.interactivemedia.v3.api.AdsRenderingSettings;
 import com.google.ads.interactivemedia.v3.api.ImaSdkSettings;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.SinglePeriodTimeline;
-import com.google.android.exoplayer2.source.ads.AdPlaybackState;
-import com.google.android.exoplayer2.source.ads.AdsLoader;
-import com.google.android.exoplayer2.source.ads.AdsMediaSource.AdLoadException;
-import com.google.android.exoplayer2.source.ads.SinglePeriodAdTimeline;
-import com.google.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.source.SinglePeriodTimeline;
+import com.kaltura.android.exoplayer2.source.ads.AdPlaybackState;
+import com.kaltura.android.exoplayer2.source.ads.AdsLoader;
+import com.kaltura.android.exoplayer2.source.ads.AdsMediaSource.AdLoadException;
+import com.kaltura.android.exoplayer2.source.ads.SinglePeriodAdTimeline;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;

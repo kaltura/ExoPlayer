@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.FormatHolder;
-import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.FormatHolder;
+import com.kaltura.android.exoplayer2.decoder.DecoderInputBuffer;
 import java.io.IOException;
 
 /**

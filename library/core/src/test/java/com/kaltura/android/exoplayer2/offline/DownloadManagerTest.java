@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.offline;
+package com.kaltura.android.exoplayer2.offline;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.offline.DownloadManager.TaskState;
-import com.google.android.exoplayer2.offline.DownloadManager.TaskState.State;
-import com.google.android.exoplayer2.testutil.DummyMainThread;
-import com.google.android.exoplayer2.testutil.RobolectricUtil;
-import com.google.android.exoplayer2.testutil.TestDownloadManagerListener;
-import com.google.android.exoplayer2.upstream.DummyDataSource;
-import com.google.android.exoplayer2.upstream.cache.Cache;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState;
+import com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState.State;
+import com.kaltura.android.exoplayer2.testutil.DummyMainThread;
+import com.kaltura.android.exoplayer2.testutil.RobolectricUtil;
+import com.kaltura.android.exoplayer2.testutil.TestDownloadManagerListener;
+import com.kaltura.android.exoplayer2.upstream.DummyDataSource;
+import com.kaltura.android.exoplayer2.upstream.cache.Cache;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -544,7 +544,7 @@ public class DownloadManagerTest {
 
   private static class FakeDownloader implements Downloader {
 
-    private final com.google.android.exoplayer2.util.ConditionVariable blocker;
+    private final com.kaltura.android.exoplayer2.util.ConditionVariable blocker;
     private final boolean isRemoveAction;
 
     private CountDownLatch started;
@@ -555,7 +555,7 @@ public class DownloadManagerTest {
     private FakeDownloader(boolean isRemoveAction) {
       this.isRemoveAction = isRemoveAction;
       this.started = new CountDownLatch(1);
-      this.blocker = new com.google.android.exoplayer2.util.ConditionVariable();
+      this.blocker = new com.kaltura.android.exoplayer2.util.ConditionVariable();
     }
 
     @Override

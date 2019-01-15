@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
 import android.annotation.TargetApi;
 import android.media.MediaCrypto;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Assertions;
 
 /**
  * An {@link ExoMediaCrypto} implementation that wraps the framework {@link MediaCrypto}.

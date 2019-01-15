@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 
 /** Helper classes to easily access and modify internal metadata values. */
 /* package */ final class ContentMetadataInternal {

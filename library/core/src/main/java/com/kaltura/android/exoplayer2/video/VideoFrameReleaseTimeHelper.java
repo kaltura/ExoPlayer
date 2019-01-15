@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.video;
+package com.kaltura.android.exoplayer2.video;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -26,8 +26,8 @@ import android.view.Choreographer;
 import android.view.Choreographer.FrameCallback;
 import android.view.Display;
 import android.view.WindowManager;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.util.Util;
 
 /**
  * Makes a best effort to adjust frame release timestamps for a smoother visual result.

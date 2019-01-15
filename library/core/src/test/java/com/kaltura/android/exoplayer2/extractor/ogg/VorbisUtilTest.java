@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.ogg;
+package com.kaltura.android.exoplayer2.extractor.ogg;
 
-import static com.google.android.exoplayer2.extractor.ogg.VorbisUtil.iLog;
-import static com.google.android.exoplayer2.extractor.ogg.VorbisUtil.verifyVorbisHeaderCapturePattern;
+import static com.kaltura.android.exoplayer2.extractor.ogg.VorbisUtil.iLog;
+import static com.kaltura.android.exoplayer2.extractor.ogg.VorbisUtil.verifyVorbisHeaderCapturePattern;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
-import com.google.android.exoplayer2.ParserException;
-import com.google.android.exoplayer2.testutil.OggTestData;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.testutil.OggTestData;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;

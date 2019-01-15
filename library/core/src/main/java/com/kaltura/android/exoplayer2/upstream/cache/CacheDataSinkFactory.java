@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.upstream.DataSink;
+import com.kaltura.android.exoplayer2.upstream.DataSink;
 
 /**
  * A {@link DataSink.Factory} that produces {@link CacheDataSink}.

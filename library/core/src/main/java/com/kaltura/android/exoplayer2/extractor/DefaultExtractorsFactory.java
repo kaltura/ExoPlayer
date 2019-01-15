@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor;
+package com.kaltura.android.exoplayer2.extractor;
 
-import com.google.android.exoplayer2.extractor.amr.AmrExtractor;
-import com.google.android.exoplayer2.extractor.flv.FlvExtractor;
-import com.google.android.exoplayer2.extractor.mkv.MatroskaExtractor;
-import com.google.android.exoplayer2.extractor.mp3.Mp3Extractor;
-import com.google.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
-import com.google.android.exoplayer2.extractor.mp4.Mp4Extractor;
-import com.google.android.exoplayer2.extractor.ogg.OggExtractor;
-import com.google.android.exoplayer2.extractor.ts.Ac3Extractor;
-import com.google.android.exoplayer2.extractor.ts.AdtsExtractor;
-import com.google.android.exoplayer2.extractor.ts.DefaultTsPayloadReaderFactory;
-import com.google.android.exoplayer2.extractor.ts.PsExtractor;
-import com.google.android.exoplayer2.extractor.ts.TsExtractor;
-import com.google.android.exoplayer2.extractor.ts.TsPayloadReader;
-import com.google.android.exoplayer2.extractor.wav.WavExtractor;
-import com.google.android.exoplayer2.util.TimestampAdjuster;
+import com.kaltura.android.exoplayer2.extractor.amr.AmrExtractor;
+import com.kaltura.android.exoplayer2.extractor.flv.FlvExtractor;
+import com.kaltura.android.exoplayer2.extractor.mkv.MatroskaExtractor;
+import com.kaltura.android.exoplayer2.extractor.mp3.Mp3Extractor;
+import com.kaltura.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor;
+import com.kaltura.android.exoplayer2.extractor.mp4.Mp4Extractor;
+import com.kaltura.android.exoplayer2.extractor.ogg.OggExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.Ac3Extractor;
+import com.kaltura.android.exoplayer2.extractor.ts.AdtsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.DefaultTsPayloadReaderFactory;
+import com.kaltura.android.exoplayer2.extractor.ts.PsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.TsExtractor;
+import com.kaltura.android.exoplayer2.extractor.ts.TsPayloadReader;
+import com.kaltura.android.exoplayer2.extractor.wav.WavExtractor;
+import com.kaltura.android.exoplayer2.util.TimestampAdjuster;
 import java.lang.reflect.Constructor;
 
 /**
@@ -59,7 +59,7 @@ public final class DefaultExtractorsFactory implements ExtractorsFactory {
     try {
       // LINT.IfChange
       flacExtractorConstructor =
-          Class.forName("com.google.android.exoplayer2.ext.flac.FlacExtractor")
+          Class.forName("com.kaltura.android.exoplayer2.ext.flac.FlacExtractor")
               .asSubclass(Extractor.class)
               .getConstructor();
       // LINT.ThenChange(../../../../../../../../proguard-rules.txt)

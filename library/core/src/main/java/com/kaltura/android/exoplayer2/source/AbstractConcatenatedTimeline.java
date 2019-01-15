@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
 
 /**
  * Abstract base class for the concatenation of one or more {@link Timeline}s.

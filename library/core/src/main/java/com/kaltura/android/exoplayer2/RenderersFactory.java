@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.audio.AudioRendererEventListener;
-import com.google.android.exoplayer2.drm.DrmSessionManager;
-import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
-import com.google.android.exoplayer2.metadata.MetadataOutput;
-import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.video.VideoRendererEventListener;
+import com.kaltura.android.exoplayer2.audio.AudioRendererEventListener;
+import com.kaltura.android.exoplayer2.drm.DrmSessionManager;
+import com.kaltura.android.exoplayer2.drm.FrameworkMediaCrypto;
+import com.kaltura.android.exoplayer2.metadata.MetadataOutput;
+import com.kaltura.android.exoplayer2.text.TextOutput;
+import com.kaltura.android.exoplayer2.video.VideoRendererEventListener;
 
 /**
  * Builds {@link Renderer} instances for use by a {@link SimpleExoPlayer}.

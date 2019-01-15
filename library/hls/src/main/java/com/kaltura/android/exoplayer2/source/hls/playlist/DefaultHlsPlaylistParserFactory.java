@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.playlist;
+package com.kaltura.android.exoplayer2.source.hls.playlist;
 
-import com.google.android.exoplayer2.offline.FilteringManifestParser;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.offline.FilteringManifestParser;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
 import java.util.Collections;
 import java.util.List;
 

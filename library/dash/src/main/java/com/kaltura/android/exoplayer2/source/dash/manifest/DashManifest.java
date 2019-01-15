@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.manifest;
+package com.kaltura.android.exoplayer2.source.dash.manifest;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.offline.FilterableManifest;
-import com.google.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.offline.FilterableManifest;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;

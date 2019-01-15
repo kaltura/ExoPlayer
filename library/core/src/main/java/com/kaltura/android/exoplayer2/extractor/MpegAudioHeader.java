@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor;
+package com.kaltura.android.exoplayer2.extractor;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 
 /**
  * An MPEG audio frame header.

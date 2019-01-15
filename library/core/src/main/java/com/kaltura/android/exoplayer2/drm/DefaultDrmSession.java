@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -24,12 +24,12 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
-import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
-import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
-import com.google.android.exoplayer2.util.EventDispatcher;
-import com.google.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.kaltura.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
+import com.kaltura.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
+import com.kaltura.android.exoplayer2.util.EventDispatcher;
+import com.kaltura.android.exoplayer2.util.Log;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;

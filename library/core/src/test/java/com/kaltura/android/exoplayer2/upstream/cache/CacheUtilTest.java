@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import static android.net.Uri.EMPTY;
 import static android.net.Uri.parse;
-import static com.google.android.exoplayer2.C.LENGTH_UNSET;
-import static com.google.android.exoplayer2.upstream.cache.CacheAsserts.assertCacheEmpty;
-import static com.google.android.exoplayer2.upstream.cache.CacheAsserts.assertCachedData;
-import static com.google.android.exoplayer2.upstream.cache.CacheUtil.generateKey;
-import static com.google.android.exoplayer2.upstream.cache.CacheUtil.getKey;
+import static com.kaltura.android.exoplayer2.C.LENGTH_UNSET;
+import static com.kaltura.android.exoplayer2.upstream.cache.CacheAsserts.assertCacheEmpty;
+import static com.kaltura.android.exoplayer2.upstream.cache.CacheAsserts.assertCachedData;
+import static com.kaltura.android.exoplayer2.upstream.cache.CacheUtil.generateKey;
+import static com.kaltura.android.exoplayer2.upstream.cache.CacheUtil.getKey;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.testutil.FakeDataSet;
-import com.google.android.exoplayer2.testutil.FakeDataSource;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.cache.CacheUtil.CachingCounters;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSource;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheUtil.CachingCounters;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.EOFException;
 import java.io.File;
 import org.junit.After;

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.webvtt;
+package com.kaltura.android.exoplayer2.text.webvtt;
 
 import android.text.Layout.Alignment;
 import android.text.SpannableStringBuilder;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.util.Log;
 
 /**
  * A representation of a WebVTT cue.

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,11 +23,11 @@ import android.media.MediaCodec;
 import android.media.MediaFormat;
 import android.support.annotation.IntDef;
 import android.view.Surface;
-import com.google.android.exoplayer2.PlayerMessage.Target;
-import com.google.android.exoplayer2.audio.AuxEffectInfo;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.exoplayer2.video.VideoFrameMetadataListener;
-import com.google.android.exoplayer2.video.spherical.CameraMotionListener;
+import com.kaltura.android.exoplayer2.PlayerMessage.Target;
+import com.kaltura.android.exoplayer2.audio.AuxEffectInfo;
+import com.kaltura.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.video.VideoFrameMetadataListener;
+import com.kaltura.android.exoplayer2.video.spherical.CameraMotionListener;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -270,7 +270,7 @@ public final class C {
   public static final int STREAM_TYPE_DEFAULT = STREAM_TYPE_MUSIC;
 
   /**
-   * Content types for {@link com.google.android.exoplayer2.audio.AudioAttributes}. One of {@link
+   * Content types for {@link com.kaltura.android.exoplayer2.audio.AudioAttributes}. One of {@link
    * #CONTENT_TYPE_MOVIE}, {@link #CONTENT_TYPE_MUSIC}, {@link #CONTENT_TYPE_SONIFICATION}, {@link
    * #CONTENT_TYPE_SPEECH} or {@link #CONTENT_TYPE_UNKNOWN}.
    */
@@ -309,7 +309,7 @@ public final class C {
       android.media.AudioAttributes.CONTENT_TYPE_UNKNOWN;
 
   /**
-   * Flags for {@link com.google.android.exoplayer2.audio.AudioAttributes}. Possible flag value is
+   * Flags for {@link com.kaltura.android.exoplayer2.audio.AudioAttributes}. Possible flag value is
    * {@link #FLAG_AUDIBILITY_ENFORCED}.
    *
    * <p>Note that {@code FLAG_HW_AV_SYNC} is not available because the player takes care of setting
@@ -328,7 +328,7 @@ public final class C {
       android.media.AudioAttributes.FLAG_AUDIBILITY_ENFORCED;
 
   /**
-   * Usage types for {@link com.google.android.exoplayer2.audio.AudioAttributes}. One of {@link
+   * Usage types for {@link com.kaltura.android.exoplayer2.audio.AudioAttributes}. One of {@link
    * #USAGE_ALARM}, {@link #USAGE_ASSISTANCE_ACCESSIBILITY}, {@link
    * #USAGE_ASSISTANCE_NAVIGATION_GUIDANCE}, {@link #USAGE_ASSISTANCE_SONIFICATION}, {@link
    * #USAGE_ASSISTANT}, {@link #USAGE_GAME}, {@link #USAGE_MEDIA}, {@link #USAGE_NOTIFICATION},
@@ -747,7 +747,7 @@ public final class C {
   /**
    * A type of a message that can be passed to an audio {@link Renderer} via {@link
    * ExoPlayer#createMessage(Target)}. The message payload should be an {@link
-   * com.google.android.exoplayer2.audio.AudioAttributes} instance that will configure the
+   * com.kaltura.android.exoplayer2.audio.AudioAttributes} instance that will configure the
    * underlying audio track. If not set, the default audio attributes will be used. They are
    * suitable for general media playback.
    *

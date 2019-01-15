@@ -12,7 +12,7 @@ Cast receiver app.
 The easiest way to use the extension is to add it as a gradle dependency:
 
 ```gradle
-implementation 'com.google.android.exoplayer:extension-cast:2.X.X'
+implementation 'com.kaltura.android.exoplayer:extension-cast:2.X.X'
 ```
 
 where `2.X.X` is the version, which must match the version of the ExoPlayer

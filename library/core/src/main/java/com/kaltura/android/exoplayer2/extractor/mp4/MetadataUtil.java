@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor.mp4;
+package com.kaltura.android.exoplayer2.extractor.mp4;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.id3.ApicFrame;
-import com.google.android.exoplayer2.metadata.id3.CommentFrame;
-import com.google.android.exoplayer2.metadata.id3.Id3Frame;
-import com.google.android.exoplayer2.metadata.id3.InternalFrame;
-import com.google.android.exoplayer2.metadata.id3.TextInformationFrame;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.id3.ApicFrame;
+import com.kaltura.android.exoplayer2.metadata.id3.CommentFrame;
+import com.kaltura.android.exoplayer2.metadata.id3.Id3Frame;
+import com.kaltura.android.exoplayer2.metadata.id3.InternalFrame;
+import com.kaltura.android.exoplayer2.metadata.id3.TextInformationFrame;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.Util;
 
 /**
  * Parses metadata items stored in ilst atoms.

@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.verify;
 
 import android.os.ConditionVariable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
-import com.google.android.exoplayer2.source.ShuffleOrder.DefaultShuffleOrder;
-import com.google.android.exoplayer2.testutil.DummyMainThread;
-import com.google.android.exoplayer2.testutil.FakeMediaSource;
-import com.google.android.exoplayer2.testutil.FakeShuffleOrder;
-import com.google.android.exoplayer2.testutil.FakeTimeline;
-import com.google.android.exoplayer2.testutil.FakeTimeline.TimelineWindowDefinition;
-import com.google.android.exoplayer2.testutil.MediaSourceTestRunner;
-import com.google.android.exoplayer2.testutil.RobolectricUtil;
-import com.google.android.exoplayer2.testutil.TimelineAsserts;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.source.MediaSource.MediaPeriodId;
+import com.kaltura.android.exoplayer2.source.ShuffleOrder.DefaultShuffleOrder;
+import com.kaltura.android.exoplayer2.testutil.DummyMainThread;
+import com.kaltura.android.exoplayer2.testutil.FakeMediaSource;
+import com.kaltura.android.exoplayer2.testutil.FakeShuffleOrder;
+import com.kaltura.android.exoplayer2.testutil.FakeTimeline;
+import com.kaltura.android.exoplayer2.testutil.FakeTimeline.TimelineWindowDefinition;
+import com.kaltura.android.exoplayer2.testutil.MediaSourceTestRunner;
+import com.kaltura.android.exoplayer2.testutil.RobolectricUtil;
+import com.kaltura.android.exoplayer2.testutil.TimelineAsserts;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;

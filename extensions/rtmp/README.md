@@ -20,7 +20,7 @@ Android, which is licensed separately.
 The easiest way to use the extension is to add it as a gradle dependency:
 
 ```gradle
-implementation 'com.google.android.exoplayer:extension-rtmp:2.X.X'
+implementation 'com.kaltura.android.exoplayer:extension-rtmp:2.X.X'
 ```
 
 where `2.X.X` is the version, which must match the version of the ExoPlayer
@@ -50,7 +50,7 @@ doesn't need to handle any other protocols, you can update any `DataSource`s and
 
 ## Links ##
 
-* [Javadoc][]: Classes matching `com.google.android.exoplayer2.ext.rtmp.*`
+* [Javadoc][]: Classes matching `com.kaltura.android.exoplayer2.ext.rtmp.*`
   belong to this module.
 
 [Javadoc]: https://google.github.io/ExoPlayer/doc/reference/index.html

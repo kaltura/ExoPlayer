@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.android.exoplayer2.extractor;
+package com.kaltura.android.exoplayer2.extractor;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.id3.ApicFrame;
-import com.google.android.exoplayer2.metadata.id3.CommentFrame;
-import com.google.android.exoplayer2.metadata.id3.Id3DecoderTest;
-import com.google.android.exoplayer2.testutil.FakeExtractorInput;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.id3.ApicFrame;
+import com.kaltura.android.exoplayer2.metadata.id3.CommentFrame;
+import com.kaltura.android.exoplayer2.metadata.id3.Id3DecoderTest;
+import com.kaltura.android.exoplayer2.testutil.FakeExtractorInput;
 import java.io.IOException;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream;
+package com.kaltura.android.exoplayer2.upstream;
 
 import android.content.Context;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.SparseArray;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Clock;
-import com.google.android.exoplayer2.util.EventDispatcher;
-import com.google.android.exoplayer2.util.SlidingPercentile;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Clock;
+import com.kaltura.android.exoplayer2.util.EventDispatcher;
+import com.kaltura.android.exoplayer2.util.SlidingPercentile;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

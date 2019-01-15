@@ -6,7 +6,7 @@ play DASH content, instantiate a `DashMediaSource` and pass it to
 
 ## Links ##
 
-* [Javadoc][]: Classes matching `com.google.android.exoplayer2.source.dash.*`
+* [Javadoc][]: Classes matching `com.kaltura.android.exoplayer2.source.dash.*`
   belong to this module.
 
 [Javadoc]: https://google.github.io/ExoPlayer/doc/reference/index.html

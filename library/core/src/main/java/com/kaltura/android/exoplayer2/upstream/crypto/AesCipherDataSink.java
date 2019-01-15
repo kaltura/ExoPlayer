@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.crypto;
+package com.kaltura.android.exoplayer2.upstream.crypto;
 
-import com.google.android.exoplayer2.upstream.DataSink;
-import com.google.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.DataSink;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
 import javax.crypto.Cipher;
 

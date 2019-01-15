@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.util;
+package com.kaltura.android.exoplayer2.util;
 
 import android.annotation.TargetApi;
-import com.google.android.exoplayer2.ExoPlayerLibraryInfo;
+import com.kaltura.android.exoplayer2.ExoPlayerLibraryInfo;
 
 /**
  * Calls through to {@link android.os.Trace} methods on supported API levels.

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream;
+package com.kaltura.android.exoplayer2.upstream;
 
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.Assert.fail;
@@ -30,8 +30,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -43,7 +43,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public final class ContentDataSourceTest {
 
-  private static final String AUTHORITY = "com.google.android.exoplayer2.core.test";
+  private static final String AUTHORITY = "com.kaltura.android.exoplayer2.core.test";
   private static final String DATA_PATH = "binary/1024_incrementing_bytes.mp3";
 
   @Test

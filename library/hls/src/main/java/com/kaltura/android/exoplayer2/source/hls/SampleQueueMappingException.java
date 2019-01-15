@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls;
+package com.kaltura.android.exoplayer2.source.hls;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.source.SampleQueue;
-import com.google.android.exoplayer2.source.TrackGroup;
+import com.kaltura.android.exoplayer2.source.SampleQueue;
+import com.kaltura.android.exoplayer2.source.TrackGroup;
 import java.io.IOException;
 
 /** Thrown when it is not possible to map a {@link TrackGroup} to a {@link SampleQueue}. */

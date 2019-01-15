@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.manifest;
+package com.kaltura.android.exoplayer2.source.dash.manifest;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.source.dash.DashSegmentIndex;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.MultiSegmentBase;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.source.dash.DashSegmentIndex;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.MultiSegmentBase;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
 import java.util.Collections;
 import java.util.List;
 

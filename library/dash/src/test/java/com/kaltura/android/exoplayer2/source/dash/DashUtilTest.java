@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash;
+package com.kaltura.android.exoplayer2.source.dash;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
-import com.google.android.exoplayer2.source.dash.manifest.AdaptationSet;
-import com.google.android.exoplayer2.source.dash.manifest.Period;
-import com.google.android.exoplayer2.source.dash.manifest.Representation;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
-import com.google.android.exoplayer2.upstream.DummyDataSource;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.drm.DrmInitData;
+import com.kaltura.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.kaltura.android.exoplayer2.source.dash.manifest.AdaptationSet;
+import com.kaltura.android.exoplayer2.source.dash.manifest.Period;
+import com.kaltura.android.exoplayer2.source.dash.manifest.Representation;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
+import com.kaltura.android.exoplayer2.upstream.DummyDataSource;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 import java.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;

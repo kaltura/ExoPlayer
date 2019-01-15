@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.android.exoplayer2.extractor.ts;
+package com.kaltura.android.exoplayer2.extractor.ts;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 
 /** Utilities method for extracting MPEG-TS streams. */
 public final class TsUtil {

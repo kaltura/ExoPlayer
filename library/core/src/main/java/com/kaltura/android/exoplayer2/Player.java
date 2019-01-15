@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.os.Looper;
 import android.support.annotation.IntDef;
@@ -22,17 +22,17 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.TextureView;
-import com.google.android.exoplayer2.C.VideoScalingMode;
-import com.google.android.exoplayer2.audio.AudioAttributes;
-import com.google.android.exoplayer2.audio.AudioListener;
-import com.google.android.exoplayer2.audio.AuxEffectInfo;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.exoplayer2.video.VideoFrameMetadataListener;
-import com.google.android.exoplayer2.video.VideoListener;
-import com.google.android.exoplayer2.video.spherical.CameraMotionListener;
+import com.kaltura.android.exoplayer2.C.VideoScalingMode;
+import com.kaltura.android.exoplayer2.audio.AudioAttributes;
+import com.kaltura.android.exoplayer2.audio.AudioListener;
+import com.kaltura.android.exoplayer2.audio.AuxEffectInfo;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.text.TextOutput;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelectionArray;
+import com.kaltura.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.video.VideoFrameMetadataListener;
+import com.kaltura.android.exoplayer2.video.VideoListener;
+import com.kaltura.android.exoplayer2.video.spherical.CameraMotionListener;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

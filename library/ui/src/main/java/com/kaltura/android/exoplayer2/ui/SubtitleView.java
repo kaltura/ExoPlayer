@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui;
+package com.kaltura.android.exoplayer2.ui;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,10 +24,10 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.accessibility.CaptioningManager;
-import com.google.android.exoplayer2.text.CaptionStyleCompat;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.text.CaptionStyleCompat;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.TextOutput;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.ArrayList;
 import java.util.List;
 

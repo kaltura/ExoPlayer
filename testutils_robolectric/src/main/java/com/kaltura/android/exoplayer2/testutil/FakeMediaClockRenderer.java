@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.Renderer;
-import com.google.android.exoplayer2.util.MediaClock;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.Renderer;
+import com.kaltura.android.exoplayer2.util.MediaClock;
 
 /** Fake abstract {@link Renderer} which is also a {@link MediaClock}. */
 public abstract class FakeMediaClockRenderer extends FakeRenderer implements MediaClock {

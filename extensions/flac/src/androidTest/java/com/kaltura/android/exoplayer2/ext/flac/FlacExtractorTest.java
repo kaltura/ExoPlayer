@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
 import android.test.InstrumentationTestCase;
-import com.google.android.exoplayer2.testutil.ExtractorAsserts;
+import com.kaltura.android.exoplayer2.testutil.ExtractorAsserts;
 
 /**
  * Unit test for {@link FlacExtractor}.

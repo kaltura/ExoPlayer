@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.analytics;
+package com.kaltura.android.exoplayer2.analytics;
 
 /**
  * @deprecated Use {@link AnalyticsListener} directly for selective overrides as all methods are

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import android.support.annotation.NonNull;
-import com.google.android.exoplayer2.extractor.ChunkIndex;
-import com.google.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.extractor.ChunkIndex;
+import com.kaltura.android.exoplayer2.util.Log;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NavigableSet;

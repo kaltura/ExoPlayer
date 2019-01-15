@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui.spherical;
+package com.kaltura.android.exoplayer2.ui.spherical;
 
-import static com.google.android.exoplayer2.ui.spherical.GlUtil.checkGlError;
+import static com.kaltura.android.exoplayer2.ui.spherical.GlUtil.checkGlError;
 
 import android.graphics.SurfaceTexture;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.ui.spherical.ProjectionRenderer.EyeType;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.TimedValueQueue;
-import com.google.android.exoplayer2.video.VideoFrameMetadataListener;
-import com.google.android.exoplayer2.video.spherical.CameraMotionListener;
-import com.google.android.exoplayer2.video.spherical.FrameRotationQueue;
-import com.google.android.exoplayer2.video.spherical.Projection;
-import com.google.android.exoplayer2.video.spherical.ProjectionDecoder;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.ui.spherical.ProjectionRenderer.EyeType;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.TimedValueQueue;
+import com.kaltura.android.exoplayer2.video.VideoFrameMetadataListener;
+import com.kaltura.android.exoplayer2.video.spherical.CameraMotionListener;
+import com.kaltura.android.exoplayer2.video.spherical.FrameRotationQueue;
+import com.kaltura.android.exoplayer2.video.spherical.Projection;
+import com.kaltura.android.exoplayer2.video.spherical.ProjectionDecoder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;

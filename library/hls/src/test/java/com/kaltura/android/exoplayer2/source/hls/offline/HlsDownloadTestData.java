@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.hls.offline;
+package com.kaltura.android.exoplayer2.source.hls.offline;
 
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.nio.charset.Charset;
 
 /** Data for HLS downloading tests. */

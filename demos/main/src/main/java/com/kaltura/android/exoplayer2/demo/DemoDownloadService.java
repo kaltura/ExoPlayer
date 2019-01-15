@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.demo;
+package com.kaltura.android.exoplayer2.demo;
 
 import android.app.Notification;
-import com.google.android.exoplayer2.offline.DownloadManager;
-import com.google.android.exoplayer2.offline.DownloadManager.TaskState;
-import com.google.android.exoplayer2.offline.DownloadService;
-import com.google.android.exoplayer2.scheduler.PlatformScheduler;
-import com.google.android.exoplayer2.ui.DownloadNotificationUtil;
-import com.google.android.exoplayer2.util.NotificationUtil;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.offline.DownloadManager;
+import com.kaltura.android.exoplayer2.offline.DownloadManager.TaskState;
+import com.kaltura.android.exoplayer2.offline.DownloadService;
+import com.kaltura.android.exoplayer2.scheduler.PlatformScheduler;
+import com.kaltura.android.exoplayer2.ui.DownloadNotificationUtil;
+import com.kaltura.android.exoplayer2.util.NotificationUtil;
+import com.kaltura.android.exoplayer2.util.Util;
 
 /** A service for downloading media. */
 public class DemoDownloadService extends DownloadService {

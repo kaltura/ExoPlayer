@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.util.Arrays;
 
 /** An array of {@link TrackGroup}s exposed by a {@link MediaPeriod}. */

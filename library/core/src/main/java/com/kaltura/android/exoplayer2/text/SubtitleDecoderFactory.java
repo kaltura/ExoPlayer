@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text;
+package com.kaltura.android.exoplayer2.text;
 
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.text.cea.Cea608Decoder;
-import com.google.android.exoplayer2.text.cea.Cea708Decoder;
-import com.google.android.exoplayer2.text.dvb.DvbDecoder;
-import com.google.android.exoplayer2.text.pgs.PgsDecoder;
-import com.google.android.exoplayer2.text.ssa.SsaDecoder;
-import com.google.android.exoplayer2.text.subrip.SubripDecoder;
-import com.google.android.exoplayer2.text.ttml.TtmlDecoder;
-import com.google.android.exoplayer2.text.tx3g.Tx3gDecoder;
-import com.google.android.exoplayer2.text.webvtt.Mp4WebvttDecoder;
-import com.google.android.exoplayer2.text.webvtt.WebvttDecoder;
-import com.google.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.text.cea.Cea608Decoder;
+import com.kaltura.android.exoplayer2.text.cea.Cea708Decoder;
+import com.kaltura.android.exoplayer2.text.dvb.DvbDecoder;
+import com.kaltura.android.exoplayer2.text.pgs.PgsDecoder;
+import com.kaltura.android.exoplayer2.text.ssa.SsaDecoder;
+import com.kaltura.android.exoplayer2.text.subrip.SubripDecoder;
+import com.kaltura.android.exoplayer2.text.ttml.TtmlDecoder;
+import com.kaltura.android.exoplayer2.text.tx3g.Tx3gDecoder;
+import com.kaltura.android.exoplayer2.text.webvtt.Mp4WebvttDecoder;
+import com.kaltura.android.exoplayer2.text.webvtt.WebvttDecoder;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
 
 /**
  * A factory for {@link SubtitleDecoder} instances.

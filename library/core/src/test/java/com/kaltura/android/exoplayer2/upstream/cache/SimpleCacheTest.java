@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
-import static com.google.android.exoplayer2.C.LENGTH_UNSET;
-import static com.google.android.exoplayer2.util.Util.toByteArray;
+import static com.kaltura.android.exoplayer2.C.LENGTH_UNSET;
+import static com.kaltura.android.exoplayer2.util.Util.toByteArray;
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 import static org.mockito.Mockito.doAnswer;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.upstream.cache.Cache.CacheException;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.upstream.cache.Cache.CacheException;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

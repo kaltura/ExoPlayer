@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.opus;
+package com.kaltura.android.exoplayer2.ext.opus;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.decoder.CryptoInfo;
-import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
-import com.google.android.exoplayer2.decoder.SimpleDecoder;
-import com.google.android.exoplayer2.decoder.SimpleOutputBuffer;
-import com.google.android.exoplayer2.drm.DecryptionException;
-import com.google.android.exoplayer2.drm.ExoMediaCrypto;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.decoder.CryptoInfo;
+import com.kaltura.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.kaltura.android.exoplayer2.decoder.SimpleDecoder;
+import com.kaltura.android.exoplayer2.decoder.SimpleOutputBuffer;
+import com.kaltura.android.exoplayer2.drm.DecryptionException;
+import com.kaltura.android.exoplayer2.drm.ExoMediaCrypto;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.List;

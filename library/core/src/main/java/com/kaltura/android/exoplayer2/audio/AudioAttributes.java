@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.audio;
+package com.kaltura.android.exoplayer2.audio;
 
 import android.annotation.TargetApi;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 
 /**
  * Attributes for audio playback, which configure the underlying platform
  * {@link android.media.AudioTrack}.
  * <p>
  * To set the audio attributes, create an instance using the {@link Builder} and either pass it to
- * {@link com.google.android.exoplayer2.SimpleExoPlayer#setAudioAttributes(AudioAttributes)} or
+ * {@link com.kaltura.android.exoplayer2.SimpleExoPlayer#setAudioAttributes(AudioAttributes)} or
  * send a message of type {@link C#MSG_SET_AUDIO_ATTRIBUTES} to the audio renderers.
  * <p>
  * This class is based on {@link android.media.AudioAttributes}, but can be used on all supported

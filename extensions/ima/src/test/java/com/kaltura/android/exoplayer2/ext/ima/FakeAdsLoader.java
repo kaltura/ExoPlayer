@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.ima;
+package com.kaltura.android.exoplayer2.ext.ima;
 
 import com.google.ads.interactivemedia.v3.api.AdErrorEvent.AdErrorListener;
 import com.google.ads.interactivemedia.v3.api.AdsManager;
@@ -22,7 +22,7 @@ import com.google.ads.interactivemedia.v3.api.AdsRequest;
 import com.google.ads.interactivemedia.v3.api.ImaSdkSettings;
 import com.google.ads.interactivemedia.v3.api.StreamManager;
 import com.google.ads.interactivemedia.v3.api.StreamRequest;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.util.ArrayList;
 
 /** Fake {@link com.google.ads.interactivemedia.v3.api.AdsLoader} implementation for tests. */

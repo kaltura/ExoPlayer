@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.upstream.DataSink;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.Factory;
-import com.google.android.exoplayer2.upstream.FileDataSourceFactory;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSource.EventListener;
+import com.kaltura.android.exoplayer2.upstream.DataSink;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSource.Factory;
+import com.kaltura.android.exoplayer2.upstream.FileDataSourceFactory;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheDataSource.EventListener;
 
 /**
  * A {@link DataSource.Factory} that produces {@link CacheDataSource}.

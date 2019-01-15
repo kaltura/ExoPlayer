@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.webvtt;
+package com.kaltura.android.exoplayer2.text.webvtt;
 
-import static com.google.android.exoplayer2.C.INDEX_UNSET;
+import static com.kaltura.android.exoplayer2.C.INDEX_UNSET;
 import static com.google.common.truth.Truth.assertThat;
 import static java.lang.Long.MAX_VALUE;
 
-import com.google.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.Cue;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

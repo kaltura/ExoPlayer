@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Timeline.Period;
-import com.google.android.exoplayer2.Timeline.Window;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Timeline.Period;
+import com.kaltura.android.exoplayer2.Timeline.Window;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

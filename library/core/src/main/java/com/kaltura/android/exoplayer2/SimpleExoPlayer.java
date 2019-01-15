@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -28,32 +28,32 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.TextureView;
-import com.google.android.exoplayer2.analytics.AnalyticsCollector;
-import com.google.android.exoplayer2.analytics.AnalyticsListener;
-import com.google.android.exoplayer2.audio.AudioAttributes;
-import com.google.android.exoplayer2.audio.AudioFocusManager;
-import com.google.android.exoplayer2.audio.AudioListener;
-import com.google.android.exoplayer2.audio.AudioRendererEventListener;
-import com.google.android.exoplayer2.audio.AuxEffectInfo;
-import com.google.android.exoplayer2.decoder.DecoderCounters;
-import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
-import com.google.android.exoplayer2.drm.DrmSessionManager;
-import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.metadata.MetadataOutput;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
-import com.google.android.exoplayer2.trackselection.TrackSelector;
-import com.google.android.exoplayer2.upstream.BandwidthMeter;
-import com.google.android.exoplayer2.util.Clock;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.exoplayer2.video.VideoFrameMetadataListener;
-import com.google.android.exoplayer2.video.VideoRendererEventListener;
-import com.google.android.exoplayer2.video.spherical.CameraMotionListener;
+import com.kaltura.android.exoplayer2.analytics.AnalyticsCollector;
+import com.kaltura.android.exoplayer2.analytics.AnalyticsListener;
+import com.kaltura.android.exoplayer2.audio.AudioAttributes;
+import com.kaltura.android.exoplayer2.audio.AudioFocusManager;
+import com.kaltura.android.exoplayer2.audio.AudioListener;
+import com.kaltura.android.exoplayer2.audio.AudioRendererEventListener;
+import com.kaltura.android.exoplayer2.audio.AuxEffectInfo;
+import com.kaltura.android.exoplayer2.decoder.DecoderCounters;
+import com.kaltura.android.exoplayer2.drm.DefaultDrmSessionManager;
+import com.kaltura.android.exoplayer2.drm.DrmSessionManager;
+import com.kaltura.android.exoplayer2.drm.FrameworkMediaCrypto;
+import com.kaltura.android.exoplayer2.metadata.Metadata;
+import com.kaltura.android.exoplayer2.metadata.MetadataOutput;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.source.TrackGroupArray;
+import com.kaltura.android.exoplayer2.text.Cue;
+import com.kaltura.android.exoplayer2.text.TextOutput;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelectionArray;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelector;
+import com.kaltura.android.exoplayer2.upstream.BandwidthMeter;
+import com.kaltura.android.exoplayer2.util.Clock;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.video.VideoFrameMetadataListener;
+import com.kaltura.android.exoplayer2.video.VideoRendererEventListener;
+import com.kaltura.android.exoplayer2.video.spherical.CameraMotionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -67,9 +67,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class SimpleExoPlayer extends BasePlayer
     implements ExoPlayer, Player.AudioComponent, Player.VideoComponent, Player.TextComponent {
 
-  /** @deprecated Use {@link com.google.android.exoplayer2.video.VideoListener}. */
+  /** @deprecated Use {@link com.kaltura.android.exoplayer2.video.VideoListener}. */
   @Deprecated
-  public interface VideoListener extends com.google.android.exoplayer2.video.VideoListener {}
+  public interface VideoListener extends com.kaltura.android.exoplayer2.video.VideoListener {}
 
   private static final String TAG = "SimpleExoPlayer";
 
@@ -78,7 +78,7 @@ public class SimpleExoPlayer extends BasePlayer
   private final ExoPlayerImpl player;
   private final Handler eventHandler;
   private final ComponentListener componentListener;
-  private final CopyOnWriteArraySet<com.google.android.exoplayer2.video.VideoListener>
+  private final CopyOnWriteArraySet<com.kaltura.android.exoplayer2.video.VideoListener>
       videoListeners;
   private final CopyOnWriteArraySet<AudioListener> audioListeners;
   private final CopyOnWriteArraySet<TextOutput> textOutputs;
@@ -574,12 +574,12 @@ public class SimpleExoPlayer extends BasePlayer
   }
 
   @Override
-  public void addVideoListener(com.google.android.exoplayer2.video.VideoListener listener) {
+  public void addVideoListener(com.kaltura.android.exoplayer2.video.VideoListener listener) {
     videoListeners.add(listener);
   }
 
   @Override
-  public void removeVideoListener(com.google.android.exoplayer2.video.VideoListener listener) {
+  public void removeVideoListener(com.kaltura.android.exoplayer2.video.VideoListener listener) {
     videoListeners.remove(listener);
   }
 
@@ -651,7 +651,7 @@ public class SimpleExoPlayer extends BasePlayer
    * Sets a listener to receive video events, removing all existing listeners.
    *
    * @param listener The listener.
-   * @deprecated Use {@link #addVideoListener(com.google.android.exoplayer2.video.VideoListener)}.
+   * @deprecated Use {@link #addVideoListener(com.kaltura.android.exoplayer2.video.VideoListener)}.
    */
   @Deprecated
   @SuppressWarnings("deprecation")
@@ -663,11 +663,11 @@ public class SimpleExoPlayer extends BasePlayer
   }
 
   /**
-   * Equivalent to {@link #removeVideoListener(com.google.android.exoplayer2.video.VideoListener)}.
+   * Equivalent to {@link #removeVideoListener(com.kaltura.android.exoplayer2.video.VideoListener)}.
    *
    * @param listener The listener to clear.
    * @deprecated Use {@link
-   *     #removeVideoListener(com.google.android.exoplayer2.video.VideoListener)}.
+   *     #removeVideoListener(com.kaltura.android.exoplayer2.video.VideoListener)}.
    */
   @Deprecated
   @SuppressWarnings("deprecation")
@@ -1163,7 +1163,7 @@ public class SimpleExoPlayer extends BasePlayer
     if (width != surfaceWidth || height != surfaceHeight) {
       surfaceWidth = width;
       surfaceHeight = height;
-      for (com.google.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
+      for (com.kaltura.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
         videoListener.onSurfaceSizeChanged(width, height);
       }
     }
@@ -1243,7 +1243,7 @@ public class SimpleExoPlayer extends BasePlayer
     @Override
     public void onVideoSizeChanged(int width, int height, int unappliedRotationDegrees,
         float pixelWidthHeightRatio) {
-      for (com.google.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
+      for (com.kaltura.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
         // Prevent duplicate notification if a listener is both a VideoRendererEventListener and
         // a VideoListener, as they have the same method signature.
         if (!videoDebugListeners.contains(videoListener)) {
@@ -1260,7 +1260,7 @@ public class SimpleExoPlayer extends BasePlayer
     @Override
     public void onRenderedFirstFrame(Surface surface) {
       if (SimpleExoPlayer.this.surface == surface) {
-        for (com.google.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
+        for (com.kaltura.android.exoplayer2.video.VideoListener videoListener : videoListeners) {
           videoListener.onRenderedFirstFrame();
         }
       }

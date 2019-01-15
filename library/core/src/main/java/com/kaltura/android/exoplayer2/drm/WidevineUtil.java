@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.util.Map;
 
 /**

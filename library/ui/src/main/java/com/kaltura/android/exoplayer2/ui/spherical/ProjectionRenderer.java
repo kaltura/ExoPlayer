@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui.spherical;
+package com.kaltura.android.exoplayer2.ui.spherical;
 
-import static com.google.android.exoplayer2.ui.spherical.GlUtil.checkGlError;
+import static com.kaltura.android.exoplayer2.ui.spherical.GlUtil.checkGlError;
 
 import android.annotation.TargetApi;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.video.spherical.Projection;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.video.spherical.Projection;
 import java.nio.FloatBuffer;
 import org.checkerframework.checker.nullness.qual.Nullable;
 

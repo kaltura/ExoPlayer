@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.mediasession;
+package com.kaltura.android.exoplayer2.ext.mediasession;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.media.session.PlaybackStateCompat;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.util.RepeatModeUtil;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.util.RepeatModeUtil;
 
 /**
  * Provides a custom action for toggling repeat modes.

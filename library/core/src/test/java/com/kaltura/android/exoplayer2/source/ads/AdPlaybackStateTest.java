@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.ads;
+package com.kaltura.android.exoplayer2.source.ads;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.chunk;
+package com.kaltura.android.exoplayer2.source.chunk;
 
 import android.support.annotation.Nullable;
 import android.util.SparseArray;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.extractor.DummyTrackOutput;
-import com.google.android.exoplayer2.extractor.Extractor;
-import com.google.android.exoplayer2.extractor.ExtractorInput;
-import com.google.android.exoplayer2.extractor.ExtractorOutput;
-import com.google.android.exoplayer2.extractor.SeekMap;
-import com.google.android.exoplayer2.extractor.TrackOutput;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.extractor.DummyTrackOutput;
+import com.kaltura.android.exoplayer2.extractor.Extractor;
+import com.kaltura.android.exoplayer2.extractor.ExtractorInput;
+import com.kaltura.android.exoplayer2.extractor.ExtractorOutput;
+import com.kaltura.android.exoplayer2.extractor.SeekMap;
+import com.kaltura.android.exoplayer2.extractor.TrackOutput;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
 import java.io.IOException;
 
 /**
@@ -49,7 +49,7 @@ public final class ChunkExtractorWrapper implements ExtractorOutput {
      *
      * @param id A track identifier.
      * @param type The type of the track. Typically one of the
-     *     {@link com.google.android.exoplayer2.C} {@code TRACK_TYPE_*} constants.
+     *     {@link com.kaltura.android.exoplayer2.C} {@code TRACK_TYPE_*} constants.
      * @return The {@link TrackOutput} for the given track identifier.
      */
     TrackOutput track(int id, int type);
@@ -71,7 +71,7 @@ public final class ChunkExtractorWrapper implements ExtractorOutput {
   /**
    * @param extractor The extractor to wrap.
    * @param primaryTrackType The type of the primary track. Typically one of the
-   *     {@link com.google.android.exoplayer2.C} {@code TRACK_TYPE_*} constants.
+   *     {@link com.kaltura.android.exoplayer2.C} {@code TRACK_TYPE_*} constants.
    * @param primaryTrackManifestFormat A manifest defined {@link Format} whose data should be merged
    *     into any sample {@link Format} output from the {@link Extractor} for the primary track.
    */

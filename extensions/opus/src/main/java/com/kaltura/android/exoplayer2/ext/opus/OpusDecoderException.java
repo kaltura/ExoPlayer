@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.opus;
+package com.kaltura.android.exoplayer2.ext.opus;
 
-import com.google.android.exoplayer2.audio.AudioDecoderException;
+import com.kaltura.android.exoplayer2.audio.AudioDecoderException;
 
 /**
  * Thrown when an Opus decoder error occurs.

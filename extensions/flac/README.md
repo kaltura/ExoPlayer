@@ -92,7 +92,7 @@ player, then implement your own logic to use the renderer for a given track.
 
 ## Links ##
 
-* [Javadoc][]: Classes matching `com.google.android.exoplayer2.ext.flac.*`
+* [Javadoc][]: Classes matching `com.kaltura.android.exoplayer2.ext.flac.*`
   belong to this module.
 
 [Javadoc]: https://google.github.io/ExoPlayer/doc/reference/index.html

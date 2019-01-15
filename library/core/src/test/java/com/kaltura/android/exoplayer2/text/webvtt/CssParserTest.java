@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.webvtt;
+package com.kaltura.android.exoplayer2.text.webvtt;
 
-import static com.google.android.exoplayer2.text.webvtt.CssParser.parseNextToken;
+import static com.kaltura.android.exoplayer2.text.webvtt.CssParser.parseNextToken;
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.android.exoplayer2.util.ParsableByteArray;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.ParsableByteArray;
+import com.kaltura.android.exoplayer2.util.Util;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

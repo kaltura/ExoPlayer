@@ -20,7 +20,7 @@ if (project.ext.has("exoplayerPublishEnabled")
         publishVersion = releaseVersion
         repoName = getBintrayRepo()
         userOrg = 'google'
-        groupId = 'com.google.android.exoplayer'
+        groupId = 'com.kaltura.android.exoplayer'
         website = 'https://github.com/google/ExoPlayer'
     }
 }

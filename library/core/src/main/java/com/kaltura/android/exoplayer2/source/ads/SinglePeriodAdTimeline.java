@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.ads;
+package com.kaltura.android.exoplayer2.source.ads;
 
 import android.support.annotation.VisibleForTesting;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.ForwardingTimeline;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.source.ForwardingTimeline;
+import com.kaltura.android.exoplayer2.util.Assertions;
 
 /** A {@link Timeline} for sources that have ads. */
 @VisibleForTesting(otherwise = VisibleForTesting.PACKAGE_PRIVATE)

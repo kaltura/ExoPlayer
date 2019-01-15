@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.extractor;
+package com.kaltura.android.exoplayer2.extractor;
 
 /**
  * Receives stream level data extracted by an {@link Extractor}.
@@ -26,7 +26,7 @@ public interface ExtractorOutput {
    * The same {@link TrackOutput} is returned if multiple calls are made with the same {@code id}.
    *
    * @param id A track identifier.
-   * @param type The type of the track. Typically one of the {@link com.google.android.exoplayer2.C}
+   * @param type The type of the track. Typically one of the {@link com.kaltura.android.exoplayer2.C}
    *     {@code TRACK_TYPE_*} constants.
    * @return The {@link TrackOutput} for the given track identifier.
    */

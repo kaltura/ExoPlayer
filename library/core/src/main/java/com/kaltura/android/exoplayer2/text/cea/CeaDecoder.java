@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.text.cea;
+package com.kaltura.android.exoplayer2.text.cea;
 
 import android.support.annotation.NonNull;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.text.Subtitle;
-import com.google.android.exoplayer2.text.SubtitleDecoder;
-import com.google.android.exoplayer2.text.SubtitleDecoderException;
-import com.google.android.exoplayer2.text.SubtitleInputBuffer;
-import com.google.android.exoplayer2.text.SubtitleOutputBuffer;
-import com.google.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.text.Subtitle;
+import com.kaltura.android.exoplayer2.text.SubtitleDecoder;
+import com.kaltura.android.exoplayer2.text.SubtitleDecoderException;
+import com.kaltura.android.exoplayer2.text.SubtitleInputBuffer;
+import com.kaltura.android.exoplayer2.text.SubtitleOutputBuffer;
+import com.kaltura.android.exoplayer2.util.Assertions;
 import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 

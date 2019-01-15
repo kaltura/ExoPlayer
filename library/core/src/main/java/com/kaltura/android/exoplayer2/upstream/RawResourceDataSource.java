@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream;
+package com.kaltura.android.exoplayer2.upstream;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
@@ -21,7 +21,7 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import com.google.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.C;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;

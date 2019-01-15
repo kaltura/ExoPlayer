@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.drm;
+package com.kaltura.android.exoplayer2.drm;
 
-import static com.google.android.exoplayer2.C.PLAYREADY_UUID;
-import static com.google.android.exoplayer2.C.UUID_NIL;
-import static com.google.android.exoplayer2.C.WIDEVINE_UUID;
-import static com.google.android.exoplayer2.util.MimeTypes.VIDEO_MP4;
+import static com.kaltura.android.exoplayer2.C.PLAYREADY_UUID;
+import static com.kaltura.android.exoplayer2.C.UUID_NIL;
+import static com.kaltura.android.exoplayer2.C.WIDEVINE_UUID;
+import static com.kaltura.android.exoplayer2.util.MimeTypes.VIDEO_MP4;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.os.Parcel;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
-import com.google.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;

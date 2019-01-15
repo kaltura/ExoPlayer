@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.util;
+package com.kaltura.android.exoplayer2.util;
 
-import static com.google.android.exoplayer2.util.UriUtil.removeQueryParameter;
-import static com.google.android.exoplayer2.util.UriUtil.resolve;
+import static com.kaltura.android.exoplayer2.util.UriUtil.removeQueryParameter;
+import static com.kaltura.android.exoplayer2.util.UriUtil.resolve;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.net.Uri;

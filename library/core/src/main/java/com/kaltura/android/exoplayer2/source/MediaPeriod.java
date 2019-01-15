@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source;
+package com.kaltura.android.exoplayer2.source;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.SeekParameters;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.SeekParameters;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.trackselection.TrackSelection;
 import java.io.IOException;
 
 /**

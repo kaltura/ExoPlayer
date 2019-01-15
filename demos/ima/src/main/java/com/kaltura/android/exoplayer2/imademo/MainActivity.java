@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.imademo;
+package com.kaltura.android.exoplayer2.imademo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.ui.PlayerView;
+import com.kaltura.android.exoplayer2.ExoPlayer;
+import com.kaltura.android.exoplayer2.ui.PlayerView;
 
 /**
  * Main Activity for the IMA plugin demo. {@link ExoPlayer} objects are created by

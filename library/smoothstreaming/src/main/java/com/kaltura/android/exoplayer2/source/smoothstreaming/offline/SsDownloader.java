@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.smoothstreaming.offline;
+package com.kaltura.android.exoplayer2.source.smoothstreaming.offline;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.SegmentDownloader;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifest;
-import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifest.StreamElement;
-import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifestParser;
-import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsUtil;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.SegmentDownloader;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.manifest.SsManifest;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.manifest.SsManifest.StreamElement;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.manifest.SsManifestParser;
+import com.kaltura.android.exoplayer2.source.smoothstreaming.manifest.SsUtil;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

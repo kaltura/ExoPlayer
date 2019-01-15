@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.upstream.cache;
+package com.kaltura.android.exoplayer2.upstream.cache;
 
 import android.support.annotation.Nullable;
 import java.io.File;
@@ -234,11 +234,11 @@ public interface Cache {
 
   /**
    * Returns the content length for the given key if one set, or {@link
-   * com.google.android.exoplayer2.C#LENGTH_UNSET} otherwise.
+   * com.kaltura.android.exoplayer2.C#LENGTH_UNSET} otherwise.
    *
    * @param key The cache key for the data.
    * @return The content length for the given key if one set, or {@link
-   *     com.google.android.exoplayer2.C#LENGTH_UNSET} otherwise.
+   *     com.kaltura.android.exoplayer2.C#LENGTH_UNSET} otherwise.
    */
   long getContentLength(String key);
 

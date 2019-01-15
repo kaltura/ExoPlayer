@@ -13,31 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.manifest;
+package com.kaltura.android.exoplayer2.source.dash.manifest;
 
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Pair;
 import android.util.Xml;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.ParserException;
-import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
-import com.google.android.exoplayer2.extractor.mp4.PsshAtomUtil;
-import com.google.android.exoplayer2.metadata.emsg.EventMessage;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentList;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentTemplate;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentTimelineElement;
-import com.google.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
-import com.google.android.exoplayer2.upstream.ParsingLoadable;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.Log;
-import com.google.android.exoplayer2.util.MimeTypes;
-import com.google.android.exoplayer2.util.UriUtil;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.exoplayer2.util.XmlPullParserUtil;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.ParserException;
+import com.kaltura.android.exoplayer2.drm.DrmInitData;
+import com.kaltura.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.kaltura.android.exoplayer2.extractor.mp4.PsshAtomUtil;
+import com.kaltura.android.exoplayer2.metadata.emsg.EventMessage;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentList;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentTemplate;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SegmentTimelineElement;
+import com.kaltura.android.exoplayer2.source.dash.manifest.SegmentBase.SingleSegmentBase;
+import com.kaltura.android.exoplayer2.upstream.ParsingLoadable;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.Log;
+import com.kaltura.android.exoplayer2.util.MimeTypes;
+import com.kaltura.android.exoplayer2.util.UriUtil;
+import com.kaltura.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.XmlPullParserUtil;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.mediacodec;
+package com.kaltura.android.exoplayer2.mediacodec;
 
 import android.media.MediaCodec;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
+import com.kaltura.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
 import java.util.Collections;
 import java.util.List;
 

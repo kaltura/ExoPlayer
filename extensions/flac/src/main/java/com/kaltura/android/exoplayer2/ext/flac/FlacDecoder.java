@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ext.flac;
+package com.kaltura.android.exoplayer2.ext.flac;
 
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
-import com.google.android.exoplayer2.decoder.SimpleDecoder;
-import com.google.android.exoplayer2.decoder.SimpleOutputBuffer;
-import com.google.android.exoplayer2.util.FlacStreamInfo;
+import com.kaltura.android.exoplayer2.Format;
+import com.kaltura.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.kaltura.android.exoplayer2.decoder.SimpleDecoder;
+import com.kaltura.android.exoplayer2.decoder.SimpleOutputBuffer;
+import com.kaltura.android.exoplayer2.util.FlacStreamInfo;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.List;

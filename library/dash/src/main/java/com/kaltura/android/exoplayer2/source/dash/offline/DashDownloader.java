@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.offline;
+package com.kaltura.android.exoplayer2.source.dash.offline;
 
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.extractor.ChunkIndex;
-import com.google.android.exoplayer2.offline.DownloadException;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.SegmentDownloader;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.source.dash.DashSegmentIndex;
-import com.google.android.exoplayer2.source.dash.DashUtil;
-import com.google.android.exoplayer2.source.dash.DashWrappingSegmentIndex;
-import com.google.android.exoplayer2.source.dash.manifest.AdaptationSet;
-import com.google.android.exoplayer2.source.dash.manifest.DashManifest;
-import com.google.android.exoplayer2.source.dash.manifest.Period;
-import com.google.android.exoplayer2.source.dash.manifest.RangedUri;
-import com.google.android.exoplayer2.source.dash.manifest.Representation;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.extractor.ChunkIndex;
+import com.kaltura.android.exoplayer2.offline.DownloadException;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.SegmentDownloader;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.source.dash.DashSegmentIndex;
+import com.kaltura.android.exoplayer2.source.dash.DashUtil;
+import com.kaltura.android.exoplayer2.source.dash.DashWrappingSegmentIndex;
+import com.kaltura.android.exoplayer2.source.dash.manifest.AdaptationSet;
+import com.kaltura.android.exoplayer2.source.dash.manifest.DashManifest;
+import com.kaltura.android.exoplayer2.source.dash.manifest.Period;
+import com.kaltura.android.exoplayer2.source.dash.manifest.RangedUri;
+import com.kaltura.android.exoplayer2.source.dash.manifest.Representation;
+import com.kaltura.android.exoplayer2.upstream.DataSource;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

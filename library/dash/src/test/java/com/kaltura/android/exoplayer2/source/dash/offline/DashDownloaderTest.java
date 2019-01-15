@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.source.dash.offline;
+package com.kaltura.android.exoplayer2.source.dash.offline;
 
-import static com.google.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD;
-import static com.google.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD_NO_INDEX;
-import static com.google.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD_URI;
-import static com.google.android.exoplayer2.testutil.CacheAsserts.assertCacheEmpty;
-import static com.google.android.exoplayer2.testutil.CacheAsserts.assertCachedData;
+import static com.kaltura.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD;
+import static com.kaltura.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD_NO_INDEX;
+import static com.kaltura.android.exoplayer2.source.dash.offline.DashDownloadTestData.TEST_MPD_URI;
+import static com.kaltura.android.exoplayer2.testutil.CacheAsserts.assertCacheEmpty;
+import static com.kaltura.android.exoplayer2.testutil.CacheAsserts.assertCachedData;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.google.android.exoplayer2.offline.DownloadException;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.testutil.FakeDataSet;
-import com.google.android.exoplayer2.testutil.FakeDataSource;
-import com.google.android.exoplayer2.testutil.FakeDataSource.Factory;
-import com.google.android.exoplayer2.testutil.TestUtil;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
-import com.google.android.exoplayer2.upstream.cache.SimpleCache;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.offline.DownloadException;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSet;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSource;
+import com.kaltura.android.exoplayer2.testutil.FakeDataSource.Factory;
+import com.kaltura.android.exoplayer2.testutil.TestUtil;
+import com.kaltura.android.exoplayer2.upstream.DataSpec;
+import com.kaltura.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
+import com.kaltura.android.exoplayer2.upstream.cache.SimpleCache;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;

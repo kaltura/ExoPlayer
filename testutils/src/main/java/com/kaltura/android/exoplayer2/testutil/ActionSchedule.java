@@ -13,42 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.testutil;
+package com.kaltura.android.exoplayer2.testutil;
 
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.view.Surface;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.PlaybackParameters;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.PlayerMessage;
-import com.google.android.exoplayer2.PlayerMessage.Target;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.testutil.Action.ClearVideoSurface;
-import com.google.android.exoplayer2.testutil.Action.ExecuteRunnable;
-import com.google.android.exoplayer2.testutil.Action.PlayUntilPosition;
-import com.google.android.exoplayer2.testutil.Action.PrepareSource;
-import com.google.android.exoplayer2.testutil.Action.Seek;
-import com.google.android.exoplayer2.testutil.Action.SendMessages;
-import com.google.android.exoplayer2.testutil.Action.SetPlayWhenReady;
-import com.google.android.exoplayer2.testutil.Action.SetPlaybackParameters;
-import com.google.android.exoplayer2.testutil.Action.SetRendererDisabled;
-import com.google.android.exoplayer2.testutil.Action.SetRepeatMode;
-import com.google.android.exoplayer2.testutil.Action.SetShuffleModeEnabled;
-import com.google.android.exoplayer2.testutil.Action.SetVideoSurface;
-import com.google.android.exoplayer2.testutil.Action.Stop;
-import com.google.android.exoplayer2.testutil.Action.ThrowPlaybackException;
-import com.google.android.exoplayer2.testutil.Action.WaitForIsLoading;
-import com.google.android.exoplayer2.testutil.Action.WaitForPlaybackState;
-import com.google.android.exoplayer2.testutil.Action.WaitForPositionDiscontinuity;
-import com.google.android.exoplayer2.testutil.Action.WaitForSeekProcessed;
-import com.google.android.exoplayer2.testutil.Action.WaitForTimelineChanged;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.HandlerWrapper;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlaybackException;
+import com.kaltura.android.exoplayer2.PlaybackParameters;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.PlayerMessage;
+import com.kaltura.android.exoplayer2.PlayerMessage.Target;
+import com.kaltura.android.exoplayer2.SimpleExoPlayer;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.source.MediaSource;
+import com.kaltura.android.exoplayer2.testutil.Action.ClearVideoSurface;
+import com.kaltura.android.exoplayer2.testutil.Action.ExecuteRunnable;
+import com.kaltura.android.exoplayer2.testutil.Action.PlayUntilPosition;
+import com.kaltura.android.exoplayer2.testutil.Action.PrepareSource;
+import com.kaltura.android.exoplayer2.testutil.Action.Seek;
+import com.kaltura.android.exoplayer2.testutil.Action.SendMessages;
+import com.kaltura.android.exoplayer2.testutil.Action.SetPlayWhenReady;
+import com.kaltura.android.exoplayer2.testutil.Action.SetPlaybackParameters;
+import com.kaltura.android.exoplayer2.testutil.Action.SetRendererDisabled;
+import com.kaltura.android.exoplayer2.testutil.Action.SetRepeatMode;
+import com.kaltura.android.exoplayer2.testutil.Action.SetShuffleModeEnabled;
+import com.kaltura.android.exoplayer2.testutil.Action.SetVideoSurface;
+import com.kaltura.android.exoplayer2.testutil.Action.Stop;
+import com.kaltura.android.exoplayer2.testutil.Action.ThrowPlaybackException;
+import com.kaltura.android.exoplayer2.testutil.Action.WaitForIsLoading;
+import com.kaltura.android.exoplayer2.testutil.Action.WaitForPlaybackState;
+import com.kaltura.android.exoplayer2.testutil.Action.WaitForPositionDiscontinuity;
+import com.kaltura.android.exoplayer2.testutil.Action.WaitForSeekProcessed;
+import com.kaltura.android.exoplayer2.testutil.Action.WaitForTimelineChanged;
+import com.kaltura.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.HandlerWrapper;
 
 /**
  * Schedules a sequence of {@link Action}s for execution during a test.
@@ -311,7 +311,7 @@ public final class ActionSchedule {
 
     /**
      * Schedules a new source preparation action to be executed.
-     * @see com.google.android.exoplayer2.ExoPlayer#prepare(MediaSource, boolean, boolean).
+     * @see com.kaltura.android.exoplayer2.ExoPlayer#prepare(MediaSource, boolean, boolean).
      *
      * @return The builder, for convenience.
      */

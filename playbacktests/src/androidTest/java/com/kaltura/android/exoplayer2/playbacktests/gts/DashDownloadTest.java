@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.playbacktests.gts;
+package com.kaltura.android.exoplayer2.playbacktests.gts;
 
 import static androidx.test.InstrumentationRegistry.getInstrumentation;
 import static com.google.common.truth.Truth.assertWithMessage;
@@ -21,21 +21,21 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import android.net.Uri;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
-import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
-import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.source.dash.DashUtil;
-import com.google.android.exoplayer2.source.dash.manifest.AdaptationSet;
-import com.google.android.exoplayer2.source.dash.manifest.DashManifest;
-import com.google.android.exoplayer2.source.dash.manifest.Representation;
-import com.google.android.exoplayer2.source.dash.offline.DashDownloader;
-import com.google.android.exoplayer2.testutil.HostActivity;
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
-import com.google.android.exoplayer2.upstream.DummyDataSource;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSource;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
-import com.google.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
-import com.google.android.exoplayer2.upstream.cache.SimpleCache;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.offline.DownloaderConstructorHelper;
+import com.kaltura.android.exoplayer2.offline.StreamKey;
+import com.kaltura.android.exoplayer2.source.dash.DashUtil;
+import com.kaltura.android.exoplayer2.source.dash.manifest.AdaptationSet;
+import com.kaltura.android.exoplayer2.source.dash.manifest.DashManifest;
+import com.kaltura.android.exoplayer2.source.dash.manifest.Representation;
+import com.kaltura.android.exoplayer2.source.dash.offline.DashDownloader;
+import com.kaltura.android.exoplayer2.testutil.HostActivity;
+import com.kaltura.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.kaltura.android.exoplayer2.upstream.DummyDataSource;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheDataSource;
+import com.kaltura.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
+import com.kaltura.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
+import com.kaltura.android.exoplayer2.upstream.cache.SimpleCache;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

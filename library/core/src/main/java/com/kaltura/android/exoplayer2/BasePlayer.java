@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2;
+package com.kaltura.android.exoplayer2;
 
 import android.support.annotation.Nullable;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.util.Util;
 
 /** Abstract base {@link Player} which implements common implementation independent methods. */
 public abstract class BasePlayer implements Player {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.exoplayer2.ui;
+package com.kaltura.android.exoplayer2.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -31,14 +31,14 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayerLibraryInfo;
-import com.google.android.exoplayer2.PlaybackPreparer;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.util.Assertions;
-import com.google.android.exoplayer2.util.RepeatModeUtil;
-import com.google.android.exoplayer2.util.Util;
+import com.kaltura.android.exoplayer2.C;
+import com.kaltura.android.exoplayer2.ExoPlayerLibraryInfo;
+import com.kaltura.android.exoplayer2.PlaybackPreparer;
+import com.kaltura.android.exoplayer2.Player;
+import com.kaltura.android.exoplayer2.Timeline;
+import com.kaltura.android.exoplayer2.util.Assertions;
+import com.kaltura.android.exoplayer2.util.RepeatModeUtil;
+import com.kaltura.android.exoplayer2.util.Util;
 import java.util.Arrays;
 import java.util.Formatter;
 import java.util.Locale;
@@ -220,7 +220,7 @@ public class PlayerControlView extends FrameLayout {
   private final String repeatAllButtonContentDescription;
 
   private Player player;
-  private com.google.android.exoplayer2.ControlDispatcher controlDispatcher;
+  private com.kaltura.android.exoplayer2.ControlDispatcher controlDispatcher;
   private VisibilityListener visibilityListener;
   private @Nullable PlaybackPreparer playbackPreparer;
 
@@ -289,7 +289,7 @@ public class PlayerControlView extends FrameLayout {
     extraAdGroupTimesMs = new long[0];
     extraPlayedAdGroups = new boolean[0];
     componentListener = new ComponentListener();
-    controlDispatcher = new com.google.android.exoplayer2.DefaultControlDispatcher();
+    controlDispatcher = new com.kaltura.android.exoplayer2.DefaultControlDispatcher();
     updateProgressAction = this::updateProgress;
     hideAction = this::hide;
 
@@ -439,16 +439,16 @@ public class PlayerControlView extends FrameLayout {
   }
 
   /**
-   * Sets the {@link com.google.android.exoplayer2.ControlDispatcher}.
+   * Sets the {@link com.kaltura.android.exoplayer2.ControlDispatcher}.
    *
-   * @param controlDispatcher The {@link com.google.android.exoplayer2.ControlDispatcher}, or null
-   *     to use {@link com.google.android.exoplayer2.DefaultControlDispatcher}.
+   * @param controlDispatcher The {@link com.kaltura.android.exoplayer2.ControlDispatcher}, or null
+   *     to use {@link com.kaltura.android.exoplayer2.DefaultControlDispatcher}.
    */
   public void setControlDispatcher(
-      @Nullable com.google.android.exoplayer2.ControlDispatcher controlDispatcher) {
+      @Nullable com.kaltura.android.exoplayer2.ControlDispatcher controlDispatcher) {
     this.controlDispatcher =
         controlDispatcher == null
-            ? new com.google.android.exoplayer2.DefaultControlDispatcher()
+            ? new com.kaltura.android.exoplayer2.DefaultControlDispatcher()
             : controlDispatcher;
   }
 
