@@ -230,19 +230,19 @@ public class PlayerNotificationManager {
   }
 
   /** The action which starts playback. */
-  public static final String ACTION_PLAY = "com.google.android.exoplayer.play";
+  public static final String ACTION_PLAY = "com.google.android.kexoplayer.play";
   /** The action which pauses playback. */
-  public static final String ACTION_PAUSE = "com.google.android.exoplayer.pause";
+  public static final String ACTION_PAUSE = "com.google.android.kexoplayer.pause";
   /** The action which skips to the previous window. */
-  public static final String ACTION_PREVIOUS = "com.google.android.exoplayer.prev";
+  public static final String ACTION_PREVIOUS = "com.google.android.kexoplayer.prev";
   /** The action which skips to the next window. */
-  public static final String ACTION_NEXT = "com.google.android.exoplayer.next";
+  public static final String ACTION_NEXT = "com.google.android.kexoplayer.next";
   /** The action which fast forwards. */
-  public static final String ACTION_FAST_FORWARD = "com.google.android.exoplayer.ffwd";
+  public static final String ACTION_FAST_FORWARD = "com.google.android.kexoplayer.ffwd";
   /** The action which rewinds. */
-  public static final String ACTION_REWIND = "com.google.android.exoplayer.rewind";
+  public static final String ACTION_REWIND = "com.google.android.kexoplayer.rewind";
   /** The action which cancels the notification and stops playback. */
-  public static final String ACTION_STOP = "com.google.android.exoplayer.stop";
+  public static final String ACTION_STOP = "com.google.android.kexoplayer.stop";
   /** The extra key of the instance id of the player notification manager. */
   public static final String EXTRA_INSTANCE_ID = "INSTANCE_ID";
 

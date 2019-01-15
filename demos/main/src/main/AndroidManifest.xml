@@ -63,7 +63,7 @@
         android:label="@string/application_name"
         android:theme="@style/PlayerTheme">
       <intent-filter>
-        <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+        <action android:name="com.google.android.kexoplayer.demo.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <data android:scheme="http"/>
         <data android:scheme="https"/>
@@ -72,7 +72,7 @@
         <data android:scheme="file"/>
       </intent-filter>
       <intent-filter>
-        <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+        <action android:name="com.google.android.kexoplayer.demo.action.VIEW_LIST"/>
         <category android:name="android.intent.category.DEFAULT"/>
       </intent-filter>
     </activity>
@@ -80,7 +80,7 @@
     <service android:name="com.google.android.kexoplayer2.demo.DemoDownloadService"
         android:exported="false">
       <intent-filter>
-        <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+        <action android:name="com.google.android.kexoplayer.downloadService.action.RESTART"/>
         <category android:name="android.intent.category.DEFAULT"/>
       </intent-filter>
     </service>
