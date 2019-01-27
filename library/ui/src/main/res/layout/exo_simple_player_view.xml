@@ -15,34 +15,34 @@
 -->
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <com.kaltura.android.exoplayer2.ui.AspectRatioFrameLayout android:id="@id/exo_content_frame"
+  <com.kaltura.android.exoplayer2.ui.AspectRatioFrameLayout android:id="@id/kaltura_exo_content_frame"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_gravity="center">
 
     <!-- Video surface will be inserted as the first child of the content frame. -->
 
-    <View android:id="@id/exo_shutter"
+    <View android:id="@id/kaltura_exo_shutter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/black"/>
 
-    <ImageView android:id="@id/exo_artwork"
+    <ImageView android:id="@id/kaltura_exo_artwork"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"/>
 
-    <com.kaltura.android.exoplayer2.ui.SubtitleView android:id="@id/exo_subtitles"
+    <com.kaltura.android.exoplayer2.ui.SubtitleView android:id="@id/kaltura_exo_subtitles"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <ProgressBar android:id="@id/exo_buffering"
+    <ProgressBar android:id="@id/kaltura_exo_buffering"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:layout_gravity="center"/>
 
-    <TextView android:id="@id/exo_error_message"
+    <TextView android:id="@id/kaltura_exo_error_message"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -52,11 +52,11 @@
 
   </com.kaltura.android.exoplayer2.ui.AspectRatioFrameLayout>
 
-  <FrameLayout android:id="@id/exo_overlay"
+  <FrameLayout android:id="@id/kaltura_exo_overlay"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
 
-  <View android:id="@id/exo_controller_placeholder"
+  <View android:id="@id/kaltura_exo_controller_placeholder"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
 

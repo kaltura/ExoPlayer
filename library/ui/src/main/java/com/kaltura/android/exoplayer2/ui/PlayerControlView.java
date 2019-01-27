@@ -296,41 +296,41 @@ public class PlayerControlView extends FrameLayout {
     LayoutInflater.from(context).inflate(controllerLayoutId, this);
     setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
 
-    durationView = findViewById(R.id.exo_duration);
-    positionView = findViewById(R.id.exo_position);
-    timeBar = findViewById(R.id.exo_progress);
+    durationView = findViewById(R.id.kaltura_exo_duration);
+    positionView = findViewById(R.id.kaltura_exo_position);
+    timeBar = findViewById(R.id.kaltura_exo_progress);
     if (timeBar != null) {
       timeBar.addListener(componentListener);
     }
-    playButton = findViewById(R.id.exo_play);
+    playButton = findViewById(R.id.kaltura_exo_play);
     if (playButton != null) {
       playButton.setOnClickListener(componentListener);
     }
-    pauseButton = findViewById(R.id.exo_pause);
+    pauseButton = findViewById(R.id.kaltura_exo_pause);
     if (pauseButton != null) {
       pauseButton.setOnClickListener(componentListener);
     }
-    previousButton = findViewById(R.id.exo_prev);
+    previousButton = findViewById(R.id.kaltura_exo_prev);
     if (previousButton != null) {
       previousButton.setOnClickListener(componentListener);
     }
-    nextButton = findViewById(R.id.exo_next);
+    nextButton = findViewById(R.id.kaltura_exo_next);
     if (nextButton != null) {
       nextButton.setOnClickListener(componentListener);
     }
-    rewindButton = findViewById(R.id.exo_rew);
+    rewindButton = findViewById(R.id.kaltura_exo_rew);
     if (rewindButton != null) {
       rewindButton.setOnClickListener(componentListener);
     }
-    fastForwardButton = findViewById(R.id.exo_ffwd);
+    fastForwardButton = findViewById(R.id.kaltura_exo_ffwd);
     if (fastForwardButton != null) {
       fastForwardButton.setOnClickListener(componentListener);
     }
-    repeatToggleButton = findViewById(R.id.exo_repeat_toggle);
+    repeatToggleButton = findViewById(R.id.kaltura_exo_repeat_toggle);
     if (repeatToggleButton != null) {
       repeatToggleButton.setOnClickListener(componentListener);
     }
-    shuffleButton = findViewById(R.id.exo_shuffle);
+    shuffleButton = findViewById(R.id.kaltura_exo_shuffle);
     if (shuffleButton != null) {
       shuffleButton.setOnClickListener(componentListener);
     }
