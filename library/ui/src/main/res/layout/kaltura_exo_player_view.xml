@@ -14,5 +14,5 @@
      limitations under the License.
 -->
 <merge>
-  <include layout="@layout/exo_playback_control_view"/>
+  <include layout="@layout/kaltura_exo_simple_player_view"/>
 </merge>

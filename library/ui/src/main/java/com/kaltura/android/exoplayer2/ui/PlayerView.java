@@ -156,13 +156,13 @@ import java.util.List;
  *       for more details.
  *       <ul>
  *         <li>Corresponding method: None
- *         <li>Default: {@code R.layout.exo_player_view}
+ *         <li>Default: {@code R.layout.kaltura_exo_player_view}
  *       </ul>
  *   <li><b>{@code controller_layout_id}</b> - Specifies the id of the layout resource to be
  *       inflated by the child {@link PlayerControlView}. See below for more details.
  *       <ul>
  *         <li>Corresponding method: None
- *         <li>Default: {@code R.layout.exo_player_control_view}
+ *         <li>Default: {@code R.layout.kaltura_exo_player_control_view}
  *       </ul>
  *   <li>All attributes that can be set on a {@link PlayerControlView} can also be set on a
  *       PlayerView, and will be propagated to the inflated {@link PlayerControlView} unless the
@@ -172,7 +172,7 @@ import java.util.List;
  * <h3>Overriding the layout file</h3>
  *
  * To customize the layout of PlayerView throughout your app, or just for certain configurations,
- * you can define {@code exo_player_view.xml} layout files in your application {@code res/layout*}
+ * you can define {@code kaltura_exo_player_view.xmlview.xml} layout files in your application {@code res/layout*}
  * directories. These layouts will override the one provided by the ExoPlayer library, and will be
  * inflated for use by PlayerView. The view identifies and binds its children by looking for the
  * following ids:
@@ -233,11 +233,11 @@ import java.util.List;
  *
  * <h3>Specifying a custom layout file</h3>
  *
- * Defining your own {@code exo_player_view.xml} is useful to customize the layout of PlayerView
+ * Defining your own {@code kaltura_exo_player_view.xmlview.xml} is useful to customize the layout of PlayerView
  * throughout your application. It's also possible to customize the layout for a single instance in
  * a layout file. This is achieved by setting the {@code player_layout_id} attribute on a
  * PlayerView. This will cause the specified layout to be inflated instead of {@code
- * exo_player_view.xml} for only the instance on which the attribute is set.
+ * kaltura_exo_player_view.xmlview.xml} for only the instance on which the attribute is set.
  */
 public class PlayerView extends FrameLayout {
 
@@ -326,7 +326,7 @@ public class PlayerView extends FrameLayout {
 
     boolean shutterColorSet = false;
     int shutterColor = 0;
-    int playerLayoutId = R.layout.exo_player_view;
+    int playerLayoutId = R.layout.kaltura_exo_player_view;
     boolean useArtwork = true;
     int defaultArtworkId = 0;
     boolean useController = true;

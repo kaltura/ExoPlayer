@@ -17,7 +17,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-  <com.kaltura.android.exoplayer2.ui.TrackSelectionView android:id="@+id/exo_track_selection_view"
+  <com.kaltura.android.exoplayer2.ui.TrackSelectionView android:id="@+id/kaltura_exo_track_selection_view"
       android:orientation="vertical"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"/>

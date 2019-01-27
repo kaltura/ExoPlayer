@@ -75,9 +75,9 @@ public class TrackSelectionView extends LinearLayout {
 
     // Inflate with the builder's context to ensure the correct style is used.
     LayoutInflater dialogInflater = LayoutInflater.from(builder.getContext());
-    View dialogView = dialogInflater.inflate(R.layout.exo_track_selection_dialog, null);
+    View dialogView = dialogInflater.inflate(R.layout.kaltura_exo_track_selection_dialog, null);
 
-    final TrackSelectionView selectionView = dialogView.findViewById(R.id.exo_track_selection_view);
+    final TrackSelectionView selectionView = dialogView.findViewById(R.id.kaltura_exo_track_selection_view);
     selectionView.init(trackSelector, rendererIndex);
     Dialog.OnClickListener okClickListener = (dialog, which) -> selectionView.applySelection();
 
@@ -126,7 +126,7 @@ public class TrackSelectionView extends LinearLayout {
     disableView.setVisibility(View.GONE);
     addView(disableView);
     // Divider view.
-    addView(inflater.inflate(R.layout.exo_list_divider, this, false));
+    addView(inflater.inflate(R.layout.kaltura_exo_list_divider, this, false));
     // View for clearing the override to allow the selector to use its default selection logic.
     defaultView =
         (CheckedTextView)
@@ -225,7 +225,7 @@ public class TrackSelectionView extends LinearLayout {
       trackViews[groupIndex] = new CheckedTextView[group.length];
       for (int trackIndex = 0; trackIndex < group.length; trackIndex++) {
         if (trackIndex == 0) {
-          addView(inflater.inflate(R.layout.exo_list_divider, this, false));
+          addView(inflater.inflate(R.layout.kaltura_exo_list_divider, this, false));
         }
         int trackViewLayoutId =
             enableAdaptiveSelections
